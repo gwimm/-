@@ -1,0 +1,226 @@
+2019-01-26 21:52:08	-->	gwosix (~gwosix@112.209.186.56) has joined #gentoo
+2019-01-26 21:52:08	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: wgetpaste or dpaste.com | wiki status? https://infra-status.gentoo.org | Perl conflicts? https://goo.gl/7Miost | Be nice! https://goo.gl/gvnCii | Switch to profile 17.0? https://goo.gl/Kv9vC2 | startx permission problems? emerge -1a xorg-server[suid] or use elogind, systemd, or a DM"
+2019-01-26 21:52:08	--	Topic set by grknight (~grknight@gentoo/developer/grknight) on Fri, 04 Jan 2019 19:55:24
+2019-01-26 21:52:09	--	Channel #gentoo: 1138 nicks (4 ops, 57 voices, 1077 normals)
+2019-01-26 21:52:09	--	PvNotice(ChanServ): Welcome to #gentoo || Acceptable Usage Policy @ http://www.gentoo.org/main/en/irc.xml || Keep the language clean || Google is your friend || No bots or scripts that talk || Turn off public away messages || More than three lines to #flood or a pastebin service, no spam!
+2019-01-26 21:52:09	--	URL for #gentoo: http://www.gentoo.org
+2019-01-26 21:52:11	--	Channel created on Sat, 15 Sep 2001 03:15:36
+2019-01-26 21:53:04	-->	Bloodclaw (~bloodclaw@vpn.h38.org) has joined #gentoo
+2019-01-26 21:53:12	-->	whjeon (~whjeon@122.46.214.189) has joined #gentoo
+2019-01-26 21:55:26	<--	fstd (~fstd@unaffiliated/fisted) has quit (Ping timeout: 240 seconds)
+2019-01-26 21:57:18	<--	noodlepie (~Phillip@94.197.120.184.threembb.co.uk) has quit (Quit: Going offline for a bit! :P)
+2019-01-26 21:57:39	-->	Starhowl (~Starhowl@p200300DBCBEDDF009535CCED662FB596.dip0.t-ipconnect.de) has joined #gentoo
+2019-01-26 21:58:23	-->	shentino (~shentino@unaffiliated/shentino) has joined #gentoo
+2019-01-26 21:59:05	catpig	Dwarf, i would definitely start with the selinux profile, because all the plasma profile does is set some default USE flags and the like. the selinux profile probably (i never actually used selinux) does more
+2019-01-26 21:59:59	catpig	for the record: havent actually checked the plasma profile, but "that's how it has always worked" and working differently would be rather insane
+2019-01-26 22:00:24	-->	AnAverageHuman (~AnAverage@gateway/tor-sasl/anaveragehuman) has joined #gentoo
+2019-01-26 22:00:28	Dwarf	Are the profiles stored in a file? If so, where are these located and are there any wiki pages I can read to get to know more about these?
+2019-01-26 22:00:45	catpig	 /usr/portage/profiles if i'm not mistaken
+2019-01-26 22:01:06	<--	megaTherion (~therion@unix.io) has quit (Ping timeout: 264 seconds)
+2019-01-26 22:01:08	-->	fstd (~fstd@unaffiliated/fisted) has joined #gentoo
+2019-01-28 20:03:26	-->	gwosix (~gwosix@112.209.186.56) has joined #gentoo
+2019-01-28 20:03:26	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: wgetpaste or dpaste.com | wiki status? https://infra-status.gentoo.org | Perl conflicts? https://goo.gl/7Miost | Be nice! https://goo.gl/gvnCii | Switch to profile 17.0? https://goo.gl/Kv9vC2 | startx permission problems? emerge -1a xorg-server[suid] or use elogind, systemd, or a DM"
+2019-01-28 20:03:26	--	Topic set by grknight (~grknight@gentoo/developer/grknight) on Fri, 04 Jan 2019 19:55:24
+2019-01-28 20:03:26	--	Channel #gentoo: 1141 nicks (5 ops, 57 voices, 1079 normals)
+2019-01-28 20:03:26	--	PvNotice(ChanServ): Welcome to #gentoo || Acceptable Usage Policy @ http://www.gentoo.org/main/en/irc.xml || Keep the language clean || Google is your friend || No bots or scripts that talk || Turn off public away messages || More than three lines to #flood or a pastebin service, no spam!
+2019-01-28 20:03:26	--	URL for #gentoo: http://www.gentoo.org
+2019-01-28 20:03:29	--	Channel created on Sat, 15 Sep 2001 03:15:36
+2019-01-28 20:03:43	pyggins	oh no, stack failed
+2019-01-28 20:04:10	gwosix	i need to overwrite portage's patch for (www-client/surf-9999) since it's not up to date...
+2019-01-28 20:04:12	<--	steils (~stefan@pripet.hukot.net) has quit (Read error: Connection reset by peer)
+2019-01-28 20:04:22	Cyp_	emerge is missing a shorthand for --keep-going. Since -k and -K are taken, maybe -R would make sense, since it's related to -r = --resume.
+2019-01-28 20:04:24	-->	kingkong1ok (~kingkongm@113.119.31.159) has joined #gentoo
+2019-01-28 20:04:30	gwosix	i made an up-to-date one right here.
+2019-01-28 20:04:47	-->	steils (~stefan@pripet.hukot.net) has joined #gentoo
+2019-01-28 20:05:03	--	bry2k200__ is now known as Bry2k200
+2019-01-28 20:05:45	--	Phizzy is now known as noodlepie
+2019-01-28 20:05:57	-->	CMoH (~cipi@unaffiliated/c-moh) has joined #gentoo
+2019-01-28 20:07:47	<--	kingkongmok (~kingkongm@113.119.31.159) has quit (Ping timeout: 250 seconds)
+2019-01-28 20:08:19	pyggins	regarding the failed stack emerge, here is the build log http://dpaste.com/1HA1S4S
+2019-01-28 20:09:10	<--	kingkong1ok (~kingkongm@113.119.31.159) has quit (Ping timeout: 245 seconds)
+2019-01-28 20:09:21	-->	kingkongmok (~kingkongm@113.119.186.207) has joined #gentoo
+2019-01-28 20:12:11	sleepymario	gwosix: you can file a bugreport and add the patch on the gentoo bugzilla
+2019-01-28 20:12:32	gwosix	ok, i will.
+2019-01-28 20:17:00	Supersonic	pyggins: last time I tried, the stack/stack-bin ebuilds didn't work either. A manual+non-root installation with the script from haskellstack.org runs fine, though, if you just want to get going quickly
+2019-01-28 20:17:05	<--	sem2peie (~sem2peie@unaffiliated/sem2peie) has quit (Ping timeout: 245 seconds)
+2019-01-28 20:18:53	pyggins	ah i see, thank you for that, i will try that instead
+2019-01-28 20:19:29	<--	pyggins (~pyggins@101.165.104.2) has quit (Quit: WeeChat 2.3)
+2019-01-28 20:19:51	sleepymario	gwosix: did you also mean to ask how to apply the patch using portage?
+2019-01-28 20:20:05	-->	catpig (~catpig@2a02:810a:980:2ea0:793c:708:acae:da1f) has joined #gentoo
+2019-01-28 20:22:26	<--	steils (~stefan@pripet.hukot.net) has quit (Read error: Connection reset by peer)
+2019-01-28 20:22:31	-->	steils1 (~stefan@pripet.hukot.net) has joined #gentoo
+2019-01-28 20:23:45	-->	kingkong1ok (~kingkongm@113.119.186.207) has joined #gentoo
+2019-01-28 20:25:36	<--	wonko7 (~wonko7@37.173.31.156) has quit (Ping timeout: 244 seconds)
+2019-01-28 20:25:41	gwosix	sleepymario, some way to `emerge www-client/surf` without making it patch the system patches
+2019-01-28 20:26:26	-->	waflessnet (~waflessne@unaffiliated/waflessnet) has joined #gentoo
+2019-01-28 20:26:44	-->	tilda_ (~tilda@unaffiliated/tildaturn) has joined #gentoo
+2019-01-28 20:26:53	<--	kingkongmok (~kingkongm@113.119.186.207) has quit (Ping timeout: 240 seconds)
+2019-01-28 20:26:59	<--	waflessnet (~waflessne@unaffiliated/waflessnet) has quit (Client Quit)
+2019-01-28 20:28:33	-->	KlausedSource (~KlausedSo@p5B2C356D.dip0.t-ipconnect.de) has joined #gentoo
+2019-01-28 20:29:49	sleepymario	gwosix: you could manually delete the patches in /usr/portage/www-client/surf/files i guess, or if you have a local repository just copy the ebuild and only use that patch.
+2019-01-28 20:30:10	sleepymario	i'd personally prefer the 2nd option
+2019-01-28 20:30:10	<--	Amt (~Amt@2607:5300:60:2a8b::1) has quit (Quit: Quit.)
+2019-01-28 20:30:31	-->	Amt (~Amt@2607:5300:60:2a8b::1) has joined #gentoo
+2019-01-28 20:30:46	<--	KlausedSource_ (~KlausedSo@p5498AEF7.dip0.t-ipconnect.de) has quit (Ping timeout: 244 seconds)
+2019-01-28 20:31:17	-->	CYBERDEViL (~CYBERDEVi@185.236.16.35) has joined #gentoo
+2019-01-28 20:32:40	-->	cvz (0596e74e@gateway/web/freenode/ip.5.150.231.78) has joined #gentoo
+2019-01-28 20:32:44	-->	pask (~pask@90-230-24-134-no534.tbcn.telia.com) has joined #gentoo
+2019-01-28 20:33:54	-->	pinkfluffysocks (~Thunderbi@cpc86415-seve24-2-0-cust214.13-3.cable.virginm.net) has joined #gentoo
+2019-01-28 20:34:20	<--	shiznix (quassel@gentoo/user/shiznix) has quit (Ping timeout: 246 seconds)
+2019-01-28 20:35:48	cvz	Launching Fedora in a systemd container from Gentoo. Is that something that would be doable? I have been trying for a while and cant really figure out how to get started
+2019-01-28 20:39:02	<--	kingkong1ok (~kingkongm@113.119.186.207) has quit (Ping timeout: 244 seconds)
+2019-01-28 20:40:04	echoSMILE	which light GUI browser could be recommended?
+2019-01-28 20:40:45	-->	aleck (~aleck@217.110.95.218) has joined #gentoo
+2019-01-28 20:41:02	Dwarf	Firefox?
+2019-01-28 20:41:23	Dwarf	What is your definition of light?
+2019-01-28 20:41:28	<--	CYBERDEViL (~CYBERDEVi@185.236.16.35) has quit (Read error: Connection reset by peer)
+2019-01-28 20:41:52	-->	CYBERDEViL (~CYBERDEVi@185.236.16.35) has joined #gentoo
+2019-01-28 20:42:04	sleepymario	echoSMILE: brave is kinda light
+2019-01-28 20:42:16	sleepymario	or sth like qutebrowser i guess
+2019-01-28 20:42:29	sleepymario	'kind of'
+2019-01-28 20:43:10	SodaMaker	links -g
+2019-01-28 20:43:22	gwosix	oh, sleepymario, you can't because it checks if the file has been altered
+2019-01-28 20:43:27	echoSMILE	Dwarf: light for an old device
+2019-01-28 20:43:28	gwosix	(sorry for the late repl)
+2019-01-28 20:43:53	sleepymario	gwosix: right, do 'repoman manifest' in the directory of the ebuild, and try again
+2019-01-28 20:44:06	sleepymario	install app-portage/repoman if necessary
+2019-01-28 20:45:25	gwosix	sleepymario: making me install pyaml >:(
+2019-01-28 20:45:58	sleepymario	gwosix: is it a huge issue?
+2019-01-28 20:46:35	sleepymario	gwosix: i'm pretty sure it's possible to recreate the manifest using portage, but i just don't know the exact command :(
+2019-01-28 20:46:38	-->	venom00 (~venom00@unaffiliated/venom00) has joined #gentoo
+2019-01-28 20:46:51	sleepymario	always used repoman myself
+2019-01-28 20:46:55	gwosix	sleepymario, nah, just joking
+2019-01-28 20:47:04	echoSMILE	SodaMaker: links -g or links2 ?
+2019-01-28 20:47:08	gwosix	but me no liek yaml ><
+2019-01-28 20:47:42	-->	kingkongmok (~kingkongm@113.119.186.207) has joined #gentoo
+2019-01-28 20:50:06	<--	tandi (~tandi@111.95.135.184) has quit (Quit: WeeChat 2.3)
+2019-01-28 20:51:22	-->	Lulu (~yin@yuilinn.xyniana.ru) has joined #gentoo
+2019-01-28 20:51:59	<--	lefou (~lefou@p200300C47F25EA35CF92F62B8D51F90E.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2019-01-28 20:52:33	cvz	hm, I guess this isnt possible. Maybe I have to dual boot :/
+2019-01-28 20:53:54	-->	lefou (~lefou@p549935DC.dip0.t-ipconnect.de) has joined #gentoo
+2019-01-28 20:55:55	Lulu	portage-2.3.59 is broken :P https://pastebin.com/raw/TArvcsdv
+2019-01-28 20:55:58	<--	Forc2 (Forc2@gateway/web/irccloud.com/x-utffxvbacxnojqiw) has quit (Excess Flood)
+2019-01-28 20:56:21	gwosix	tui browsers, anyone?
+2019-01-28 20:56:38	-->	Forc2 (Forc2@gateway/web/irccloud.com/x-dpbmqpxofimhpuii) has joined #gentoo
+2019-01-28 20:56:57	-->	SpudDogg (~SpudDogg@64.135.81.34) has joined #gentoo
+2019-01-28 20:57:06	<--	kdc (~kdc@dustpuppy.is.co.za) has quit (Remote host closed the connection)
+2019-01-28 20:57:16	<--	SpudDogg (~SpudDogg@64.135.81.34) has quit (Read error: Connection reset by peer)
+2019-01-28 20:57:41	SodaMaker	weboob.org
+2019-01-28 20:58:44	-->	SpudDogg (~SpudDogg@64.135.81.34) has joined #gentoo
+2019-01-28 21:00:44	stefan00	where does OpenRC store it’s runlevel entries (rc-update add …)?
+2019-01-28 21:01:42	gwosix	stefan00: /etc/init.d
+2019-01-28 21:02:18	<--	SpudDogg (~SpudDogg@64.135.81.34) has quit (Read error: Connection reset by peer)
+2019-01-30 17:06:17	-->	gwosix (~gwosix@112.209.186.56) has joined #gentoo
+2019-01-30 17:06:17	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: wgetpaste or dpaste.com | wiki status? https://infra-status.gentoo.org | Perl conflicts? https://goo.gl/7Miost | Be nice! https://goo.gl/gvnCii | Switch to profile 17.0? https://goo.gl/Kv9vC2 | startx permission problems? emerge -1a xorg-server[suid] or use elogind, systemd, or a DM"
+2019-01-30 17:06:17	--	Topic set by grknight (~grknight@gentoo/developer/grknight) on Fri, 04 Jan 2019 19:55:24
+2019-01-30 17:06:17	--	Channel #gentoo: 1125 nicks (5 ops, 56 voices, 1064 normals)
+2019-01-30 17:06:17	--	PvNotice(ChanServ): Welcome to #gentoo || Acceptable Usage Policy @ http://www.gentoo.org/main/en/irc.xml || Keep the language clean || Google is your friend || No bots or scripts that talk || Turn off public away messages || More than three lines to #flood or a pastebin service, no spam!
+2019-01-30 17:06:18	--	URL for #gentoo: http://www.gentoo.org
+2019-01-30 17:06:20	--	Channel created on Sat, 15 Sep 2001 03:15:36
+2019-01-30 17:06:33	gwosix	my nvidia module isn't showing up...
+2019-01-30 17:06:37	-->	cosimone (~cosimone@93-51-213-243.ip268.fastwebnet.it) has joined #gentoo
+2019-01-30 17:06:43	<--	oscarandrea (~oscar@unaffiliated/oscarandrea) has quit (Remote host closed the connection)
+2019-01-30 17:08:05	gwosix	https://cdn.discordapp.com/attachments/361910177961738244/540095832309891072/img.png
+2019-01-30 17:08:12	gwosix	i think i found the problem...
+2019-01-30 17:08:53	+wraeth	gwosix: Updated kernel and haven't rebuilt external modules? `emerge -a1 @module-rebuild` should take care of that.
+2019-01-30 17:09:20	<--	cynapse (~chris@185.217.69.133) has quit (Remote host closed the connection)
+2019-01-30 17:09:21	-->	hijacker (~nikolay@external.oldum.net) has joined #gentoo
+2019-01-30 17:10:40	<--	cosimone (~cosimone@93-51-213-243.ip268.fastwebnet.it) has quit (Client Quit)
+2019-01-30 17:10:51	gwosix	no, i'm using a custom kernel
+2019-01-30 17:10:52	-->	cosimone (~cosimone@93-51-213-243.ip268.fastwebnet.it) has joined #gentoo
+2019-01-30 17:12:07	gwosix	it's installing the modules to lib/modu.. 4.20.0$(EXTRAVERSION)$(CKVERSION)
+2019-01-30 17:14:22	-->	xmorph (~xt_@unaffiliated/xmorph) has joined #gentoo
+2019-01-30 17:16:03	gwosix	if i just move the files in `/lib/modules/4.20.0` to where they belong in `/lib/modules/4.20.0-ck1`?
+2019-01-30 17:16:05	-->	oscarandrea (~oscar@unaffiliated/oscarandrea) has joined #gentoo
+2019-01-30 17:17:02	+wraeth	When did it last work?
+2019-01-30 17:17:15	gwosix	not
+2019-01-30 17:17:17	gwosix	xD
+2019-01-30 17:17:26	<--	oscarandrea (~oscar@unaffiliated/oscarandrea) has quit (Remote host closed the connection)
+2019-01-30 17:17:35	gwosix	i'll change the makefile of my kernel, that'd probably work
+2019-01-30 17:17:51	+wraeth	How did you install the kernel?
+2019-01-30 17:18:00	gwosix	the ebuild parses it for the version
+2019-01-30 17:18:10	gwosix	git clone ck-hacking
+2019-01-30 17:18:29	+wraeth	Why not sys-kernel/ck-sources?
+2019-01-30 17:18:38	gwosix	it's way behind
+2019-01-30 17:18:45	+wraeth	You could patch it...
+2019-01-30 17:18:50	-->	MWoodJ__ (~mwoodj@24.96.232.198) has joined #gentoo
+2019-01-30 17:19:01	+wraeth	Anyway, *where* are you kernel sources saved/configured/built? /usr/src?
+2019-01-30 17:19:08	gwosix	yup
+2019-01-30 17:19:18	+wraeth	Do you have /usr/src/linux pointing to it?
+2019-01-30 17:19:26	gwosix	symlink is cor-
+2019-01-30 17:19:27	gwosix	yeah
+2019-01-30 17:19:32	gwosix	that's all fine
+2019-01-30 17:19:44	gwosix	it's using the wrong `/lib/modules/xxx` dir
+2019-01-30 17:19:53	-->	valebes (~valebes@net-130-25-223-251.cust.vodafonedsl.it) has joined #gentoo
+2019-01-30 17:19:56	gwosix	the ebuild doesn't fail either
+2019-01-30 17:20:11	gwosix	https://packages.gentoo.org/packages/sys-kernel/ck-sources
+2019-01-30 17:20:12	gwosix	yeah
+2019-01-30 17:20:21	gwosix	they're still at 4.19.2
+2019-01-30 17:20:39	gwosix	4.20.0 has been out for a while
+2019-01-30 17:21:03	-->	kajo (~kajo@134.147.24.165) has joined #gentoo
+2019-01-30 17:21:13	cosimone	question: is it possible to apply environments using the package.env directory to entire sets instead of individual packages?
+2019-01-30 17:21:36	-->	oscarandrea (~oscar@unaffiliated/oscarandrea) has joined #gentoo
+2019-01-30 17:21:57	<--	io_default (~io_defaul@p4FD6E9BD.dip0.t-ipconnect.de) has quit (Quit: io_default)
+2019-01-30 17:22:11	cosimone	say i have an environment that enables bug symbols called "debugsyms" and a set, can i write something like "@myset debugsyms" in a package.env file?
+2019-01-30 17:22:18	<--	_mwoodj_ (~mwoodj@pdpc/sponsor/digium/hyper-eye) has quit (Ping timeout: 272 seconds)
+2019-01-30 17:22:40	+wraeth	gwosix: I would guess it's your manually fetched sources. You could try bumping the ck-sources ebuild yourself instead.
+2019-01-30 17:23:27	+wraeth	cosimone: I don't believe so, but I haven't tried it nor see documentation explicitly forbidding it (but, since it's not mentioned as allowed from what I've seen with a quick glance, I'd guess not).
+2019-01-30 17:23:34	gwosix	i'll just find out if my little Makefile hack workss
+2019-01-30 17:23:50	gwosix	if i can help the community i will try to, wraeth
+2019-01-30 17:24:38	gwosix	OH I THINK IT DID!
+2019-01-30 17:24:44	+wraeth	gwosix: If you do successfully bump the ebuild locally, an ebuild patch (and/or full ebuild) would likely be appreciated on bug 675558. :)
+2019-01-30 17:24:45	willikins	wraeth: https://bugs.gentoo.org/675558 "sys-kernel/ck-sources-4.20 version bump"; Gentoo Linux, Current packages; UNCO; bernardo:gokturk
+2019-01-30 17:26:32	gwosix	wraeth, it worked
+2019-01-30 17:26:46	+wraeth	:)
+2019-01-30 17:26:54	-->	Bloodclaw (~bloodclaw@vpn.h38.org) has joined #gentoo
+2019-01-30 17:27:04	cosimone	wraeth: i see. i set up a script to parse the set file and add every entry in a package.env file automatically, so it's not that big of a deal, but having such a feature directly built into portage would be useful for some cases
+2019-01-30 17:27:28	gwosix	con kolivas decides to do this in the Makefile...
+2019-01-30 17:27:32	gwosix	EXTRAVERSION := $(EXTRAVERSION)$(CKVERSION)
+2019-01-30 17:27:44	gwosix	and that's what throws the ebuild off...
+2019-01-30 17:27:47	gwosix	why though
+2019-01-30 17:27:57	gwosix	let me fix the ebuild...
+2019-01-30 17:28:15	-->	Maitreya (~mark@ptr-1pnmgntvc760mfd1bo7.18120a2.ip6.access.telenet.be) has joined #gentoo
+2019-01-30 17:28:20	gwosix	it shouldn't parse the text dry...
+2019-01-30 17:28:30	+wraeth	cosimone: `cat /etc/portage/sets/myset | sed -e 's:$: myenv.conf:' > /etc/portage/package.env/myset` (probably)
+2019-01-30 17:28:51	gwosix	also: why isn't there a ck-sources-9999?
+2019-01-30 17:29:10	+wraeth	gwosix: You'd have to ask the maintainer.
+2019-01-30 17:29:16	gwosix	hmmm
+2019-01-30 17:29:26	+wraeth	May just not have been asked for.
+2019-01-30 17:29:36	gwosix	i'm basically on 9999
+2019-01-30 17:29:43	gwosix	i just cloned the repo lol xD
+2019-01-30 17:30:10	gwosix	i hope i don't go unstable because of it though
+2019-01-30 17:41:50	-->	gwosix (~gwosix@112.209.186.56) has joined #gentoo
+2019-01-30 17:41:50	--	Topic for #gentoo is "Gentoo Linux Support | Can't speak? /j #gentoo-ops | long pastes: wgetpaste or dpaste.com | wiki status? https://infra-status.gentoo.org | Perl conflicts? https://goo.gl/7Miost | Be nice! https://goo.gl/gvnCii | Switch to profile 17.0? https://goo.gl/Kv9vC2 | startx permission problems? emerge -1a xorg-server[suid] or use elogind, systemd, or a DM"
+2019-01-30 17:41:50	--	Topic set by grknight (~grknight@gentoo/developer/grknight) on Fri, 04 Jan 2019 19:55:24
+2019-01-30 17:41:50	--	Channel #gentoo: 1132 nicks (5 ops, 56 voices, 1071 normals)
+2019-01-30 17:41:51	--	PvNotice(ChanServ): Welcome to #gentoo || Acceptable Usage Policy @ http://www.gentoo.org/main/en/irc.xml || Keep the language clean || Google is your friend || No bots or scripts that talk || Turn off public away messages || More than three lines to #flood or a pastebin service, no spam!
+2019-01-30 17:41:51	--	URL for #gentoo: http://www.gentoo.org
+2019-01-30 17:41:53	--	Channel created on Sat, 15 Sep 2001 03:15:36
+2019-01-30 17:44:13	<--	Makaveli7 (~Makaveli7@unaffiliated/makaveli7) has quit (Quit: Leaving)
+2019-01-30 17:50:57	-->	Makaveli7 (~Makaveli7@unaffiliated/makaveli7) has joined #gentoo
+2019-01-30 17:51:14	-->	megawatt (~megawatt@213.21.42.84) has joined #gentoo
+2019-01-30 17:52:23	<--	whjeon (~whjeon@122.46.214.189) has quit (Quit: Leaving)
+2019-01-30 17:53:49	<--	oscarandrea (~oscar@unaffiliated/oscarandrea) has quit (Quit: Leaving.)
+2019-01-30 17:55:30	-->	BenG83 (~BenG83@HSI-KBW-082-212-041-239.hsi.kabelbw.de) has joined #gentoo
+2019-01-30 17:56:17	<--	subs3v3n (~subs3v3n@gateway/tor-sasl/subs3v3n) has quit (Ping timeout: 256 seconds)
+2019-01-30 17:56:30	-->	feriman (~feriman@188.163.112.37) has joined #gentoo
+2019-01-30 17:57:19	<--	Makaveli7 (~Makaveli7@unaffiliated/makaveli7) has quit (Quit: Leaving)
+2019-01-30 17:57:52	nfk	[11:20] <gwosix> they're still at 4.19.2 // yeah, most annoying anything less than 4.19... 9(?) has a nasty data corrupting bug in blk-mq subsystem
+2019-01-30 17:58:12	<--	TwistedFate (~twistedfa@unaffiliated/twistedfate) has quit (Quit: TwistedFate)
+2019-01-30 17:58:47	nfk	[11:22] <wraeth> gwosix: I would guess it's your manually fetched sources. You could try bumping the ck-sources ebuild yourself instead // haha, tried that, the thing is weirder than you'd think
+2019-01-30 17:59:22	-->	stefan00 (~stefan00@ip9234924b.dynamic.kabel-deutschland.de) has joined #gentoo
+2019-01-30 18:00:39	stefan00	is there a portage way to --unmerge a package and _all_ it’s stuff? (config files etc)
+2019-01-30 18:01:09	<--	immibis (~immibis@125-238-72-168-fibre.sparkbb.co.nz) has quit (Ping timeout: 268 seconds)
+2019-01-30 18:01:30	-->	_chaky_ (~chaky@gateway/tor-sasl/chaky) has joined #gentoo
+2019-01-30 18:01:34	-->	subs3v3n (~subs3v3n@gateway/tor-sasl/subs3v3n) has joined #gentoo
+2019-01-30 18:01:38	nfk	config should remain only if they are modified, same as other config_protected stuff
+2019-01-30 18:02:00	nfk	and since packages can create untracked files at runtime, probably not 100.0%
+2019-01-30 18:02:36	nfk	that is, even if you tweaked portage to remove every tracked file when unmerging a package, bits would still likely remain
+2019-01-30 18:03:18	<--	ashirase (~ashirase@modemcable098.166-22-96.mc.videotron.ca) has quit (Ping timeout: 245 seconds)
+2019-01-30 18:03:24	stefan00	nfk: OK, thanks for the hints. Nevermind, I’ll do it manually.
+2019-01-30 18:04:09	<--	emmett1 (~emmett1@2001:e68:7400:0:34d:f788:eb46:6586) has quit (Remote host closed the connection)
+2019-01-30 18:04:19	<--	kajo (~kajo@134.147.24.165) has quit (Ping timeout: 246 seconds)
+2019-01-30 18:04:47	<--	chaky (~chaky@gateway/tor-sasl/chaky) has quit (Ping timeout: 256 seconds)
+2019-01-30 18:04:49	--	_chaky_ is now known as chaky
+2019-01-30 18:05:43	nfk	stefan00, oh and /var is likely left by design as people generally do not fancy package managers destroying databases or logs
+2019-01-30 18:05:58	-->	medard (~medard@b30.softec.ba.cust.gts.sk) has joined #gentoo

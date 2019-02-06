@@ -1,0 +1,72 @@
+2019-01-22 10:27:40	-->	gwosix (~sai@122.3.47.163) has joined ##themadhouse
+2019-01-22 10:27:40	--	Topic for ##themadhouse is "Linux, free software, and general computing. Find the rest of us at https://discord.gg/m9FtAV"
+2019-01-22 10:27:40	--	Topic set by Astrak on Sun, 23 Dec 2018 21:50:06
+2019-01-22 10:27:40	--	Channel ##themadhouse: 2 nicks (1 op, 0 voices, 1 normal)
+2019-01-22 10:27:42	--	Channel created on Sun, 23 Dec 2018 08:08:19
+2019-01-22 10:28:15	gwosix	Astrak, how you doin'?
+2019-01-22 10:28:27	@Astrak	Doing good man
+2019-01-22 10:28:37	@Astrak	How about you?
+2019-01-22 10:28:40	gwosix	oh, didn't expect a response hahaha
+2019-01-22 10:28:45	gwosix	i'm well, thanks
+2019-01-22 10:28:46	@Astrak	lmao
+2019-01-22 10:28:55	gwosix	in math class right now
+2019-01-22 10:29:01	@Astrak	Nice. I'm at work right now
+2019-01-22 10:29:10	gwosix	the teach lets me just sit around for it anyway
+2019-01-22 10:29:25	@Astrak	Neat. Is IRC not blocked at your school?
+2019-01-22 10:29:35	gwosix	nope, for some reason it ain't
+2019-01-22 10:29:35	@Astrak	Or are you hotspotting off your phone
+2019-01-22 10:29:38	@Astrak	Oh nice
+2019-01-22 10:30:09	gwosix	they seem to crack down on their own "defenses" too
+2019-01-22 10:30:20	gwosix	lest time i got some torrent traffic going
+2019-01-22 10:30:48	gwosix	oh, i'm on gentoo nau!
+2019-01-22 10:31:03	@Astrak	oh nice! I miss gentoo...
+2019-01-22 10:31:14	@Astrak	it was so much fun
+2019-01-22 10:31:35	gwosix	aw, what you on?
+2019-01-22 10:31:54	@Astrak	still on arch. haven't found the time to migrate away yet
+2019-01-22 10:32:11	@Astrak	need to prep my dotfiles for a non-systemd setup
+2019-01-22 10:32:37	gwosix	you could try nix
+2019-01-22 10:32:44	gwosix	nix is really cool
+2019-01-22 10:32:52	@Astrak	I've heard good things about nix. I'll have a closer look into it
+2019-01-22 10:33:36	gwosix	yeah, there was a while when a good friend of mine would advocate for it on the unixporn server
+2019-01-22 10:33:51	gwosix	he was actually really good ad it too xD
+2019-01-22 10:34:19	@Astrak	Oh yeah nixos is the one with the weird package management thing! I was very interested in this a while back but never tested it out
+2019-01-22 10:35:19	gwosix	yeah, it's **so** cool
+2019-01-22 10:35:22	gwosix	it really is
+2019-01-22 10:35:37	gwosix	you have a single configuration and the system takes care of the rest
+2019-01-22 10:37:55	gwosix	nix is also a lang, actually...
+2019-01-22 10:38:06	gwosix	if you write a string by itself:
+2019-01-22 10:38:09	gwosix	"like this"
+2019-01-22 10:38:14	gwosix	it prints it...
+2019-01-24 18:35:56	-->	sai1 (~sai@112.209.186.56) has joined ##themadhouse
+2019-01-24 18:35:56	--	Mode ##themadhouse [+ns] by orwell.freenode.net
+2019-01-24 18:35:56	--	Channel ##themadhouse: 1 nick (1 op, 0 voices, 0 normals)
+2019-01-24 18:35:56	--	Mode ##themadhouse [-o sai1] by services.
+2019-01-24 18:35:56	--	Notice(orwell.freenode.net): *** Notice -- TS for ##themadhouse changed from 1548326159 to 1545552499
+2019-01-24 18:35:56	--	Mode ##themadhouse [+ct-s] by services.
+2019-01-24 18:35:56	-->	ChanServ (ChanServ@services.) has joined ##themadhouse
+2019-01-24 18:35:56	--	Mode ##themadhouse [+o ChanServ] by services.
+2019-01-24 18:35:59	--	Channel created on Sun, 23 Dec 2018 08:08:19
+2019-01-24 18:36:07	sai1	 /msg NickServ VERIFY REGISTER gwosix suffrqbqlent
+2019-01-24 18:36:10	sai1	oof
+2019-01-24 18:36:11	sai1	xD
+2019-01-24 18:37:56	--	You are now known as gwosix
+2019-01-24 18:38:09	--	You are now known as gwu
+2019-01-24 18:38:14	--	You are now known as gwosix
+2019-01-24 19:00:24	--	irc: disconnected from server
+2019-01-24 19:00:40	-->	gwu (~gwosix@112.209.186.56) has joined ##themadhouse
+2019-01-24 19:00:40	--	Channel ##themadhouse: 2 nicks (1 op, 0 voices, 1 normal)
+2019-01-24 19:00:41	--	Channel created on Sun, 23 Dec 2018 08:08:19
+2019-01-24 19:01:45	--	irc: disconnected from server
+2019-01-24 19:02:00	-->	gwosix (~gwosix@112.209.186.56) has joined ##themadhouse
+2019-01-24 19:02:00	--	Channel ##themadhouse: 2 nicks (1 op, 0 voices, 1 normal)
+2019-01-24 19:02:01	--	Channel created on Sun, 23 Dec 2018 08:08:19
+2019-01-25 07:22:23	--	irc: disconnected from server
+2019-01-25 07:43:02	-->	gwosix (~gwosix@122.3.47.163) has joined ##themadhouse
+2019-01-25 07:43:02	--	Mode ##themadhouse [+ns] by card.freenode.net
+2019-01-25 07:43:02	--	Channel ##themadhouse: 1 nick (1 op, 0 voices, 0 normals)
+2019-01-25 07:43:02	--	Mode ##themadhouse [-o gwosix] by services.
+2019-01-25 07:43:02	--	Notice(card.freenode.net): *** Notice -- TS for ##themadhouse changed from 1548373385 to 1545552499
+2019-01-25 07:43:02	--	Mode ##themadhouse [+ct-s] by services.
+2019-01-25 07:43:02	-->	ChanServ (ChanServ@services.) has joined ##themadhouse
+2019-01-25 07:43:02	--	Mode ##themadhouse [+o ChanServ] by services.
+2019-01-25 07:43:08	--	Channel created on Sun, 23 Dec 2018 08:08:19

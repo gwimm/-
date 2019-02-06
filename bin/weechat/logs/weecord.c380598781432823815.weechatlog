@@ -1,0 +1,18 @@
+2019-01-31 00:34:13	GitHub	ThanksMrSotarks
+2019-01-31 00:34:13		[ppy/osu-tools] Issue opened: #21 How to use?
+2019-01-31 00:34:13		when I type
+2019-01-31 00:34:13		dotnet PerformanceCalculator.dll
+2019-01-31 00:34:13		into Powershell, it returns with 
+2019-01-31 00:34:13		
+2019-01-31 00:34:13		> No executable found matching command "dotnet-PerformanceCalculator.dll"
+2019-01-31 00:34:13		where do I go from here?
+2019-01-31 00:38:09	GitHub	girantinas
+2019-01-31 00:38:09		[ppy/osu-tools] New comment on issue #21: How to use?
+2019-01-31 00:38:09		Where are you opening the powershell window? It must be used in the ~\PerformanceCalculator\bin\Debug\netcoreapp2.0 folder. In any case, make sure you follow VINXIS' video step by step if you're new to this (which we might want to add to the README for newbies).
+2019-01-31 00:47:20	GitHub	peppy
+2019-01-31 00:47:20		[ppy/osu-tools] New comment on issue #21: How to use?
+2019-01-31 00:47:20		The readme instructions are misleading currently.
+2019-01-31 00:47:20		
+2019-01-31 00:47:20		Please use
+2019-01-31 00:47:20		
+2019-01-31 00:47:20		dotnet run --project PerformanceCalculator

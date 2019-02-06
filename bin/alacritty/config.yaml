@@ -1,0 +1,10 @@
+font:
+  normal:
+    family: scientifica
+    style: Regular
+  bold:
+    family: scientifica
+    style: Regular
+  italic:
+    family: scientifica
+    style: Regular

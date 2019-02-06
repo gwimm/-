@@ -1,0 +1,1039 @@
+2019-01-30 13:30:01	⚉	And polio
+2019-01-30 13:30:09	viz	Didn't know about polio
+2019-01-30 13:30:15	viz	Actually
+2019-01-30 13:30:20	⚉	Huge outbreak in the US. Didn't sound so fun
+2019-01-30 13:30:32	viz	It's only in the US?
+2019-01-30 13:30:49	xent	so basically there is air alchohol in vaccines that makes everyone around you drunk and that's how my cousin died from a drunk driver after she got her first vaccines!! 😭😤😤
+2019-01-30 13:30:59	⚉	The news story was that a few towns in the US had huge polio outbreaks after too many parents refused to vaccinate their children
+2019-01-30 13:31:08	viz	Do you even know how vaccines work
+2019-01-30 13:31:10	⚉	This was about a year ago iirc
+2019-01-30 13:31:19	viz	Oh no
+2019-01-30 13:31:21	viz	That's bad
+2019-01-30 13:31:40	xent	yes but the air alchohol is bad for everyone so polio is a sacrifice
+2019-01-30 13:31:46	⚉	<:thonk:451159467883626500>
+2019-01-30 13:31:55	viz	What
+2019-01-30 13:32:01	viz	You're really ignorant
+2019-01-30 13:32:18	⚉	Considering what some users here have been honestly saying, I think it's probably in the best interest of everyone here that the circlejerk stop
+2019-01-30 13:32:43	viz	I'd be happy if he was circlejerking
+2019-01-30 13:32:44	viz	Tbh
+2019-01-30 13:33:08	viz	Because that amount of stupidity is ducking terrible
+2019-01-30 13:33:22	xent	yes it was bait lol
+2019-01-30 13:38:22	gwosix	alright
+2019-01-30 13:38:31	gwosix	i gotta leave servers for this to be useful
+2019-01-30 13:39:40	davidv7	for what
+2019-01-30 13:39:57	viz	Bitlbee
+2019-01-30 13:40:05	viz	Afaicg
+2019-01-30 13:45:28	gwosix	yeet
+2019-01-30 13:45:30	gwosix	alright
+2019-01-30 13:45:37	gwosix	using weechat on discord
+2019-01-30 13:46:01	gwosix	this breaks all sorts of shit because of all the unicode
+2019-01-30 13:46:05	gwosix	but fuck u
+2019-01-30 13:46:09	gwosix	\n
+2019-01-30 13:46:17	gwosix	hmm
+2019-01-30 13:46:40	Superuser	discord has a few secret features
+2019-01-30 13:46:47	gwosix	alright discord's awful markdown seems to work
+2019-01-30 13:46:50	Superuser	v/few/wef
+2019-01-30 13:47:04	gwosix	like what Superuser?
+2019-01-30 13:47:07	Superuser	https://www.reddit.com/r/discordapp/comments/5ygj2k/didntknowdiscordhadvimlikeeditingsyntax/
+2019-01-30 13:47:45	gwosix	regex
+2019-01-30 13:47:47	gwosix	nice
+2019-01-30 13:47:54	Superuser	i just did it twice lol
+2019-01-30 13:48:21	gwosix	s/nice/this\ doesn't\ very\ useful\ though
+2019-01-30 13:48:35	gwosix	s/nice/this doesn't very useful though
+2019-01-30 13:48:40	gwosix	s/nice/this
+2019-01-30 13:48:43	[kiwmi] pornguy	why do i not get any input in drm <:ree:454820323640999956>
+2019-01-30 13:48:45	Superuser	uhh
+2019-01-30 13:48:59	Superuser	it works for me
+2019-01-30 13:49:03	gwosix	yeet
+2019-01-30 13:49:04	Superuser	even in browser
+2019-01-30 13:49:29	gwosix	oh
+2019-01-30 13:49:33	gwosix	yeah
+2019-01-30 13:49:40	gwosix	it's the client
+2019-01-30 13:49:48	gwosix	why is this shit in the client?
+2019-01-30 13:49:58	gwosix	!
+2019-01-30 13:49:59	[kiwmi] pornguy	you can still send empty messages like this though, since both the client and the server dont check this
+2019-01-30 13:50:10	Superuser	haha lol
+2019-01-30 13:50:24	davidv7	how do you do that
+2019-01-30 13:50:24	gwosix	we need something that's not js garbage
+2019-01-30 13:50:29	Superuser	haha
+2019-01-30 13:50:31	gwosix	regex david
+2019-01-30 13:50:43	gwosix	oh
+2019-01-30 13:50:51	gwosix	\
+2019-01-30 13:50:53	davidv7	im talking about the empty message
+2019-01-30 13:50:54	davidv7	\
+2019-01-30 13:51:02	[kiwmi] pornguy	@davidv7#2315 wriet a message
+2019-01-30 13:51:02		edit it to an empty string. the server doesnt check edits
+2019-01-30 13:51:02		also the client has a bug where sending /nick  actually sends an empty message (and resets your nickname)
+2019-01-30 13:51:09	Superuser	this tbh
+2019-01-30 13:51:12	davidv7	it does
+2019-01-30 13:51:17	davidv7	it deletes the message on an empty string
+2019-01-30 13:51:22	davidv7	test
+2019-01-30 13:51:32	[kiwmi] pornguy	yes
+2019-01-30 13:51:37	[kiwmi] pornguy	thats why you edit it to /nick
+2019-01-30 13:51:43	davidv7	ok
+2019-01-30 13:51:49	Superuser	󠀡󠀡
+2019-01-30 13:51:49	davidv7	ok
+2019-01-30 13:51:53	Superuser	also that works&=^
+2019-01-30 13:51:57	[kiwmi] pornguy	its either the bug in the client or using the api directly
+2019-01-30 13:52:01	[kiwmi] pornguy	@Superuser#1337 thats not empt though
+2019-01-30 13:52:05	Superuser	i know
+2019-01-30 13:52:10	[kiwmi] pornguy	the other one is
+2019-01-30 13:52:20	Superuser	hmmm
+2019-01-30 14:00:27	gwosix	hmmmmmmmmmmmmmmmm
+2019-01-30 14:00:52	⚉	Or presumably any server usecase where you want something that can monitor IRC or whatever and do something when messages come in or automatically respond
+2019-01-30 14:01:55	[kiwmi] pornguy	where does it list the compose key things again?
+2019-01-30 14:02:09	⚉	It's like .XCompose or something iirc
+2019-01-30 14:02:15	⚉	Duck it
+2019-01-30 13:53:52	gwosix	it dies so hard i need to kill the proc with -9
+2019-01-30 13:53:54	gwosix	damn
+2019-01-30 13:53:58	davidv7	im not a beta im alpha as fuck 😤
+2019-01-30 13:54:17	Superuser	canary is alpha
+2019-01-30 13:54:57	davidv7	wish i didnt have to eat food
+2019-01-30 13:54:58	davidv7	im so sick
+2019-01-30 13:55:18	[kiwmi] pornguy	o
+2019-01-30 13:57:24	[kiwmi] pornguy	how can i write a $ without being able to use shift
+2019-01-30 13:57:41	[kiwmi] pornguy	or pipe
+2019-01-30 13:57:47	[kiwmi] pornguy	or anything actually
+2019-01-30 13:58:04	⚉	Add a compose sequence for s/ or something idk
+2019-01-30 13:58:34	davidv7	why did riot send me an email from starboard
+2019-01-30 13:58:35	davidv7	😡
+2019-01-30 13:58:43	⚉	wat
+2019-01-30 13:59:03	⚉	Maybe you enabled some rarted email notifications?
+2019-01-30 13:59:19	⚉	Cause gwu and I were chatting in there earlier
+2019-01-30 13:59:34	gwosix	yeah uwu
+2019-01-30 13:59:51	gwosix	weechat-headless is a thing?
+2019-01-30 13:59:52	gwosix	why?
+2019-01-30 14:00:16	⚉	Reading messages over SSH?
+2019-01-30 14:00:27	gwosix	hmmmmmmmmmmmmmmmm
+2019-01-30 14:00:52	⚉	Or presumably any server usecase where you want something that can monitor IRC or whatever and do something when messages come in or automatically respond
+2019-01-30 14:01:55	[kiwmi] pornguy	where does it list the compose key things again?
+2019-01-30 14:02:09	⚉	It's like .XCompose or something iirc
+2019-01-30 14:02:15	⚉	Duck it
+2019-01-30 14:02:26	gwosix	oh yeet
+2019-01-30 14:02:28	gwosix	alright
+2019-01-30 14:02:35	gwosix	with go.py it's bearable
+2019-01-30 14:02:37	[kiwmi] pornguy	im working on it
+2019-01-30 14:02:49	⚉	Why don't you have a shift key though?
+2019-01-30 14:02:50	gwosix	@pornguy don't work though
+2019-01-30 14:03:08	gwosix	that would work in the bitlbee client...
+2019-01-30 14:03:26	gwosix	alright
+2019-01-30 14:03:37	gwosix	never using the official client again, yeet
+2019-01-30 14:05:11	gwosix	this is really cozy though
+2019-01-30 13:59:03	⚉	Maybe you enabled some rarted email notifications?
+2019-01-30 13:59:19	⚉	Cause gwu and I were chatting in there earlier
+2019-01-30 13:59:34	gwosix	yeah uwu
+2019-01-30 13:59:51	gwosix	weechat-headless is a thing?
+2019-01-30 13:59:52	gwosix	why?
+2019-01-30 14:00:16	⚉	Reading messages over SSH?
+2019-01-30 14:00:27	gwosix	hmmmmmmmmmmmmmmmm
+2019-01-30 14:00:52	⚉	Or presumably any server usecase where you want something that can monitor IRC or whatever and do something when messages come in or automatically respond
+2019-01-30 14:01:55	[kiwmi] pornguy	where does it list the compose key things again?
+2019-01-30 14:02:09	⚉	It's like .XCompose or something iirc
+2019-01-30 14:02:15	⚉	Duck it
+2019-01-30 14:02:26	gwosix	oh yeet
+2019-01-30 14:02:28	gwosix	alright
+2019-01-30 14:02:35	gwosix	with go.py it's bearable
+2019-01-30 14:02:37	[kiwmi] pornguy	im working on it
+2019-01-30 14:02:49	⚉	Why don't you have a shift key though?
+2019-01-30 14:02:50	gwosix	@pornguy don't work though
+2019-01-30 14:03:08	gwosix	that would work in the bitlbee client...
+2019-01-30 14:03:26	gwosix	alright
+2019-01-30 14:03:37	gwosix	never using the official client again, yeet
+2019-01-30 14:05:11	gwosix	this is really cozy though
+2019-01-30 14:06:24	davidv7	Is there a good client for it even?
+2019-01-30 14:06:38	davidv7	When me and viz were trying it out they all sucked
+2019-01-30 14:06:42	davidv7	For matrix
+2019-01-30 14:07:12	⚉	Fractal is good, gwu likes the weechat plugin
+2019-01-30 14:07:28	[kiwmi] pornguy	@OTheB#2311 i do
+2019-01-30 14:07:28		but its not smart enough to make shift key was pressed, but not yet released and dollar sign was pressed into dollarsign, but gives me a 4 because retarded
+2019-01-30 14:07:41	gwosix	the weechat plugin is really minimal
+2019-01-30 14:07:52	gwosix	and it's written in not python
+2019-01-30 14:07:56	gwosix	lua uwu
+2019-01-30 14:08:00	gwosix	lua is nice
+2019-01-30 14:08:07	⚉	If you're just working with small rooms then you really don't need many features
+2019-01-30 14:08:13	gwosix	yeah
+2019-01-30 14:08:31	gwosix	till now i'm just using matrix to talk to OtheB
+2019-01-30 14:08:39	⚉	And starboard
+2019-01-30 14:08:49	gwosix	yeah
+2019-01-30 14:09:37	gwosix	the client side for weecord isn't that nice
+2019-01-30 14:09:45	gwosix	it feels a bit slow and clunky
+2019-01-30 14:10:06	gwosix	even with only a few from th 42 servers left
+2019-01-30 14:10:17	gwosix	and by a few a mean really just 5 servers
+2019-01-30 14:10:30	⚉	hmm
+2019-01-30 14:10:35	gwosix	i'm at 101 channels discord autojoins
+2019-01-30 14:10:57	gwosix	go.py is a fuzzy finder for channels though so it's cool
+2019-01-30 14:11:18	gwosix	and the speed of the client seems to be in no way impeeded upon
+2019-01-30 14:11:25	⚉	I have a couple of servers I could cut off
+2019-01-30 14:11:37	⚉	That would put me on 3
+2019-01-30 14:11:52	yemou	Peen
+2019-01-30 14:11:55	gwosix	uwu
+2019-01-30 14:11:59	gwosix	hi yemou
+2019-01-30 14:12:00	⚉	Boom, one down
+2019-01-30 14:12:13	gwosix	yemou, i'm on tui right now owo
+2019-01-30 14:12:18	⚉	Other one might be a little more tedious
+2019-01-30 14:12:20	yemou	That's cool
+2019-01-30 14:12:27	gwosix	yeah
+2019-01-30 14:12:39	yemou	But can you vc?
+2019-01-30 14:12:41	gwosix	weechat is a lot cooler than i thought...
+2019-01-30 14:12:43	gwosix	nah
+2019-01-30 14:12:49	yemou	Then it's shit
+2019-01-30 14:12:58	gwosix	but i can easily open firefox to do so
+2019-01-30 14:13:06	gwosix	i don't usually vc...
+2019-01-30 14:13:15	⚉	Or VC on mobile
+2019-01-30 14:13:15	yemou	I vc everyday
+2019-01-30 14:13:28	gwosix	yeah, because you have friends q-q
+2019-01-30 14:13:30	⚉	OOOOOOOOOO I wonder if I could connect my interface to a Librem 5...
+2019-01-30 14:13:31	xent	woah go to https://reddit.com/.compact
+2019-01-30 14:13:34	yemou	uwu
+2019-01-30 14:13:55	xent	compact is made for 2010-2014 phones
+2019-01-30 14:14:00	xent	but i like it more
+2019-01-30 14:14:08	gwosix	xent, what the fuck
+2019-01-30 14:14:21	gwosix	xD
+2019-01-30 14:14:26	yemou	https://media.discordapp.net/attachments/361910177961738244/540172946015256576/2fc254b.jpg
+2019-01-30 14:14:33	gwosix	nah but with some css magic you could make that look bearable
+2019-01-31 00:05:33	diamondburned	not
+2019-01-31 00:05:38	natemonster321	: 6 hours, 8
+2019-01-31 00:05:39	natemonster321	<:thonk:451159467883626500>
+2019-01-31 00:05:42	diamondburned	yeah st doesn't do c+v
+2019-01-31 00:05:44	diamondburned	which sucks
+2019-01-31 00:05:45	natemonster321	st works fine for copy and paste
+2019-01-31 00:05:49	natemonster321	tf is wrong with ur config
+2019-01-31 00:05:50	tdeo	1y, 126d, 18h
+2019-01-31 00:05:54	Superuser	how tf does st not support basic shit
+2019-01-31 00:05:57	natemonster321	nathan@nathanGentoo
+2019-01-31 00:05:57		     -odNMMMMMMMMNNmhy+-             -------------------
+2019-01-31 00:05:57		   -yNMMMMMMMMMMMNNNmmdhy+-           OS: Gentoo Base System release 2.6 x86_64
+2019-01-31 00:05:57		 omMMMMMMMMMMMMNmdmmmmddhhy/        Kernel: 4.20.5-gentoo-traps-are-gay
+2019-01-31 00:05:57		 omMMMMMMMMMMMNhhyyyohmdddhhhdo      Uptime: 6 hours, 8 mins
+2019-01-31 00:05:57		.ydMMMMMMMMMMdhs++so/smdddhhhhdm+    Packages: 219 (emerge)
+2019-01-31 00:05:57		 oyhdmNMMMMMMMNdyooydmddddhhhhyhNd.   Shell: zsh 5.7
+2019-01-31 00:05:57		  :oyhhdNNMMMMMMMNNNmmdddhhhhhyymMh   Resolution: 1920x1080, 1920x1080
+2019-01-31 00:05:57		    .:+sydNMMMMMNNNmmmdddhhhhhhmMmy   WM: bspwm
+2019-01-31 00:05:57		       /mMMMMMMNNNmmmdddhhhhhmMNhs:   Theme: oomox-tooPurple [GTK2/3]
+2019-01-31 00:05:57		    oNMMMMMMMNNNmmmddddhhdmMNhs+    Icons: Papirus-Dark [GTK2/3]
+2019-01-31 00:05:57		  sNMMMMMMMMNNNmmmdddddmNMmhs/.      Terminal: st
+2019-01-31 00:05:57		 /NMMMMMMMMNNNNmmmdddmNMNdso:        Terminal Font: Fira Code Retina
+2019-01-31 00:05:57		+MMMMMMMNNNNNmmmmdmNMNdso/-           CPU: Intel i5-6500 (4) @ 3.600GHz
+2019-01-31 00:05:57		yMMNNNNNNNmmmmmNNMmhs+/-             GPU: NVIDIA GeForce GTX 1070
+2019-01-31 00:05:57		/hMMNNNNNNNNMNdhs++/-                GPU: Intel HD Graphics 530
+2019-01-31 00:05:57		/ohdmmddhys+++/:.                   Memory: 2554MiB / 7885MiB
+2019-01-31 00:05:57		  -//////:--.
+2019-01-31 00:05:59	natemonster321	but it does
+2019-01-31 00:06:00	tdeo	lmao
+2019-01-31 00:06:06	natemonster321	<:thonk:451159467883626500>
+2019-01-31 00:06:09	diamondburned	MMMMMMMMMMMMMMMMMMMMM
+2019-01-31 00:06:09	natemonster321	diamond ur pc succ
+2019-01-31 00:06:09	drumsetmonkey	Where’s <@158714260254490625>? In the server!
+2019-01-31 00:06:14	diamondburned	nanithefuck
+2019-01-31 00:06:23	natemonster321	<:lmaothink:501510595615391745>
+2019-01-31 00:06:25	Superuser	why did you copy neofetch?
+2019-01-31 00:06:26	diamondburned	ok nvm i lied
+2019-01-31 00:06:27	diamondburned	it works
+2019-01-31 00:06:27	diamondburned	xd
+2019-01-31 00:06:29	natemonster321	<:lmaothink:501510595615391745>
+2019-01-31 00:06:35	natemonster321	i did it because it was the first thing that came to mind
+2019-01-31 00:06:42	DewWisp	nanithefuck.png.jpg.gif.bmp.pdf.wav.zip.rar
+2019-01-31 00:07:21	phisch	oh boy, the smash piranha is released 🍾
+2019-01-31 00:07:32	natemonster321	yeah i'm a plant main until hoker
+2019-01-31 00:07:34	diamondburned	tf
+2019-01-31 00:07:37	diamondburned	not sure if my bash is slow or not
+2019-01-31 00:07:42	phisch	joker?
+2019-01-31 00:07:45	diamondburned	but I could see it redrawing when I hit enter with 5000fps
+2019-01-31 00:07:53	natemonster321	joker from persona 5
+2019-01-31 00:08:02	natemonster321	first dlc character for smash ultimate, release date TBD
+2019-01-31 00:08:02	phisch	oh fuck
+2019-01-31 00:08:14	gwosix	hey, diamond
+2019-01-31 00:08:22	gwosix	i'm in weechat
+2019-01-31 00:08:25	natemonster321	ok
+2019-01-31 00:08:26	diamondburned	tbh just gonna use 60fps like a gamer
+2019-01-31 00:08:28	diamondburned	ok gwimm
+2019-01-31 00:08:49	natemonster321	hey gwimm you're pretty cool
+2019-01-31 00:11:00	gwosix	yeah, but i don't get any mentions q-q
+2019-01-31 00:11:12	natemonster321	F
+2019-01-31 00:11:12	gwosix	diamondburned: doesn't even work
+2019-01-31 00:11:16	natemonster321	@grimm#2308
+2019-01-31 00:11:24	diamondburned	wdym doesn't even wrrk
+2019-01-31 00:11:25	diamondburned	what doesn't
+2019-01-31 00:11:27	diamondburned	what are you talking about
+2019-01-31 00:11:38	Renzix	in irc thats how you @ people
+2019-01-31 00:11:44	diamondburned	i know
+2019-01-31 00:13:21	natemonster321	shit where's ahrs
+2019-01-31 00:13:29	natemonster321	how do i apply patches to st with portage
+2019-01-31 00:13:38	diamondburned	how do you switch to a bold variant on st
+2019-01-31 00:13:39	diamondburned	<:thonk:451159467883626500>
+2019-01-31 00:13:41	Superuser	wallhaven gives a flippin color palette??
+2019-01-31 00:13:41		hands dowm best wall site ever
+2019-01-31 00:13:44	natemonster321	wdym <:thonk:451159467883626500>
+2019-01-31 00:13:55	Renzix	you put it in /etc/portage/patches/st/
+2019-01-31 00:14:03	Renzix	or something like that
+2019-01-31 00:14:33	Renzix	The same as dwm https://wiki.gentoo.org/wiki/Dwm#Patching
+2019-01-31 00:14:34	diamondburned	v
+2019-01-31 00:14:39	diamondburned	https://media.discordapp.net/attachments/361910177961738244/540323994159546400/unknown.png
+2019-01-31 00:14:46	yemou	i applied a patch to pitivi
+2019-01-31 00:14:49	diamondburned	o
+2019-01-31 00:14:50	diamondburned	what is it
+2019-01-31 00:14:56	diamondburned	green screen?
+2019-01-31 00:15:19	fr3fou	https://media.discordapp.net/attachments/361910177961738244/540324165110988803/5092432125158791184538676489867687890518016_n.png
+2019-01-31 00:15:33	diamondburned	>cringy anime
+2019-01-31 00:16:25	yemou	it was patch so it would compile
+2019-01-31 00:16:25	ym "cp -r" 555	shut up diamond
+2019-01-31 00:16:35	ym "cp -r" 555	😠
+2019-01-31 00:16:39	ym "cp -r" 555	i must protect
+2019-01-31 00:16:40	yemou	anyway
+2019-01-31 00:16:52	yemou	pitivi doesnt output any audio for me
+2019-01-31 00:17:14	gwosix	i'mma try bitlbee as well
+2019-01-31 00:18:07	diamondburned	k ngl
+2019-01-31 00:18:07		https://media.discordapp.net/attachments/361910177961738244/540324868151836672/unknown.png
+2019-01-31 00:18:13	diamondburned	@ym555#1339 protect that airhead idiot who's basically the antagonist of the story?
+2019-01-31 00:18:16	diamondburned	o k a y m a t e
+2019-01-31 00:18:21	ym "cp -r" 555	yes
+2019-01-31 00:18:27	ym "cp -r" 555	she's' fuckin cute
+2019-01-31 00:18:39	ym "cp -r" 555	i haven't even watched the anime
+2019-01-31 00:18:47	diamondburned	i know you haven't
+2019-01-31 00:18:53	yemou	ok im gonna call pitvi shit and download kdenlive <:GWmythicalGhostHug:367722252567052298>
+2019-01-31 00:18:55	diamondburned	you wouldn't have thought that way if you have
+2019-01-31 00:19:29	diamondburned	somehow that sentence sounded wrong
+2019-01-31 00:19:29	diamondburned	<:thonk:451159467883626500>
+2019-01-31 00:19:43	Renzix	watch what
+2019-01-31 00:19:44	Renzix	monkaS
+2019-01-31 00:19:45	diamondburned	>no icon
+2019-01-31 00:19:45		https://media.discordapp.net/attachments/361910177961738244/540325277948051457/unknown.png
+2019-01-31 00:19:47	diamondburned	ok trash tier
+2019-01-31 00:19:47	ym "cp -r" 555	yea lol
+2019-01-31 00:19:52	diamondburned	watch Kaguya-sama
+2019-01-31 00:19:58	ym "cp -r" 555	but i think it was right grammatically
+2019-01-31 00:20:02	diamondburned	it was
+2019-01-31 00:20:10	diamondburned	it just didn't sound right
+2019-01-31 00:20:18	ym "cp -r" 555	yea-
+2019-01-31 00:20:20	Renzix	What did she do
+2019-01-31 00:20:22	Renzix	monkaS
+2019-01-31 00:20:28	ym "cp -r" 555	watch the anime?
+2019-01-31 00:20:32	ym "cp -r" 555	DON"T spoil
+2019-01-31 00:20:35	ym "cp -r" 555	shut diamond
+2019-01-31 00:20:36	diamondburned	okay excluding like 2 or 3 t-
+2019-01-31 00:20:37	diamondburned	no you
+2019-01-31 00:20:48	ym "cp -r" 555	<:GWahreeWeebRage:370265985787101187>
+2019-01-31 00:20:49	diamondburned	i'm not even intentionally spoiling
+2019-01-31 00:20:52	diamondburned	I haven't even finished it yet lmao
+2019-01-31 00:20:52	yemou	chika great
+2019-01-31 00:20:54	Renzix	i have no time
+2019-01-31 00:20:55	Renzix	ree
+2019-01-31 00:20:59	diamondburned	I'm still stuck at the cliffhanger
+2019-01-31 00:21:00	Renzix	i watch anime now
+2019-01-31 00:21:01	ym "cp -r" 555	chika cute <:GWmythicalGhostHug:367722252567052298>
+2019-01-31 00:21:05	yemou	<:GWmythicalGhostHug:367722252567052298>
+2019-01-31 00:21:12	diamondburned	>watch anime
+2019-01-31 00:21:12		>immediate change of mind
+2019-01-31 00:21:14	diamondburned	that'll happen
+2019-01-31 00:21:31	Renzix	I have to finish like 2 series
+2019-01-31 00:21:34	Renzix	before i start that one
+2019-01-31 00:21:44	diamondburned	I want to finish Boogiepop tbh
+2019-01-31 00:21:45	diamondburned	2019 series tho
+2019-01-31 00:21:55	yemou	look
+2019-01-31 00:22:00	yemou	chika eat
+2019-01-31 00:22:00		https://em.wattpad.com/2a408a6a4895e6de9f79e15a8e938a4be47e8a7e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f5865776962524d447652385564673d3d2d3532323739373835332e313532353663386236653165613762633331373435343339323737382e676966
+2019-01-31 00:22:30	diamondburned	>calling her Chika
+2019-01-31 00:22:32	diamondburned	>not Fujiwarwa
+2019-01-31 00:22:37	yemou	eat my ass
+2019-01-31 00:22:38	diamondburned	alright mate
+2019-01-31 00:22:50	yemou	https://media.discordapp.net/attachments/361910177961738244/540326054569443341/unknown.png
+2019-01-31 00:23:07	yemou	can we star this
+2019-01-31 00:23:12	diamondburned	can we do that tho
+2019-01-31 00:23:16	Renzix	no
+2019-01-31 00:23:18	Renzix	white theme
+2019-01-31 00:23:23	Renzix	bad
+2019-01-31 00:23:26	yemou	<:thonkmad:451162399417040897>
+2019-01-31 00:23:26	diamondburned	shut fuck renzix i like ntr
+2019-01-31 00:23:30	Plasma	Fuck dude it's time to commit
+2019-01-31 00:23:35	Plasma	Chisai is gonna be finished
+2019-01-31 00:23:35	Plasma	lmao
+2019-01-31 00:23:39	diamondburned	ccmmit what toaster bath?
+2019-01-31 00:23:40	diamondburned	yes pls
+2019-01-31 00:23:40	yemou	https://media.discordapp.net/attachments/361910177961738244/540326267329970176/unknown.png
+2019-01-31 00:23:42	Renzix	wtf is ntr
+2019-01-31 00:23:45	natemonster321	alright i think i got it
+2019-01-31 00:23:48	Renzix	am i rarted
+2019-01-31 00:24:00	diamondburned	cuckold in english
+2019-01-31 00:24:04	Renzix	o
+2019-01-31 00:24:11	diamondburned	good culture in hentai-language
+2019-01-31 00:24:21	Superuser	uses roboto
+2019-01-31 00:24:37	Renzix	yemou
+2019-01-31 00:24:39	Renzix	come back
+2019-01-31 00:24:42	yemou	no
+2019-01-31 00:24:44	Superuser	out of all those you use robote?
+2019-01-31 00:24:54	Renzix	🍪 🍪 🍪
+2019-01-31 00:24:56	diamondburned	>judging opinions
+2019-01-31 00:24:57	diamondburned	alright fag
+2019-01-31 00:24:57	Renzix	take these
+2019-01-31 00:25:01	diamondburned	Overpass is the best
+2019-01-31 00:25:03	yemou	no <:thonkmad:451162399417040897>
+2019-01-31 00:25:04	diamondburned	any single one of you not using Overpass
+2019-01-31 00:25:09	diamondburned	is a fucking stupid cunt
+2019-01-31 00:25:14	Superuser	never said roboto was bad, but its baisc af
+2019-01-31 00:25:24	diamondburned	your opinions are basic
+2019-01-31 00:25:31	Superuser	your code is basic
+2019-01-31 00:25:34	ym "cp -r" 555	star that shit <:GWoooHikariAngry:381150362624851971>
+2019-01-31 00:25:34	diamondburned	great
+2019-01-31 00:25:39	diamondburned	basic code == great
+2019-01-31 00:25:39	Renzix	NO
+2019-01-31 00:25:42	Renzix	white theme
+2019-01-31 00:25:42	ym "cp -r" 555	YES
+2019-01-31 00:25:47	Renzix	is objectively wrong
+2019-01-31 00:25:51	Renzix	in 99% of cases
+2019-01-31 00:25:54	ym "cp -r" 555	but it is funny
+2019-01-31 00:25:57	diamondburned	if that shit is starred i will literally put my dick in ym's anus
+2019-01-31 00:25:58	Superuser	this ^
+2019-01-31 00:25:58	ym "cp -r" 555	<:ree:454820323640999956>
+2019-01-31 00:26:23	diamondburned	https://media.discordapp.net/attachments/361910177961738244/540326948748918785/unknown.png
+2019-01-31 00:26:25	ym "cp -r" 555	@diamondburned#4507 are you sure that's what is gonna happen? 😉
+2019-01-31 00:26:28	diamondburned	fuck yeah
+2019-01-31 00:26:38	ym "cp -r" 555	gay
+2019-01-31 00:26:45	ym "cp -r" 555	very
+2019-01-31 00:27:17	diamondburned	no shit
+2019-01-31 00:27:24	diamondburned	you think I didn't know that?
+2019-01-31 00:27:30	diamondburned	<:thonkcerned:518744193569521679>
+2019-01-31 00:27:48	yemou	https://media.discordapp.net/attachments/361910177961738244/540327306602741779/lmao2.mp4
+2019-01-31 00:28:00	Renzix	ill star that
+2019-01-31 00:28:08	Renzix	<:ree:454820323640999956>
+2019-01-31 00:28:13	yemou	he said he will star it
+2019-01-31 00:28:18	Renzix	<:ree:454820323640999956>
+2019-01-31 00:28:19	Renzix	<:ree:454820323640999956>
+2019-01-31 00:28:20	Renzix	<:ree:454820323640999956>
+2019-01-31 00:28:22	yemou	gotcha \😎
+2019-01-31 00:29:37	yemou	2nd account time
+2019-01-31 00:29:44	Renzix	D:
+2019-01-31 00:29:48	ym "cp -r" 555	😎
+2019-01-31 00:29:50	Renzix	thats against discord policy
+2019-01-31 00:29:51	Renzix	D:
+2019-01-31 00:29:54	arskiy	The mods can get video again on the log, right?
+2019-01-31 00:29:56	yemou	i dont care
+2019-01-31 00:29:58	ym "cp -r" 555	discord gay
+2019-01-31 00:30:02	natemonster321	YEET got scrollback working
+2019-01-31 00:30:02	ym "cp -r" 555	@natemonster321#7520 star
+2019-01-31 00:30:05	ym "cp -r" 555	STAR
+2019-01-31 00:30:06	natemonster321	star what
+2019-01-31 00:30:14	diamondburned	nothing
+2019-01-31 00:30:14	god	@Renzix#7867 pee pee head
+2019-01-31 00:30:24	natemonster321	ok i starred
+2019-01-31 00:30:25	ym "cp -r" 555	the scrot above
+2019-01-31 00:30:26	diamondburned	the only god I know
+2019-01-31 00:30:29	natemonster321	diamond i hope you're ready to eat
+2019-01-31 00:30:31	ym "cp -r" 555	no fuk
+2019-01-31 00:30:33	ym "cp -r" 555	not that one
+2019-01-31 00:30:36	diamondburned	https://tenor.com/vBpl.gif
+2019-01-31 00:30:38	ym "cp -r" 555	FUK
+2019-01-31 00:30:47	ym "cp -r" 555	that backfired
+2019-01-31 00:31:16	ym "cp -r" 555	i should watch the melancholy of whatever
+2019-01-31 00:31:18	natemonster321	scrollback gang kek
+2019-01-31 00:31:20	yemou	https://media.discordapp.net/attachments/361910177961738244/540328190535663648/received_2141240209425410.mp4
+2019-01-31 00:31:49	diamondburned	>mfw accidental message gets starred instead of the real gay one so people are mislead
+2019-01-31 00:31:50	diamondburned	<:GWqlabsFeelsFunnyMan:398950861361119233>
+2019-01-31 00:32:03	natemonster321	i starred both anyway <:lmaothink:501510595615391745>
+2019-01-31 00:32:31	Renzix	Okay
+2019-01-31 00:32:41	Renzix	I need 500 points by tomorrow
+2019-01-31 00:32:56	natemonster321	itadakimassu gayboy
+2019-01-31 00:33:09	ym "cp -r" 555	<:wow:391457911840178178>
+2019-01-31 00:33:48	diamondburned	lol fuck
+2019-01-31 00:33:56	natemonster321	tfw went back to alacritty since comfy
+2019-01-31 00:33:57	natemonster321	<:lmaothink:501510595615391745>
+2019-01-31 00:34:04	diamondburned	tfw be nate retard
+2019-01-31 00:34:07	natemonster321	and lo, nothing has changed
+2019-01-31 00:34:14	natemonster321	tfw still using shitty opengl meme terminal
+2019-01-31 00:34:22	natemonster321	rust too
+2019-01-31 00:34:44	Renzix	I mean
+2019-01-31 00:34:44	Superuser	opengl meme terminal?
+2019-01-31 00:34:48	Renzix	if you just want comfy
+2019-01-31 00:34:54	Renzix	just use xfce4-terminal
+2019-01-31 00:35:00	Renzix	and be lazy
+2019-01-31 00:35:12	Superuser	what are the advantages of alacritty?
+2019-01-31 00:35:26	Renzix	Alacritty https://github.com/jwilm/alacritty
+2019-01-31 00:35:33	Superuser	yea xfce4 apps a pretty good
+2019-01-31 00:35:44	Renzix	rust+opengl+yml config file pretty much
+2019-01-31 00:36:17	Renzix	o and cross platform
+2019-01-31 00:36:42	Renzix	I never tried in in windows tho
+2019-01-31 00:36:47	Renzix	and macOS doesnt run it well
+2019-01-31 00:36:50	diamondburned	nah hyper's prob better
+2019-01-31 00:36:54	diamondburned	on windows
+2019-01-31 00:36:57	Superuser	no just no
+2019-01-31 00:37:01	diamondburned	no cure for shit font config
+2019-01-31 00:37:02	Superuser	fuck hyper
+2019-01-31 00:37:23	Superuser	who wants a whole js terminal +electron
+2019-01-31 00:37:31	natemonster321	except on windows since it's the only decent one there <:lmaothink:501510595615391745>
+2019-01-31 00:38:08	Renzix	what else r u gonna use on windows tho
+2019-01-31 00:38:13	Superuser	hyper is on like every package manager lol
+2019-01-31 00:38:57	natemonster321	ok time to just use hyper <:lmaothink:501510595615391745>
+2019-01-31 00:39:00	Renzix	Im actually curious now to see how alacritty works in windows
+2019-01-31 00:39:02	natemonster321	since st is too minimal to be usable
+2019-01-31 00:39:08	natemonster321	and alacritty is too meme
+2019-01-31 00:39:08	Superuser	https://github.com/cmderdev/cmder <:thinkingsuicide:338804980506951681>
+2019-01-31 00:39:13	natemonster321	so just go further in meme <:lmaothink:501510595615391745>
+2019-01-31 00:39:15	Renzix	thats allright
+2019-01-31 00:39:15	diamondburned	shit font rendering
+2019-01-31 00:39:19	Renzix	but still not the best
+2019-01-31 00:39:44	Superuser	is kitty a meme too
+2019-01-31 00:39:50	natemonster321	yeah
+2019-01-31 00:39:51	diamondburned	let's see
+2019-01-31 00:39:54	diamondburned	- [x] Python
+2019-01-31 00:39:55	diamondburned	yes
+2019-01-31 00:39:55	Renzix	kitty is fine
+2019-01-31 00:39:56	natemonster321	and the dev is actually an asshole
+2019-01-31 00:39:59	Superuser	i know
+2019-01-31 00:40:00	Renzix	its c++
+2019-01-31 00:40:02	Renzix	wat
+2019-01-31 00:40:03	radxix	hello friends
+2019-01-31 00:40:03	natemonster321	no
+2019-01-31 00:40:05	natemonster321	it's C
+2019-01-31 00:40:07	natemonster321	but it still sucks
+2019-01-31 00:40:07	Superuser	its python
+2019-01-31 00:40:07	natemonster321	iirc
+2019-01-31 00:40:10	diamondburned	it's python m9
+2019-01-31 00:40:11	natemonster321	python + C
+2019-01-31 00:40:16	natemonster321	it's both
+2019-01-31 00:40:26	Renzix	o
+2019-01-31 00:40:28	natemonster321	C for low-level iirc, and python for high level shit
+2019-01-31 00:40:28	Renzix	it is
+2019-01-31 00:40:30	natemonster321	or something like that
+2019-01-31 00:40:34	Renzix	thats not that bad
+2019-01-31 00:40:35	Renzix	tho
+2019-01-31 00:40:38	diamondburned	but it has a shit ton of python to qualify it's made with python
+2019-01-31 00:40:40	natemonster321	it's still python
+2019-01-31 00:40:46	natemonster321	a lot of it
+2019-01-31 00:40:46	diamondburned	if I use a cgo binding for opengl, and C is most of my stuff
+2019-01-31 00:40:50	diamondburned	you can't call it C
+2019-01-31 00:41:13	natemonster321	ngl i think i'll just be omega lazy and use xfce term or smth
+2019-01-31 00:41:16	natemonster321	st gae
+2019-01-31 00:41:34	radxix	frick you friend
+2019-01-31 00:41:35	Renzix	urxvt is also fine
+2019-01-31 00:41:40	natemonster321	urxvt gae
+2019-01-31 00:41:41	diamondburned	urxvt shit
+2019-01-31 00:41:44	Renzix	ree
+2019-01-31 00:41:46	natemonster321	i'm never touching that shit
+2019-01-31 00:41:56	natemonster321	what's proper font fallbacks? oh yeah that doesn't exist
+2019-01-31 00:42:01	natemonster321	neither does true color
+2019-01-31 00:42:05	natemonster321	oh and want copy and paste?
+2019-01-31 00:42:06	natemonster321	haha
+2019-01-31 00:42:09	natemonster321	PERL FAGGOT
+2019-01-31 00:42:38	diamondburned	tbh
+2019-01-31 00:42:49	diamondburned	i want a dream distro without a c compiler, python, perl or any of that bs
+2019-01-31 00:42:51	diamondburned	just binaries
+2019-01-31 00:43:00	Renzix	Y no bsd
+2019-01-31 00:43:07	natemonster321	>no compiler
+2019-01-31 00:43:09	diamondburned	idk tbh lul
+2019-01-31 00:43:13	Renzix	bsd has clang
+2019-01-31 00:43:16	Renzix	but
+2019-01-31 00:43:20	Renzix	thats about it
+2019-01-31 00:43:21	Renzix	i think
+2019-01-31 00:44:17	arskiy	Have you tried something like LfS?
+2019-01-31 00:44:18	diamondburned	wb open
+2019-01-31 00:44:24	diamondburned	>lfs
+2019-01-31 00:44:24		too lazy
+2019-01-31 00:44:27	arskiy	lul
+2019-01-31 00:44:32	arskiy	I actually built one
+2019-01-31 00:44:36	arskiy	in december
+2019-01-31 00:44:51	arskiy	but am too much of a debian pleb to acually use it everyday
+2019-01-31 00:45:14	arskiy	one week to compile everything
+2019-01-31 00:45:14	Seance	It's <@102934585247039488>! Praise the sun! \[T]/
+2019-01-31 00:46:14	arskiy	you actually need gcc, perl and python to get LfS working
+2019-01-31 00:46:17	Seance	so y'all, I got a dumb question. Why doesn't neofetch need root to get the output of lspci -mm
+2019-01-31 00:46:30	Seance	when the equivalent command outside of neofetch does need it
+2019-01-31 00:46:34	diamondburned	you don't need root for lspci -mm
+2019-01-31 00:46:36	diamondburned	<:thonk:451159467883626500>
+2019-01-31 00:46:49	diamondburned	v
+2019-01-31 00:46:51	arskiy	just tested
+2019-01-31 00:46:52	diamondburned	https://media.discordapp.net/attachments/361910177961738244/540332103448002562/unknown.png
+2019-01-31 00:46:53	arskiy	can confirm
+2019-01-31 00:46:58	diamondburned	fuck I just realized st doesn't have tabs
+2019-01-31 00:46:59	natemonster321	wtf why does like
+2019-01-31 00:47:01	diamondburned	gnome terminal time
+2019-01-31 00:47:03	diamondburned	<:GWsoraeDabmoji:407618965112619028>
+2019-01-31 00:47:08	natemonster321	no terminal have terminal padding options?
+2019-01-31 00:47:08	ym "cp -r" 555	or tabbed
+2019-01-31 00:47:09	Seance	Ah, must be a quirk of my distro
+2019-01-31 00:47:11	Superuser	lspci needs root in certain distros
+2019-01-31 00:47:12	diamondburned	external bin
+2019-01-31 00:47:13	diamondburned	bloat
+2019-01-31 00:47:13	arskiy	https://media.discordapp.net/attachments/361910177961738244/540332193835253780/unknown.png
+2019-01-31 00:47:14	ym "cp -r" 555	tabbed works pretty well
+2019-01-31 00:47:17	Renzix	why tf adds padding
+2019-01-31 00:47:21	Superuser	kitty has a margon option
+2019-01-31 00:47:22	Renzix	on the inside of a terminal
+2019-01-31 00:47:27	ym "cp -r" 555	nah it isn't bloat because alot of applications can use it
+2019-01-31 00:47:34	diamondburned	i'd prob only use it for st tbh
+2019-01-31 00:47:38	ym "cp -r" 555	well a lot
+2019-01-31 00:47:46	Renzix	just use tmux
+2019-01-31 00:47:47	ym "cp -r" 555	nothing implements the protocol lmao
+2019-01-31 00:47:48	Renzix	or somthing
+2019-01-31 00:47:49	ym "cp -r" 555	<:GWczeAngryCry:402867151465086981>
+2019-01-31 00:47:56	Renzix	good to learn
+2019-01-31 00:48:01	arskiy	but still
+2019-01-31 00:48:03	Plasma	What’s the point of LFS?
+2019-01-31 00:48:07	steamport	hey guys
+2019-01-31 00:48:09	Renzix	To make your own distro
+2019-01-31 00:48:11	Renzix	wdym
+2019-01-31 00:48:12	arskiy	being gay and wasting time
+2019-01-31 00:48:13	natemonster321	lfs is gentoo but the next level
+2019-01-31 00:48:14	Plasma	But why
+2019-01-31 00:48:14	Superuser	i might add like 5 pixels cause i have a large screen, but sometimes the text is a little to close to the borders
+2019-01-31 00:48:16	arskiy	as someone who made one
+2019-01-31 00:48:18	steamport	i made a script that cowsays a cat fact when i open a terminal
+2019-01-31 00:48:21	natemonster321	the gayest level
+2019-01-31 00:48:28	Renzix	It exists mainly for knoledge purposes
+2019-01-31 00:48:30	steamport	curl -s https://catfact.ninja/fact | jq '.fact' | cowsay -f catfence
+2019-01-31 00:48:35	arskiy	literally 15 hours to compile gcc
+2019-01-31 00:48:37	Turquoise	i made a script that plays 2048
+2019-01-31 00:48:41	arskiy	FUCKING 15 HOURS
+2019-01-31 00:48:44	Turquoise	should i commit sudoky
+2019-01-31 00:48:50	steamport	/ "A cat has more bones than a human;  \
+2019-01-31 00:48:50		\ humans have 206, and the cat - 230." /
+2019-01-31 00:48:50		 -------------------------------------- 
+2019-01-31 00:48:50		       \     *     ,MMM8&&&.            *
+2019-01-31 00:48:50		                  MMMM88&&&&&    .
+2019-01-31 00:48:50		        \        MMMM88&&&&&&&
+2019-01-31 00:48:50		     *           MMM88&&&&&&&&
+2019-01-31 00:48:50		         \       MMM88&&&&&&&&
+2019-01-31 00:48:50		                 'MMM88&&&&&&'
+2019-01-31 00:48:50		          \        'MMM8&&&'      *
+2019-01-31 00:48:50		          |\___/|
+2019-01-31 00:48:50		         =) oYo (=            .              '
+2019-01-31 00:48:50		          \  ^  /
+2019-01-31 00:48:50		           )=*=(       *
+2019-01-31 00:48:50		          /     \
+2019-01-31 00:48:50		          |     |
+2019-01-31 00:48:50		         /| | | |\
+2019-01-31 00:48:50		         \| | |_|/\
+2019-01-31 00:48:50		  _/\_/\_//_// ___/\_/\_/\_/\_/\_/\_/\_/\_/\_
+2019-01-31 00:48:50		  |  |  |  | \_) |  |  |  |  |  |  |  |  |  |
+2019-01-31 00:48:50		  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+2019-01-31 00:48:50		  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |     
+2019-01-31 00:48:50		  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+2019-01-31 00:48:50		  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+2019-01-31 00:48:51	Seance	I was tooling around looking through how neofetch handles fetching GPU info
+2019-01-31 00:48:59	diamondburned	>using jq for a simple json
+2019-01-31 00:49:08	Turquoise	> using jq
+2019-01-31 00:49:12	Seance	and uses awk to parse    lspci -mm with shell expansion
+2019-01-31 00:49:15	arskiy	oh c'mon
+2019-01-31 00:49:19	arskiy	jq is nice
+2019-01-31 00:49:21	diamondburned	| cut -d\" -f4
+2019-01-31 00:49:24	diamondburned	jq is bloat
+2019-01-31 00:49:26	Superuser	oof had to compile libc++ just for discord
+2019-01-31 00:49:29	steamport	@diamondburned#4507 it's not one entry
+2019-01-31 00:49:30	arskiy	very handy when dealing with apis
+2019-01-31 00:49:32	Turquoise	jq is bloated and slow
+2019-01-31 00:49:35	steamport	@Superuser#1337 laughs in flatpak
+2019-01-31 00:49:36	natemonster321	the only long part on libc++ are the tess
+2019-01-31 00:49:39	diamondburned	but all you need is fact
+2019-01-31 00:49:40	diamondburned	and it works
+2019-01-31 00:49:40	natemonster321	you can disable those
+2019-01-31 00:49:45	Superuser	flatpaks are bloated
+2019-01-31 00:49:45	natemonster321	with a flag iirc
+2019-01-31 00:49:49	steamport	@diamondburned#4507 yes but jq lets me just get the fact
+2019-01-31 00:49:51	Superuser	and im not on arch anymore
+2019-01-31 00:49:52	diamondburned	you don't need length
+2019-01-31 00:49:54	diamondburned	so?
+2019-01-31 00:49:56	diamondburned	this also does
+2019-01-31 00:50:02	diamondburned	
+2019-01-31 00:50:02		hanaharu ~/Scripts/xst/ master curl -s https://catfact.ninja/fact | cut -d\" -f4
+2019-01-31 00:50:02		The ancestor of all domestic cats is the African Wild Cat which still exists today.
+2019-01-31 00:50:02		
+2019-01-31 00:50:06	diamondburned	you know how json works man
+2019-01-31 00:50:18	steamport	oh wow
+2019-01-31 00:50:20	steamport	it works?
+2019-01-31 00:50:23	steamport	huh
+2019-01-31 00:50:24	Turquoise	why not some set magic @diamondburned#4507
+2019-01-31 00:50:24	diamondburned	yeah
+2019-01-31 00:50:27	steamport	i've never messed with cut
+2019-01-31 00:50:29	diamondburned	because im lazy
+2019-01-31 00:50:30	Turquoise	you don't even need cut
+2019-01-31 00:50:33	diamondburned	i could if it's in a script
+2019-01-31 00:50:35	Turquoise	thonking
+2019-01-31 00:50:42	Turquoise	works in your cli as well
+2019-01-31 00:50:50	diamondburned	yeah but that's h0m0
+2019-01-31 00:51:02	Turquoise	doesn't prevent you from being gay
+2019-01-31 00:51:04	diamondburned	actually let's try
+2019-01-31 00:51:06	diamondburned	not set
+2019-01-31 00:51:07	Turquoise	see
+2019-01-31 00:51:08	diamondburned	but arrays
+2019-01-31 00:51:09	Turquoise	see
+2019-01-31 00:51:12	diamondburned	fuk of m9
+2019-01-31 00:51:15	Turquoise	you are literally gay
+2019-01-31 00:51:24	steamport	@diamondburned#4507 i made a bash script that compiles a KSP mod for 4 seperate versions
+2019-01-31 00:51:38	steamport	dynamically, based on environmental variables
+2019-01-31 00:51:42	Turquoise	imagine writing shell scripts
+2019-01-31 00:51:44	Turquoise	in 2019
+2019-01-31 00:51:45	Turquoise	ahaha
+2019-01-31 00:51:45	diamondburned	bash
+2019-01-31 00:51:45		hanaharu ~/Scripts/xst/ master curl -s https://catfact.ninja/fact | cut -d\" -f4
+2019-01-31 00:51:45		The ancestor of all domestic cats is the African Wild Cat which still exists today.
+2019-01-31 00:51:45		
+2019-01-31 00:51:47	diamondburned	fuck
+2019-01-31 00:51:50	diamondburned	bash
+2019-01-31 00:51:50		hanaharu ~/Scripts/xst/ master IFS='"' a=( $(curl -s https://catfact.ninja/fact) )
+2019-01-31 00:51:50		hanaharu ~/Scripts/xst/ master ech^C
+2019-01-31 00:51:50		hanaharu ~/Scripts/xst/ master printf^C
+2019-01-31 00:51:50		hanaharu ~/Scripts/xst/ master echo $a
+2019-01-31 00:51:50		{
+2019-01-31 00:51:50		hanaharu ~/Scripts/xst/ master echo ${a[3]}
+2019-01-31 00:51:50		A cat can jump up to five times its own height in a single bound.
+2019-01-31 00:51:50		
+2019-01-31 00:51:51	diamondburned	pure bash
+2019-01-31 00:51:53	diamondburned	<:GWsoraeDabmoji:407618965112619028>
+2019-01-31 00:51:59	Turquoise	yeboy
+2019-01-31 00:52:01	steamport	and yes my build script uses IFS hackery
+2019-01-31 00:52:08	arskiy	cries in fff
+2019-01-31 00:52:15	steamport	since apparently IFS isn't meant to be used as a string.split
+2019-01-31 00:52:22	Turquoise	why not
+2019-01-31 00:52:28	Turquoise	fuck haters
+2019-01-31 00:52:36	diamondburned	^
+2019-01-31 00:52:41	diamondburned	fuck read -ad
+2019-01-31 00:52:42	arskiy	if someone here actually wants to build a LfS system, here's a good host system: https://github.com/xros/Breath_OS
+2019-01-31 00:52:44	diamondburned	that's weak energy
+2019-01-31 00:52:52	Turquoise	well sh doesn't have read -d
+2019-01-31 00:52:57	Turquoise	so you don't have a choice
+2019-01-31 00:52:57	diamondburned	sh is weak energy
+2019-01-31 00:52:58	diamondburned	<:GWsoraeDabmoji:407618965112619028>
+2019-01-31 00:53:01	Turquoise	like you
+2019-01-31 00:53:05	diamondburned	okay pal
+2019-01-31 00:53:09	Turquoise	literally gay
+2019-01-31 00:53:20	Turquoise	https://media.discordapp.net/attachments/361910177961738244/540333730410004510/2019-01-31_01-53-15.png
+2019-01-31 00:53:20	diamondburned	if you use sh you might as well pass this into perl to parse json
+2019-01-31 00:53:20	diamondburned	gay
+2019-01-31 00:53:28	Turquoise	nah
+2019-01-31 00:53:31	Turquoise	pass into scheme
+2019-01-31 00:53:33	Turquoise	<:roodab:479143304588689423>
+2019-01-31 00:53:50	Renzix	i agree
+2019-01-31 00:53:52	diamondburned	you'd have a brain smaller than a micron to use sh tbh
+2019-01-31 00:53:59	diamondburned	for anything except running commands in chain
+2019-01-31 00:54:01	steamport	also
+2019-01-31 00:54:06	Turquoise	https://media.discordapp.net/attachments/361910177961738244/540333924275060747/2019-01-31_01-53-59.png
+2019-01-31 00:54:08	Turquoise	tfw
+2019-01-31 00:54:11	steamport	why is betterdiscordctl not detecting my flatpak Discord install
+2019-01-31 00:54:12	Turquoise	i may have some sh issues
+2019-01-31 00:54:16	steamport	even tho i'm using the --flatpak option
+2019-01-31 00:54:17	diamondburned	because it's flatpak
+2019-01-31 00:54:29	diamondburned	and all the container bs like fp/snap are shit
+2019-01-31 00:54:38	steamport	it literally has a --flatpak option
+2019-01-31 00:54:43	steamport	and a --snap option
+2019-01-31 00:54:44	diamondburned	yeah but it's flatpak
+2019-01-31 00:54:46	Renzix	1 why are you using flatpak
+2019-01-31 00:54:47	diamondburned	like that'll work
+2019-01-31 00:55:04	arskiy	@natemonster321#7520 What are the actual pros from gentoo? aside from the elitism, memes and gay energy
+2019-01-31 00:55:13	steamport	@Renzix#7867 you can't compile discord client from source
+2019-01-31 00:55:15	Turquoise	it's minimal and flexible
+2019-01-31 00:55:16	Renzix	You do everything
+2019-01-31 00:55:16	Turquoise	i guess
+2019-01-31 00:55:16	diamondburned	light
+2019-01-31 00:55:28	diamondburned	you can customize your kernel
+2019-01-31 00:55:30	Renzix	Its like if LFS was viable
+2019-01-31 00:55:32	Seance	do you need more pros than that
+2019-01-31 00:55:32	diamondburned	which tbh is dope as fucking fuck
+2019-01-31 00:55:32	natemonster321	gentoo is extremely customizable
+2019-01-31 00:55:36	steamport	gentoo is like 1% faster due to GCC optimizations or whatever
+2019-01-31 00:55:40	diamondburned	lmao no
+2019-01-31 00:55:42	Turquoise	gentoio isn't actually that hard to be honest
+2019-01-31 00:55:45	diamondburned	not if you're not an idiot
+2019-01-31 00:55:46	natemonster321	use flags are basically analagous to disabling features of programs at compile time
+2019-01-31 00:55:50	Turquoise	you just have to bother with the install process
+2019-01-31 00:55:52	diamondburned	because I have to customize my kernel on Arch, and it was a fucking pain in t he ass
+2019-01-31 00:55:53	steamport	#!/bin/bash
+2019-01-31 00:55:53		IFS=' ' read -r -a _KSPVERS <<< "$KSPVERS"
+2019-01-31 00:55:53		IFS=' ' read -r -a _KSPBINS <<< "$KSPBINS"
+2019-01-31 00:55:53		for element in "${!_KSPVERS[@]}"
+2019-01-31 00:55:53		do
+2019-01-31 00:55:53		    rm -rf "src/DLLs"
+2019-01-31 00:55:53		    current_kspvr="${_KSPVERS[$element]}"
+2019-01-31 00:55:53		    current_kspbin="${_KSPBINS[$element]}"
+2019-01-31 00:55:53		    echo "Building for $current_kspvr / $current_kspbin"
+2019-01-31 00:55:53		    filename="KSP-$current_kspvr.7z"
+2019-01-31 00:55:53		    wget "https://img.steamport.xyz/$filename"
+2019-01-31 00:55:53		    mkdir "src/DLLs"
+2019-01-31 00:55:53		    7za x $filename -osrc/DLLs -pgQn337XZBEFxzFuVwzKgc27ehZo7XLz485hh3erqF9
+2019-01-31 00:55:53		    bash "buildscripts/Travis/avc_to_assembly.sh"
+2019-01-31 00:55:53		    msbuild /p:DefineConstants="KSP${current_kspbin}" Kerbalism.sln /t:Build /p:Configuration="Release"
+2019-01-31 00:55:53		    /bin/cp -rf "src/KerbalismBootstrap/obj/Release/KerbalismBootstrap.dll" "GameData/Kerbalism/KerbalismBootstrap.dll"
+2019-01-31 00:55:53		    /bin/cp -rf "src/Kerbalism/obj/Release/Kerbalism.dll" "GameData/Kerbalism/Kerbalism${current_kspbin}.bin"
+2019-01-31 00:55:53		    rm -rf $filename
+2019-01-31 00:55:53		done
+2019-01-31 00:55:54	natemonster321	so if you never use some obscure feature
+2019-01-31 00:55:58	natemonster321	don't even need to install it
+2019-01-31 00:55:59	steamport	there's the build script
+2019-01-31 00:56:04	diamondburned	>do on new line
+2019-01-31 00:56:07	diamondburned	okay buddy retard
+2019-01-31 00:56:14	arskiy	oh ok, seems pretty nice
+2019-01-31 00:56:17	natemonster321	the huge thing about gentoo is that it's flexible and can be as minimal or as bloated as you want it to be
+2019-01-31 00:56:26	diamondburned	all i care is the kernel tbh
+2019-01-31 00:56:30	steamport	i use linux-ck
+2019-01-31 00:56:33	diamondburned	my kernel prob has 100 patches on it
+2019-01-31 00:56:36	diamondburned	mine has more patches than ck lul
+2019-01-31 00:56:38	diamondburned	ck is one of it
+2019-01-31 00:56:44	Turquoise	i use some meme kernel
+2019-01-31 00:56:45	diamondburned	but i went even further
+2019-01-31 00:56:45	natemonster321	+ it's really easy to use custom kernels, customized ebuilds (compile recipes basically) and fun shit like that
+2019-01-31 00:56:47	Renzix	I like to give the comparison why do we use binary distros assuming i dont care about speed of compile time
+2019-01-31 00:56:53	Turquoise	Linux turquoise 4.20.5-zen1-owo-what-s-this #1 ZEN SMP Mon Jan 28 17:45:31 CET 2019 x86_64 Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz GenuineIntel GNU/Linux
+2019-01-31 00:56:53		
+2019-01-31 00:56:54	Turquoise	ayy
+2019-01-31 00:56:56	arskiy	that breath_os that i linked earlier is literally an iso of a clean install of LfS. you can test it if you want, it's 100% viable too
+2019-01-31 00:56:56	steamport	@diamondburned#4507 what other patches
+2019-01-31 00:57:05	diamondburned	rt, bfq (though I use muqss)
+2019-01-31 00:57:10	diamondburned	disabled some drivers and the bs
+2019-01-31 00:57:14	diamondburned	and something else i forgot lel
+2019-01-31 00:57:25	arskiy	it's just a pain in the ass to install X11
+2019-01-31 00:57:28	steamport	Linux roomba 4.20.5-1-ck #1 SMP PREEMPT Wed Jan 30 18:21:35 EST 2019 x86_64 unknown unknown GNU/Linux
+2019-01-31 00:57:37	diamondburned	https://media.discordapp.net/attachments/361910177961738244/540334807599546368/unknown.png
+2019-01-31 00:57:38	Turquoise	smol dick energy
+2019-01-31 00:57:58	diamondburned	not gonna recompile my kernel to fix the repetitive name
+2019-01-31 00:57:58	diamondburned	kek
+2019-01-31 00:58:03	diamondburned	arch's already takes 5 hours
+2019-01-31 00:58:05	diamondburned	fuck that bloated shit
+2019-01-31 00:58:06	natemonster321	i'm going to recompile to change the name now
+2019-01-31 00:58:09	diamondburned	tried my best to debloat it
+2019-01-31 00:58:10	diamondburned	epic failed
+2019-01-31 00:58:11	steamport	imagine not using ccache
+2019-01-31 00:58:11	natemonster321	hmm
+2019-01-31 00:58:14	natemonster321	i'm taking suggestions
+2019-01-31 00:58:19	natemonster321	what should i name my kernel
+2019-01-31 00:58:23	diamondburned	4.20-pothous
+2019-01-31 00:58:28	Turquoise	whatever trap is in your pfp
+2019-01-31 00:58:28	steamport	^
+2019-01-31 00:58:28	natemonster321	no thanks that's dumb
+2019-01-31 00:58:31	Renzix	cornal
+2019-01-31 00:58:34	natemonster321	i was thinking that actually
+2019-01-31 00:58:36	diamondburned	okay tf
+2019-01-31 00:58:38	diamondburned	gimme that pfp
+2019-01-31 00:58:41	steamport	Linux-popcorn-cornal
+2019-01-31 00:58:41	natemonster321	just naming it alice haoge or smth
+2019-01-31 00:58:46	steamport	or name it joe
+2019-01-31 00:58:55	diamondburned	>ching chong
+2019-01-31 00:58:56	diamondburned	okay
+2019-01-31 00:58:56	natemonster321	only 3d trap i've found and like so far is alice haoge uwu
+2019-01-31 00:59:12	Renzix	tfw you wanna look that up
+2019-01-31 00:59:13	Renzix	but
+2019-01-31 00:59:15	Turquoise	i just googled and
+2019-01-31 00:59:17	Renzix	you dont want to
+2019-01-31 00:59:17	Turquoise	what the fuck
+2019-01-31 00:59:20	Turquoise	like
+2019-01-31 00:59:21	Turquoise	how
+2019-01-31 00:59:25	natemonster321	yeah
+2019-01-31 00:59:36	diamondburned	k
+2019-01-31 00:59:36		https://media.discordapp.net/attachments/361910177961738244/540335308118556700/unknown.png
+2019-01-31 00:59:44	steamport	hey question
+2019-01-31 00:59:44	diamondburned	also haoge is not a trap
+2019-01-31 00:59:45	diamondburned	fuck you
+2019-01-31 00:59:47	diamondburned	you suck
+2019-01-31 00:59:50	natemonster321	yes it is <:thonk:451159467883626500>
+2019-01-31 00:59:51	steamport	does IE8 work on Wine 4.0-rcWhatever
+2019-01-31 00:59:53	diamondburned	w0t
+2019-01-31 00:59:54	natemonster321	alice haoge is a trap
+2019-01-31 00:59:59	diamondburned	where
+2019-01-31 01:00:05	diamondburned	traps shouldn't have a bust <:GWmythicalThonkCool:367331557100224522>
+2019-01-31 01:00:11	Turquoise	<:thonk:451159467883626500>
+2019-01-31 01:00:14	Turquoise	<:thonkcerned:518744193569521679>
+2019-01-31 01:00:31	natemonster321	https://media.discordapp.net/attachments/361910177961738244/540335537798643729/trap.png
+2019-01-31 01:00:33	natemonster321	that's
+2019-01-31 01:00:33	diamondburned	https://media.discordapp.net/attachments/361910177961738244/540335547961311242/unknown.png
+2019-01-31 01:00:34	natemonster321	fake titty
+2019-01-31 01:00:35	diamondburned	OH SHIT WHITHEFUOfhdshfuwdasfipw]dah wr-frf vjqrew g
+2019-01-31 01:00:37	natemonster321	<:lmaothink:501510595615391745>
+2019-01-31 01:01:04	natemonster321	also jesus christ fuck alacritty
+2019-01-31 01:01:06	steamport	hey, anyone here good at malware analysis?
+2019-01-31 01:01:09	steamport	i can't read asm for shit
+2019-01-31 01:01:13	Turquoise	rm -rf
+2019-01-31 01:01:19	steamport	i got some weird undetected scr thing in spam email
+2019-01-31 01:01:19	Turquoise	that's the best malware analysis
+2019-01-31 01:01:22	natemonster321	i'm just gonna use st until i find something else i like kek
+2019-01-31 01:01:29	Turquoise	i use urxvt tbh
+2019-01-31 01:01:31	Turquoise	because memes
+2019-01-31 01:01:36	natemonster321	i wonder if unicode in kernel name would break it <:thonk:451159467883626500>
+2019-01-31 01:01:39	natemonster321	let's try it
+2019-01-31 01:01:43	Turquoise	omo
+2019-01-31 01:01:48	Renzix	prolly not
+2019-01-31 01:01:49	Renzix	cuz
+2019-01-31 01:01:51	Renzix	ext2
+2019-01-31 01:01:53	Turquoise	omo
+2019-01-31 01:01:53	Renzix	or whatever
+2019-01-31 01:02:06	Renzix	as long as your file system can handle it
+2019-01-31 01:02:10	Renzix	i think
+2019-01-31 01:02:14	arskiy	https://media.discordapp.net/attachments/361910177961738244/540335971737141280/2Q.png
+2019-01-31 01:02:16	natemonster321	haha let's find out and fuck my system
+2019-01-31 01:02:27	diamondburned	ngl
+2019-01-31 01:02:33	diamondburned	virus' prob written in normie#
+2019-01-31 01:02:40	natemonster321	<:lmaothink:501510595615391745>
+2019-01-31 01:02:47	diamondburned	80%
+2019-01-31 01:02:51	diamondburned	19% it's in C
+2019-01-31 01:02:52	diamondburned	1% others
+2019-01-31 01:03:01	Renzix	actually
+2019-01-31 01:03:04	Renzix	probably
+2019-01-31 01:03:05	Renzix	except
+2019-01-31 01:03:06	Turquoise	just make a normal looking bash script and forget to set a variable before running rm -rf $var/*
+2019-01-31 01:03:08	Turquoise	:)
+2019-01-31 01:03:11	Renzix	some are prob in python/bash
+2019-01-31 01:03:13	Turquoise	:):):):):):)
+2019-01-31 01:03:14	diamondburned	most of the shitrus i've seen are C#
+2019-01-31 01:03:22	diamondburned	though they're targeted towards wangblows
+2019-01-31 01:03:35	Turquoise	windows users deserve viruses
+2019-01-31 01:03:38	Turquoise	to be honest
+2019-01-31 01:03:49	Turquoise	same for manjaro users actually
+2019-01-31 01:03:50	Turquoise	🤔
+2019-01-31 01:03:53	Renzix	I would imagine mac viruses would be bash/swift? and a couple would be in python
+2019-01-31 01:04:09	diamondburned	idk i don't do mac shit
+2019-01-31 01:04:11	diamondburned	idgas about them
+2019-01-31 01:04:15	natemonster321	<:lmaothink:501510595615391745>
+2019-01-31 01:04:16	natemonster321	mac sucks
+2019-01-31 01:04:24	natemonster321	i should really just install gentoo again on my macbook
+2019-01-31 01:04:27	diamondburned	imagine writing virus in Gomeme and accidentally make it cross platform
+2019-01-31 01:04:28	diamondburned	k e k
+2019-01-31 01:04:38	natemonster321	imagine writing
+2019-01-31 01:04:52	Renzix	just install ubuntu
+2019-01-31 01:04:55	Renzix	on your mac
+2019-01-31 01:04:59	natemonster321	wait ur right
+2019-01-31 01:05:05	Renzix	or just elementry
+2019-01-31 01:05:05	natemonster321	i don't want to configure it
+2019-01-31 01:05:08	natemonster321	so ubuntu is perfect
+2019-01-31 01:05:10	diamondburned	tbf i could prob write a wannacry-like that's crossplatform
+2019-01-31 01:05:15	diamondburned	without the smb exlpoit
+2019-01-31 01:05:19	natemonster321	time to yeet
+2019-01-31 01:05:22	natemonster321	and
+2019-01-31 01:05:26	Bear	https://media.discordapp.net/attachments/361910177961738244/540336776678735897/image0.jpg
+2019-01-31 01:05:27	natemonster321	everything works on ubuntu
+2019-01-31 01:05:37	natemonster321	that's unironically a good idea, gotta do it rn kek
+2019-01-31 01:05:44	Renzix	I know it is
+2019-01-31 01:05:57	Renzix	i used to use manjaro on mine
+2019-01-31 01:05:58	Renzix	but
+2019-01-31 01:06:01	natemonster321	manjaro bad
+2019-01-31 01:06:01	diamondburned	reEEEEEEEEE
+2019-01-31 01:06:04	Renzix	you guys hate manjaro
+2019-01-31 01:06:05	Renzix	soo
+2019-01-31 01:06:05	natemonster321	ree
+2019-01-31 01:06:13	Bear	Why use Manjaro though?
+2019-01-31 01:06:14	natemonster321	ubuntu time
+2019-01-31 01:06:15	arskiy	i started reeing at manjaro after mine panicked()
+2019-01-31 01:06:17	Renzix	y not
+2019-01-31 01:06:25	Renzix	it never broke for me
+2019-01-31 01:06:28	Bear	It defeats the whole reason for using Arch.
+2019-01-31 01:06:44	natemonster321	yeah he shifted away from manjaro
+2019-01-31 01:06:44	Renzix	aur is nice and i want somewhat up to date packages
+2019-01-31 01:06:46	Renzix	without ppa
+2019-01-31 01:06:47	diamondburned	because Renzix is a retard
+2019-01-31 01:06:50	Bear	They don’t even have a minimal install anymore.
+2019-01-31 01:06:50	natemonster321	>ppa
+2019-01-31 01:06:53	natemonster321	just compile it urself lol
+2019-01-31 01:06:57	Bear	Just install Arch?
+2019-01-31 01:06:59	diamondburned	sOmEwHaT
+2019-01-31 01:07:00	natemonster321	just use gentoo lol
+2019-01-31 01:07:11	Renzix	its retina display
+2019-01-31 01:07:12	Renzix	so
+2019-01-31 01:07:17	Renzix	configuring it is hard af
+2019-01-31 01:07:23	Renzix	cuz the text is super tiny
+2019-01-31 01:07:26	Renzix	in tty
+2019-01-31 01:07:27	natemonster321	i have a friend with hidpi laptop
+2019-01-31 01:07:29	natemonster321	not a macbook
+2019-01-31 01:07:31	natemonster321	but it's so dumb
+2019-01-31 01:07:33	Renzix	and wm's dont work properly
+2019-01-31 01:07:34	natemonster321	all the text is fucking tiny
+2019-01-31 01:07:44	diamondburned	k
+2019-01-31 01:07:44		https://media.discordapp.net/attachments/361910177961738244/540337356704579594/unknown.png
+2019-01-31 01:07:47	natemonster321	and his font size in term is like upwards of 30
+2019-01-31 01:07:56	Renzix	Yes gnome and KDE work
+2019-01-31 01:08:01	Renzix	and a couple others
+2019-01-31 01:08:37	Renzix	i just put pop os on it cuz i wanted to use freebsd but wifi drivers didnt work
+2019-01-31 01:08:48	natemonster321	pOpOs
+2019-01-31 01:08:49	natemonster321	more like
+2019-01-31 01:08:52	natemonster321	ubuntu but gay
+2019-01-31 01:09:08	nanovimdragon9999	mfw <:wipe:405929249325711373>
+2019-01-31 01:09:08		https://media.discordapp.net/attachments/361910177961738244/540337706006216725/2019-01-30_20-08.png
+2019-01-31 01:09:24	diamondburned	shit font
+2019-01-31 01:09:25	diamondburned	shame on you
+2019-01-31 01:09:30	nanovimdragon9999	🤷
+2019-01-31 01:09:39	diamondburned	>be linux user
+2019-01-31 01:09:39		>has a configurable font system
+2019-01-31 01:09:39		>doesn't config it
+2019-01-31 01:09:45	diamondburned	>font worse than wangdows
+2019-01-31 01:10:00	nanovimdragon9999	i mean you did use that font before didn't you? @diamondburned#4507
+2019-01-31 01:10:06	diamondburned	no lel
+2019-01-31 01:10:07	fr3fou	Where'd you get that ss  @nanodragon9999#9999
+2019-01-31 01:10:13	nanovimdragon9999	from my acc? @fr3fou#7177
+2019-01-31 01:10:17	diamondburned	I don't use fonts that wide
+2019-01-31 01:10:26	fr3fou	You have access? <:GWseremePeepoGGERS:402867853906280450>
+2019-01-31 01:10:28	nanovimdragon9999	ofc
+2019-01-31 01:10:30	fr3fou	Do you work on it
+2019-01-31 01:10:33	nanovimdragon9999	kinda
+2019-01-31 01:11:00	lidl papi	fort awesome?
+2019-01-31 01:11:47	diamondburned	hMMMMMMMMMMMMMMMMMMMM
+2019-01-31 01:12:02	nanovimdragon9999	<a:thinksplode:408737958418448384>
+2019-01-31 01:12:41	diamondburned	Not sure what I should work on first
+2019-01-31 01:12:48	diamondburned	Finish the app menu
+2019-01-31 01:12:50	diamondburned	Eh
+2019-01-31 01:13:36	lidl papi	idk I’ll post some kangaroos in devnull
+2019-01-31 01:26:14	happens	Cheers, love! <@126686179721478144>'s here!
+2019-01-31 01:26:19	[gotag shill] oxy	o/
+2019-01-31 01:26:22	nanovimdragon9999	Welcome @happens#1337
+2019-01-31 01:26:32	[gotag shill] oxy	nano <:GhostHugScarf:408369856380010527>
+2019-01-31 01:26:34	happens	Thanks! o/
+2019-01-31 01:26:37	nanovimdragon9999	<:ugu:524897940360396811>  @oxycodone#6969
+2019-01-31 01:27:34	natemonster321	hello there
+2019-01-31 01:27:34	natemonster321	uwu
+2019-01-31 01:31:56	nanovimdragon9999	<:ugu:524897940360396811>  @natemonster321#7520
+2019-01-31 01:32:54	nanovimdragon9999	<:thinking:357130008210178050>
+2019-01-31 01:33:20	[gotag shill] oxy	<:Hmm:442445183909625856>
+2019-01-31 01:34:15	natemonster321	alright i'm bored, time to install 🅱ubuntu on my macbook
+2019-01-31 01:34:33	arskiy	come on nate
+2019-01-31 01:34:38	arskiy	post the unicode kernel
+2019-01-31 01:34:45	natemonster321	i will once it's done compiling
+2019-01-31 01:34:48	arskiy	oh ok
+2019-01-31 01:34:53	natemonster321	that is, if it works
+2019-01-31 01:35:00	arskiy	I thought you already finished
+2019-01-31 01:35:04	natemonster321	lol no
+2019-01-31 01:35:09	natemonster321	it usually takes around 10 minutes for me
+2019-01-31 01:35:13	[gotag shill] oxy	too slow
+2019-01-31 01:35:14	natemonster321	but i'm also doing some other junk rn
+2019-01-31 01:35:15	natemonster321	<:lmaothink:501510595615391745>
+2019-01-31 01:36:37	diamondburned	ngl it took like 7-8 mins for me on the mainline git kernel
+2019-01-31 01:36:39	diamondburned	So yeah too slow
+2019-01-31 01:36:47	steamport	lol
+2019-01-31 01:36:57	natemonster321	i was compiling something else too
+2019-01-31 01:36:57	steamport	Facebook was dumb enough to use their internal enterprise cert
+2019-01-31 01:37:00	natemonster321	but that finished already kek
+2019-01-31 01:37:00	steamport	for spying apps
+2019-01-31 01:37:11	steamport	and they got their ENTIRE ENTERPRISE CERT REVOKED BY APPLE
+2019-01-31 01:37:12	steamport	LMAO
+2019-01-31 01:37:31	steamport	so all their internal apps
+2019-01-31 01:37:33	steamport	stopped working on iOS
+2019-01-31 01:37:52	arskiy	https://appleinsider.com/articles/19/01/30/apple-has-revoked-facebooks-enterprise-developer-certificates-after-sideload-violations
+2019-01-31 01:37:53	arskiy	source
+2019-01-31 01:37:55	natemonster321	the latest ubuntu is 18.10 right?
+2019-01-31 01:38:06	steamport	yeah, but there's a 19.04 beta
+2019-01-31 01:38:09	arskiy	^
+2019-01-31 01:38:12	natemonster321	oh
+2019-01-31 01:38:15	natemonster321	>19.04
+2019-01-31 01:38:16	arskiy	disco dingo, right?
+2019-01-31 01:38:16	Renzix	l o l
+2019-01-31 01:38:23	natemonster321	isn't that the lts one <:thonk:451159467883626500>
+2019-01-31 01:38:23	natemonster321	or
+2019-01-31 01:38:30	steamport	no
+2019-01-31 01:38:31	steamport	18.04 is lts
+2019-01-31 01:38:31	arskiy	the lts is 18.04
+2019-01-31 01:38:32	diamondburned	beta
+2019-01-31 01:38:37	steamport	20.04 will be LTS
+2019-01-31 01:38:38	natemonster321	wait idk my ubuntu versioning
+2019-01-31 01:38:40	natemonster321	oh
+2019-01-31 01:38:42	diamondburned	It's not even April yet
+2019-01-31 01:38:47	steamport	every 2nd version is LTS
+2019-01-31 01:38:51	natemonster321	w/e i'll isntall 18.10 i already have the iso for it
+2019-01-31 01:38:53	steamport	wait no
+2019-01-31 01:38:55	steamport	was it every 4th
+2019-01-31 01:39:09	diamondburned	Think 2nd lts
+2019-01-31 01:39:13	steamport	no
+2019-01-31 01:39:13	diamondburned	or 4th release
+2019-01-31 01:39:16	steamport	it's 2nd
+2019-01-31 01:39:21	diamondburned	16.04, 18.04, etc
+2019-01-31 01:39:24	steamport	ye
+2019-01-31 01:39:27	diamondburned	That's what I fucking said
+2019-01-31 01:39:31	steamport	12.04, 14.04, 16.04, 18.04, 20.04, etc
+2019-01-31 01:39:33	diamondburned	Fucking fuck
+2019-01-31 01:39:42	steamport	and more importantly
+2019-01-31 01:39:49	steamport	why does yubico authenticator's TOTP keys
+2019-01-31 01:39:53	steamport	fail to paste into FF in Plsma
+2019-01-31 01:39:59	steamport	but it works fine into a terminal
+2019-01-31 01:40:04	diamondburned	>Plasma
+2019-01-31 01:40:13	steamport	i don't like tiling WMs
+2019-01-31 01:40:15	steamport	xfce is... meh

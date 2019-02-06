@@ -1,0 +1,20 @@
+# vim:ft=sh
+
+cache-file			"~/.cache/newsboat/cache.db"
+error-log			"~/.local/share/newsboat/err.log"
+download-path		"~/dl/%n"
+save-path			"~/dl"
+
+external-url-viewer	"urlview"
+browser				"firefox -new-tab"
+player				"mpv"
+
+reload-threads		20
+cleanup-on-quit		yes
+text-width			74
+
+# bind-key - quit
+bind-key G end
+bind-key g home
+bind-key j down
+bind-key k up

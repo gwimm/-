@@ -1,0 +1,2177 @@
+2019-01-19 20:48:02		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
+2019-01-19 20:48:02		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
+2019-01-19 20:48:02		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
+2019-01-19 20:48:02		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
+2019-01-19 20:48:02		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2019-01-19 20:48:10		List of bars:
+2019-01-19 20:48:10		  input: window, bottom, height: 1
+2019-01-19 20:48:10		  status: window, bottom, height: 1
+2019-01-19 20:48:10		  title: window, top, height: 1
+2019-01-19 20:48:10		  nicklist: window, right, width: auto
+2019-01-19 20:48:10		  fset: window, top, height: 3
+2019-01-19 20:48:10		  buflist: root, left, width: auto
+2019-01-19 20:48:19		[core]  /bar  list|listfull|listitems
+2019-01-19 20:48:19		              add <name> <type>[,<conditions>] <position> <size> <separator> <item1>[,<item2>...]
+2019-01-19 20:48:19		              default [input|title|status|nicklist]
+2019-01-19 20:48:19		              del <name>|-all
+2019-01-19 20:48:19		              set <name> <option> <value>
+2019-01-19 20:48:19		              hide|show|toggle <name>
+2019-01-19 20:48:19		              scroll <name> <window> <scroll_value>
+2019-01-19 20:48:19		manage bars
+2019-01-19 20:48:19		         list: list all bars
+2019-01-19 20:48:19		     listfull: list all bars (verbose)
+2019-01-19 20:48:19		    listitems: list all bar items
+2019-01-19 20:48:19		          add: add a new bar
+2019-01-19 20:48:19		         name: name of bar (must be unique)
+2019-01-19 20:48:19		         type:   root: outside windows,
+2019-01-19 20:48:19		               window: inside windows, with optional conditions (see below)
+2019-01-19 20:48:19		   conditions: the conditions to display the bar:
+2019-01-19 20:48:19		                 active: on active window
+2019-01-19 20:48:19		               inactive: on inactive windows
+2019-01-19 20:48:19		               nicklist: on windows with nicklist
+2019-01-19 20:48:19		               other condition: see /help weechat.bar.xxx.conditions and /help eval
+2019-01-19 20:48:19		               without conditions, the bar is always displayed
+2019-01-19 20:48:19		     position: bottom, top, left or right
+2019-01-19 20:48:19		         size: size of bar (in chars)
+2019-01-19 20:48:19		    separator: 1 for using separator (line), 0 or nothing means no separator
+2019-01-19 20:48:19		    item1,...: items for this bar (items can be separated by comma (space between items) or "+" (glued items))
+2019-01-19 20:48:19		      default: create a default bar (all default bars if no bar name is given)
+2019-01-19 20:48:19		          del: delete a bar (or all bars with -all)
+2019-01-19 20:48:19		          set: set a value for a bar property
+2019-01-19 20:48:19		       option: option to change (for options list, look at /set weechat.bar.<barname>.*)
+2019-01-19 20:48:19		        value: new value for option
+2019-01-19 20:48:19		         hide: hide a bar
+2019-01-19 20:48:19		         show: show an hidden bar
+2019-01-19 20:48:19		       toggle: hide/show a bar
+2019-01-19 20:48:19		       scroll: scroll bar
+2019-01-19 20:48:19		       window: window number (use '*' for current window or for root bars)
+2019-01-19 20:48:19		 scroll_value: value for scroll: 'x' or 'y' (optional), followed by '+', '-', 'b' (beginning) or 'e' (end), value (for +/-), and optional % (to scroll by % of width/height, otherwise value is number of chars)
+2019-01-19 20:48:19		Examples:
+2019-01-19 20:48:19		  create a bar with time, buffer number + name, and completion:
+2019-01-19 20:48:19		    /bar add mybar root bottom 1 0 [time],buffer_number+:+buffer_name,completion
+2019-01-19 20:48:19		  hide a bar:
+2019-01-19 20:48:19		    /bar hide mybar
+2019-01-19 20:48:19		  scroll nicklist 10 lines down on current buffer:
+2019-01-19 20:48:19		    /bar scroll nicklist * y+10
+2019-01-19 20:48:19		  scroll to end of nicklist on current buffer:
+2019-01-19 20:48:19		    /bar scroll nicklist * ye
+2019-01-20 20:51:21		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2019-01-20 20:51:31	=!=	No help available, "border" is not a command or an option
+2019-01-20 20:51:35		[core]
+2019-01-20 20:51:35		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2019-01-20 20:51:35		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2019-01-20 20:51:35		[charset]
+2019-01-20 20:51:35		  charset
+2019-01-20 20:51:35		[exec]
+2019-01-20 20:51:35		  exec
+2019-01-20 20:51:35		[buflist]
+2019-01-20 20:51:35		  buflist
+2019-01-20 20:51:35		[aspell]
+2019-01-20 20:51:35		  aspell
+2019-01-20 20:51:35		[irc]
+2019-01-20 20:51:35		  admin       connect     devoice     invite      links       motd        op          quiet       sajoin      service     time        users       whois     
+2019-01-20 20:51:35		  allchan     ctcp        die         ison        list        msg         oper        quote       samode      servlist    topic       version     whowas    
+2019-01-20 20:51:35		  allpv       cycle       disconnect  join        lusers      names       part        reconnect   sanick      squery      trace       voice     
+2019-01-20 20:51:35		  allserv     dcc         halfop      kick        map         nick        ping        rehash      sapart      squit       unban       wallchops 
+2019-01-20 20:51:35		  ban         dehalfop    ignore      kickban     me          notice      pong        remove      saquit      stats       unquiet     wallops   
+2019-01-20 20:51:35		  cap         deop        info        kill        mode        notify      query       restart     server      summon      userhost    who       
+2019-01-20 20:51:35		[fset]
+2019-01-20 20:51:35		  fset
+2019-01-20 20:51:35		[trigger]
+2019-01-20 20:51:35		  trigger
+2019-01-20 20:51:35		[script]
+2019-01-20 20:51:35		  script
+2019-01-20 20:51:35		[fifo]
+2019-01-20 20:51:35		  fifo
+2019-01-20 20:51:35		[python]
+2019-01-20 20:51:35		  python
+2019-01-20 20:51:35		[perl]
+2019-01-20 20:51:35		  perl
+2019-01-20 20:51:35		[logger]
+2019-01-20 20:51:35		  logger
+2019-01-20 20:51:35		[alias]
+2019-01-20 20:51:35		  AAWAY    AME      ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII    
+2019-01-20 20:51:35		  alias    AMSG     BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WW     
+2019-01-20 20:51:35		[relay]
+2019-01-20 20:51:35		  relay
+2019-01-20 20:51:35		[xfer]
+2019-01-20 20:51:35		  me  xfer
+2019-01-20 20:51:51		[core]  /bar  list|listfull|listitems
+2019-01-20 20:51:51		              add <name> <type>[,<conditions>] <position> <size> <separator> <item1>[,<item2>...]
+2019-01-20 20:51:51		              default [input|title|status|nicklist]
+2019-01-20 20:51:51		              del <name>|-all
+2019-01-20 20:51:51		              set <name> <option> <value>
+2019-01-20 20:51:51		              hide|show|toggle <name>
+2019-01-20 20:51:51		              scroll <name> <window> <scroll_value>
+2019-01-20 20:51:51		manage bars
+2019-01-20 20:51:51		         list: list all bars
+2019-01-20 20:51:51		     listfull: list all bars (verbose)
+2019-01-20 20:51:51		    listitems: list all bar items
+2019-01-20 20:51:51		          add: add a new bar
+2019-01-20 20:51:51		         name: name of bar (must be unique)
+2019-01-20 20:51:51		         type:   root: outside windows,
+2019-01-20 20:51:51		               window: inside windows, with optional conditions (see below)
+2019-01-20 20:51:51		   conditions: the conditions to display the bar:
+2019-01-20 20:51:51		                 active: on active window
+2019-01-20 20:51:51		               inactive: on inactive windows
+2019-01-20 20:51:51		               nicklist: on windows with nicklist
+2019-01-20 20:51:51		               other condition: see /help weechat.bar.xxx.conditions and /help eval
+2019-01-20 20:51:51		               without conditions, the bar is always displayed
+2019-01-20 20:51:51		     position: bottom, top, left or right
+2019-01-20 20:51:51		         size: size of bar (in chars)
+2019-01-20 20:51:51		    separator: 1 for using separator (line), 0 or nothing means no separator
+2019-01-20 20:51:51		    item1,...: items for this bar (items can be separated by comma (space between items) or "+" (glued items))
+2019-01-20 20:51:51		      default: create a default bar (all default bars if no bar name is given)
+2019-01-20 20:51:51		          del: delete a bar (or all bars with -all)
+2019-01-20 20:51:51		          set: set a value for a bar property
+2019-01-20 20:51:51		       option: option to change (for options list, look at /set weechat.bar.<barname>.*)
+2019-01-20 20:51:51		        value: new value for option
+2019-01-20 20:51:51		         hide: hide a bar
+2019-01-20 20:51:51		         show: show an hidden bar
+2019-01-20 20:51:51		       toggle: hide/show a bar
+2019-01-20 20:51:51		       scroll: scroll bar
+2019-01-20 20:51:51		       window: window number (use '*' for current window or for root bars)
+2019-01-20 20:51:51		 scroll_value: value for scroll: 'x' or 'y' (optional), followed by '+', '-', 'b' (beginning) or 'e' (end), value (for +/-), and optional % (to scroll by % of width/height, otherwise value is number of chars)
+2019-01-20 20:51:51		Examples:
+2019-01-20 20:51:51		  create a bar with time, buffer number + name, and completion:
+2019-01-20 20:51:51		    /bar add mybar root bottom 1 0 [time],buffer_number+:+buffer_name,completion
+2019-01-20 20:51:51		  hide a bar:
+2019-01-20 20:51:51		    /bar hide mybar
+2019-01-20 20:51:51		  scroll nicklist 10 lines down on current buffer:
+2019-01-20 20:51:51		    /bar scroll nicklist * y+10
+2019-01-20 20:51:51		  scroll to end of nicklist on current buffer:
+2019-01-20 20:51:51		    /bar scroll nicklist * ye
+2019-01-22 10:24:09		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2019-01-22 10:24:22	=!=	Too few arguments for command "/query" (help on command: /help query)
+2019-01-22 10:24:35	=!=	irc: unable to add temporary server "freenode" because the addition of temporary servers with command /connect is currently disabled
+2019-01-22 10:24:35	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2019-01-22 10:24:58	=!=	Too few arguments for command "/server add" (help on command: /help server)
+2019-01-22 10:25:07	=!=	irc: unable to add temporary server "freenode" because the addition of temporary servers with command /connect is currently disabled
+2019-01-22 10:25:07	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2019-01-22 10:25:27		irc: server freenode added
+2019-01-22 11:10:18		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2019-01-22 11:10:22	=!=	irc: unable to add temporary server "freenodee" because the addition of temporary servers with command /connect is currently disabled
+2019-01-22 11:10:22	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2019-01-24 18:33:54		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2019-01-24 18:42:24	=!=	Error: option "itc.look.smart_filter" not found
+2019-01-24 18:42:39		Option changed: irc.look.smart_filter = on
+2019-01-24 18:43:02		Filter "irc_smart" added:
+2019-01-24 18:43:02		  [irc_smart] buffer: * / tags: irc_smart_filter / regex: * 
+2019-01-24 18:43:26		Option changed: irc.look.smart_filter_delay = 4  (default: 5)
+2019-01-24 18:47:56		List of bars:
+2019-01-24 18:47:56		  input: window, bottom, height: 1
+2019-01-24 18:47:56		  title: window, top, height: 1
+2019-01-24 18:47:56		  status: window, bottom, height: 1
+2019-01-24 18:47:56		  nicklist: window, right, width: auto
+2019-01-24 18:47:56		  fset: window, top, height: 3
+2019-01-24 18:47:56		  buflist: root, left, width: auto
+2019-01-24 18:49:59	=!=	Option "nick" not found (tip: you can use wildcard "*" in option to see a sublist)
+2019-01-24 18:50:16	=!=	Option "nick*" not found (tip: you can use wildcard "*" in option to see a sublist)
+2019-01-24 18:50:25	=!=	Error: unknown command "/option" (type /help for help)
+2019-01-24 18:50:34		[core]
+2019-01-24 18:50:34		  away     debug    key      proxy    set      window 
+2019-01-24 18:50:34		  bar      eval     layout   quit     unset  
+2019-01-24 18:50:34		  buffer   filter   mouse    reload   upgrade
+2019-01-24 18:50:34		  color    help     mute     repeat   uptime 
+2019-01-24 18:50:34		  command  history  plugin   save     version
+2019-01-24 18:50:34		  cursor   input    print    secure   wait   
+2019-01-24 18:50:34		[charset]
+2019-01-24 18:50:34		  charset
+2019-01-24 18:50:34		[exec]
+2019-01-24 18:50:34		  exec
+2019-01-24 18:50:34		[buflist]
+2019-01-24 18:50:34		  buflist
+2019-01-24 18:50:34		[aspell]
+2019-01-24 18:50:34		  aspell
+2019-01-24 18:50:34		[irc]
+2019-01-24 18:50:34		  admin       ison        part        squit     
+2019-01-24 18:50:34		  allchan     join        ping        stats     
+2019-01-24 18:50:34		  allpv       kick        pong        summon    
+2019-01-24 18:50:34		  allserv     kickban     query       time      
+2019-01-24 18:50:34		  ban         kill        quiet       topic     
+2019-01-24 18:50:34		  cap         links       quote       trace     
+2019-01-24 18:50:34		  connect     list        reconnect   unban     
+2019-01-24 18:50:34		  ctcp        lusers      rehash      unquiet   
+2019-01-24 18:50:34		  cycle       map         remove      userhost  
+2019-01-24 18:50:34		  dcc         me          restart     users     
+2019-01-24 18:50:34		  dehalfop    mode        sajoin      version   
+2019-01-24 18:50:34		  deop        motd        samode      voice     
+2019-01-24 18:50:34		  devoice     msg         sanick      wallchops 
+2019-01-24 18:50:34		  die         names       sapart      wallops   
+2019-01-24 18:50:34		  disconnect  nick        saquit      who       
+2019-01-24 18:50:34		  halfop      notice      server      whois     
+2019-01-24 18:50:34		  ignore      notify      service     whowas    
+2019-01-24 18:50:34		  info        op          servlist  
+2019-01-24 18:50:34		  invite      oper        squery    
+2019-01-24 18:50:34		[fset]
+2019-01-24 18:50:34		  fset
+2019-01-24 18:50:34		[trigger]
+2019-01-24 18:50:34		  trigger
+2019-01-24 18:50:34		[script]
+2019-01-24 18:50:34		  script
+2019-01-24 18:50:34		[fifo]
+2019-01-24 18:50:34		  fifo
+2019-01-24 18:50:34		[python]
+2019-01-24 18:50:34		  python
+2019-01-24 18:50:34		[perl]
+2019-01-24 18:50:34		  perl
+2019-01-24 18:50:34		[logger]
+2019-01-24 18:50:34		  logger
+2019-01-24 18:50:34		[alias]
+2019-01-24 18:50:34		  AAWAY    BYE      IG       MSGBUF   SIGNOFF  WC     
+2019-01-24 18:50:34		  alias    C        J        MUB      T        WI     
+2019-01-24 18:50:34		  AME      CHAT     K        N        UB       WII    
+2019-01-24 18:50:34		  AMSG     CL       KB       Q        UMODE    WW     
+2019-01-24 18:50:34		  ANICK    CLOSE    LEAVE    REDRAW   V      
+2019-01-24 18:50:34		  BEEP     EXIT     M        SAY      W      
+2019-01-24 18:50:34		[relay]
+2019-01-24 18:50:34		  relay
+2019-01-24 18:50:34		[xfer]
+2019-01-24 18:50:34		  me  xfer
+2019-01-24 18:50:48	=!=	Error: unknown command "/conf" (type /help for help)
+2019-01-24 18:51:05	=!=	Error: unknown command "/search" (type /help for help)
+2019-01-24 18:52:50		Option changed: weechat.look.nick_prefix = "<"  (default: "")
+2019-01-24 18:52:57		Option changed: weechat.look.nick_prefix = "< "  (default: "")
+2019-01-24 18:53:12	=!=	Error: option "weechat.look.nick_p<" not found
+2019-01-24 18:53:25		Option changed: weechat.look.nick_suffix = " >"  (default: "")
+2019-01-24 18:53:35		List of bars:
+2019-01-24 18:53:35		  input: window, bottom, height: 1
+2019-01-24 18:53:35		  title: window, top, height: 1
+2019-01-24 18:53:35		  status: window, bottom, height: 1
+2019-01-24 18:53:35		  nicklist: window, right, width: auto
+2019-01-24 18:53:35		  fset: window, top, height: 3
+2019-01-24 18:53:35		  buflist: root, left, width: auto
+2019-01-24 18:53:45	=!=	Error with command "/bar nicklist" (help on command: /help bar)
+2019-01-24 18:53:52		[core]  /bar  list|listfull|listitems
+2019-01-24 18:53:52		              add <name> <type>[,<conditions>] <position> <size> <separator> <item1>[,<item2>...]
+2019-01-24 18:53:52		              default [input|title|status|nicklist]
+2019-01-24 18:53:52		              del <name>|-all
+2019-01-24 18:53:52		              set <name> <option> <value>
+2019-01-24 18:53:52		              hide|show|toggle <name>
+2019-01-24 18:53:52		              scroll <name> <window> <scroll_value>
+2019-01-24 18:53:52		manage bars
+2019-01-24 18:53:52		         list: list all bars
+2019-01-24 18:53:52		     listfull: list all bars (verbose)
+2019-01-24 18:53:52		    listitems: list all bar items
+2019-01-24 18:53:52		          add: add a new bar
+2019-01-24 18:53:52		         name: name of bar (must be unique)
+2019-01-24 18:53:52		         type:   root: outside windows,
+2019-01-24 18:53:52		               window: inside windows, with optional conditions (see below)
+2019-01-24 18:53:52		   conditions: the conditions to display the bar:
+2019-01-24 18:53:52		                 active: on active window
+2019-01-24 18:53:52		               inactive: on inactive windows
+2019-01-24 18:53:52		               nicklist: on windows with nicklist
+2019-01-24 18:53:52		               other condition: see /help weechat.bar.xxx.conditions and /help eval
+2019-01-24 18:53:52		               without conditions, the bar is always displayed
+2019-01-24 18:53:52		     position: bottom, top, left or right
+2019-01-24 18:53:52		         size: size of bar (in chars)
+2019-01-24 18:53:52		    separator: 1 for using separator (line), 0 or nothing means no separator
+2019-01-24 18:53:52		    item1,...: items for this bar (items can be separated by comma (space between items) or "+" (glued items))
+2019-01-24 18:53:52		      default: create a default bar (all default bars if no bar name is given)
+2019-01-24 18:53:52		          del: delete a bar (or all bars with -all)
+2019-01-24 18:53:52		          set: set a value for a bar property
+2019-01-24 18:53:52		       option: option to change (for options list, look at /set weechat.bar.<barname>.*)
+2019-01-24 18:53:52		        value: new value for option
+2019-01-24 18:53:52		         hide: hide a bar
+2019-01-24 18:53:52		         show: show an hidden bar
+2019-01-24 18:53:52		       toggle: hide/show a bar
+2019-01-24 18:53:52		       scroll: scroll bar
+2019-01-24 18:53:52		       window: window number (use '*' for current window or for root bars)
+2019-01-24 18:53:52		 scroll_value: value for scroll: 'x' or 'y' (optional), followed by '+', '-', 'b' (beginning) or 'e' (end), value (for +/-), and optional % (to scroll by % of width/height, otherwise value is number of chars)
+2019-01-24 18:53:52		Examples:
+2019-01-24 18:53:52		  create a bar with time, buffer number + name, and completion:
+2019-01-24 18:53:52		    /bar add mybar root bottom 1 0 [time],buffer_number+:+buffer_name,completion
+2019-01-24 18:53:52		  hide a bar:
+2019-01-24 18:53:52		    /bar hide mybar
+2019-01-24 18:53:52		  scroll nicklist 10 lines down on current buffer:
+2019-01-24 18:53:52		    /bar scroll nicklist * y+10
+2019-01-24 18:53:52		  scroll to end of nicklist on current buffer:
+2019-01-24 18:53:52		    /bar scroll nicklist * ye
+2019-01-24 18:54:19		Option changed: weechat.look.nick_suffix = ">"  (default: "")
+2019-01-24 18:54:24		Option changed: weechat.look.nick_prefix = "<"  (default: "")
+2019-01-24 18:55:20		Option changed: irc.server_default.nicks = "gwu, gwosix, gwimm, gwimminus"  (default: "")
+2019-01-24 18:56:17		Option changed: irc.server.freenode.autoconnect = on  (default if null: off)
+2019-01-24 18:56:30		Option changed: irc.server.freenode.username = "gwosix"  (default if null: "sai")
+2019-01-24 18:59:27		Option changed: irc.server.freenode.sasl_password = "ETAisq2653589"  (default if null: "")
+2019-01-24 19:00:11		Option changed: irc.server.freenode.sasl_username = "gwosix"  (default if null: "")
+2019-01-24 19:01:35		Option changed: irc.server.freenode.nicks = "gwosix, gwu"  (default if null: "gwu, gwosix, gwimm, gwimminus")
+2019-01-25 08:10:04	=!=	Error: unknown command "/baar" (type /help for help)
+2019-01-25 08:10:06		List of bars:
+2019-01-25 08:10:06		  input: window, bottom, height: 1
+2019-01-25 08:10:06		  title: window, top, height: 1
+2019-01-25 08:10:06		  status: window, bottom, height: 1
+2019-01-25 08:10:06		  nicklist: (hidden) window, right, width: auto
+2019-01-25 08:10:06		  fset: window, top, height: 3
+2019-01-25 08:10:06		  buflist: root, left, width: auto
+2019-01-25 08:10:11	=!=	Error with command "/bar nicklist" (help on command: /help bar)
+2019-01-25 08:10:16	=!=	Error with command "/bar fset" (help on command: /help bar)
+2019-01-25 08:10:22	=!=	irc: command "part" must be executed on irc buffer (server or channel)
+2019-01-25 08:10:32		[core]  /bar  list|listfull|listitems
+2019-01-25 08:10:32		              add <name> <type>[,<conditions>] <position> <size> <separator> <item1>[,<item2>...]
+2019-01-25 08:10:32		              default [input|title|status|nicklist]
+2019-01-25 08:10:32		              del <name>|-all
+2019-01-25 08:10:32		              set <name> <option> <value>
+2019-01-25 08:10:32		              hide|show|toggle <name>
+2019-01-25 08:10:32		              scroll <name> <window> <scroll_value>
+2019-01-25 08:10:32		manage bars
+2019-01-25 08:10:32		         list: list all bars
+2019-01-25 08:10:32		     listfull: list all bars (verbose)
+2019-01-25 08:10:32		    listitems: list all bar items
+2019-01-25 08:10:32		          add: add a new bar
+2019-01-25 08:10:32		         name: name of bar (must be unique)
+2019-01-25 08:10:32		         type:   root: outside windows,
+2019-01-25 08:10:32		               window: inside windows, with optional conditions (see below)
+2019-01-25 08:10:32		   conditions: the conditions to display the bar:
+2019-01-25 08:10:32		                 active: on active window
+2019-01-25 08:10:32		               inactive: on inactive windows
+2019-01-25 08:10:32		               nicklist: on windows with nicklist
+2019-01-25 08:10:32		               other condition: see /help weechat.bar.xxx.conditions and /help eval
+2019-01-25 08:10:32		               without conditions, the bar is always displayed
+2019-01-25 08:10:32		     position: bottom, top, left or right
+2019-01-25 08:10:32		         size: size of bar (in chars)
+2019-01-25 08:10:32		    separator: 1 for using separator (line), 0 or nothing means no separator
+2019-01-25 08:10:32		    item1,...: items for this bar (items can be separated by comma (space between items) or "+" (glued items))
+2019-01-25 08:10:32		      default: create a default bar (all default bars if no bar name is given)
+2019-01-25 08:10:32		          del: delete a bar (or all bars with -all)
+2019-01-25 08:10:32		          set: set a value for a bar property
+2019-01-25 08:10:32		       option: option to change (for options list, look at /set weechat.bar.<barname>.*)
+2019-01-25 08:10:32		        value: new value for option
+2019-01-25 08:10:32		         hide: hide a bar
+2019-01-25 08:10:32		         show: show an hidden bar
+2019-01-25 08:10:32		       toggle: hide/show a bar
+2019-01-25 08:10:32		       scroll: scroll bar
+2019-01-25 08:10:32		       window: window number (use '*' for current window or for root bars)
+2019-01-25 08:10:32		 scroll_value: value for scroll: 'x' or 'y' (optional), followed by '+', '-', 'b' (beginning) or 'e' (end), value (for +/-), and optional % (to scroll by % of width/height, otherwise value is number of chars)
+2019-01-25 08:10:32		Examples:
+2019-01-25 08:10:32		  create a bar with time, buffer number + name, and completion:
+2019-01-25 08:10:32		    /bar add mybar root bottom 1 0 [time],buffer_number+:+buffer_name,completion
+2019-01-25 08:10:32		  hide a bar:
+2019-01-25 08:10:32		    /bar hide mybar
+2019-01-25 08:10:32		  scroll nicklist 10 lines down on current buffer:
+2019-01-25 08:10:32		    /bar scroll nicklist * y+10
+2019-01-25 08:10:32		  scroll to end of nicklist on current buffer:
+2019-01-25 08:10:32		    /bar scroll nicklist * ye
+2019-01-25 08:10:43		List of bars:
+2019-01-25 08:10:43		  input: window, bottom, height: 1
+2019-01-25 08:10:43		  title: window, top, height: 1
+2019-01-25 08:10:43		  status: window, bottom, height: 1
+2019-01-25 08:10:43		  nicklist: (hidden) window, right, width: auto
+2019-01-25 08:10:43		  fset: window, top, height: 3
+2019-01-25 08:10:43		  buflist: root, left, width: auto
+2019-01-25 08:11:05	=!=	Too few arguments for command "/bar add" (help on command: /help bar)
+2019-01-25 08:11:23	=!=	Too few arguments for command "/bar add" (help on command: /help bar)
+2019-01-25 08:12:39		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2019-01-25 08:18:41		Option changed: irc.server.freenode.autojoin = "##programming,#haskell,##javascript"  (default if null: "")
+2019-01-25 08:21:12	=!=	Error: unknown command "/move" (type /help for help)
+2019-01-25 08:23:46		All servers:
+2019-01-25 08:23:46		 * freenode [connected], nick: gwosix, 3 channels, 0 pv
+2019-01-25 08:23:53		[irc]  /server  list|listfull [<name>]
+2019-01-25 08:23:53		                add <name> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2019-01-25 08:23:53		                copy|rename <name> <new_name>
+2019-01-25 08:23:53		                reorder <name> [<name>...]
+2019-01-25 08:23:53		                open <name>|-all [<name>...]
+2019-01-25 08:23:53		                del|keep <name>
+2019-01-25 08:23:53		                deloutq|jump|raw
+2019-01-25 08:23:53		list, add or remove IRC servers
+2019-01-25 08:23:53		    list: list servers (without argument, this list is displayed)
+2019-01-25 08:23:53		listfull: list servers with detailed info for each server
+2019-01-25 08:23:53		     add: add a new server
+2019-01-25 08:23:53		    name: server name, for internal and display use; this name is used to connect to the server (/connect name) and to set server options: irc.server.name.xxx
+2019-01-25 08:23:53		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2019-01-25 08:23:53		   -temp: add a temporary server (not saved)
+2019-01-25 08:23:53		  option: set option for server (for boolean option, value can be omitted)
+2019-01-25 08:23:53		nooption: set boolean option to 'off' (for example: -nossl)
+2019-01-25 08:23:53		    copy: duplicate a server
+2019-01-25 08:23:53		  rename: rename a server
+2019-01-25 08:23:53		 reorder: reorder list of servers
+2019-01-25 08:23:53		    open: open the server buffer without connecting
+2019-01-25 08:23:53		    keep: keep server in config file (for temporary servers only)
+2019-01-25 08:23:53		     del: delete a server
+2019-01-25 08:23:53		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2019-01-25 08:23:53		    jump: jump to server buffer
+2019-01-25 08:23:53		     raw: open buffer with raw IRC data
+2019-01-25 08:23:53		Examples:
+2019-01-25 08:23:53		  /server listfull
+2019-01-25 08:23:53		  /server add freenode chat.freenode.net
+2019-01-25 08:23:53		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2019-01-25 08:23:53		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2019-01-25 08:23:53		  /server copy freenode freenode-test
+2019-01-25 08:23:53		  /server rename freenode-test freenode2
+2019-01-25 08:23:53		  /server reorder freenode2 freenode
+2019-01-25 08:23:53		  /server del freenode
+2019-01-25 08:23:53		  /server deloutq
+2019-01-25 08:24:09		irc: server mozilla added
+2019-01-25 08:24:15	=!=	irc: unable to add temporary server "moziall" because the addition of temporary servers with command /connect is currently disabled
+2019-01-25 08:24:15	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2019-01-25 08:34:30	=!=	Error with command "/server freenode" (help on command: /help server)
+2019-01-25 08:34:36		[irc]  /server  list|listfull [<name>]
+2019-01-25 08:34:36		                add <name> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2019-01-25 08:34:36		                copy|rename <name> <new_name>
+2019-01-25 08:34:36		                reorder <name> [<name>...]
+2019-01-25 08:34:36		                open <name>|-all [<name>...]
+2019-01-25 08:34:36		                del|keep <name>
+2019-01-25 08:34:36		                deloutq|jump|raw
+2019-01-25 08:34:36		list, add or remove IRC servers
+2019-01-25 08:34:36		    list: list servers (without argument, this list is displayed)
+2019-01-25 08:34:36		listfull: list servers with detailed info for each server
+2019-01-25 08:34:36		     add: add a new server
+2019-01-25 08:34:36		    name: server name, for internal and display use; this name is used to connect to the server (/connect name) and to set server options: irc.server.name.xxx
+2019-01-25 08:34:36		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2019-01-25 08:34:36		   -temp: add a temporary server (not saved)
+2019-01-25 08:34:36		  option: set option for server (for boolean option, value can be omitted)
+2019-01-25 08:34:36		nooption: set boolean option to 'off' (for example: -nossl)
+2019-01-25 08:34:36		    copy: duplicate a server
+2019-01-25 08:34:36		  rename: rename a server
+2019-01-25 08:34:36		 reorder: reorder list of servers
+2019-01-25 08:34:36		    open: open the server buffer without connecting
+2019-01-25 08:34:36		    keep: keep server in config file (for temporary servers only)
+2019-01-25 08:34:36		     del: delete a server
+2019-01-25 08:34:36		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2019-01-25 08:34:36		    jump: jump to server buffer
+2019-01-25 08:34:36		     raw: open buffer with raw IRC data
+2019-01-25 08:34:36		Examples:
+2019-01-25 08:34:36		  /server listfull
+2019-01-25 08:34:36		  /server add freenode chat.freenode.net
+2019-01-25 08:34:36		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2019-01-25 08:34:36		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2019-01-25 08:34:36		  /server copy freenode freenode-test
+2019-01-25 08:34:36		  /server rename freenode-test freenode2
+2019-01-25 08:34:36		  /server reorder freenode2 freenode
+2019-01-25 08:34:36		  /server del freenode
+2019-01-25 08:34:36		  /server deloutq
+2019-01-25 08:34:49		All servers:
+2019-01-25 08:34:49		Server: freenode [connected], nick: gwosix
+2019-01-25 08:34:49		  addresses. . . . . . : 'chat.freenode.net'
+2019-01-25 08:34:49		  proxy. . . . . . . . :   ('')
+2019-01-25 08:34:49		  ipv6 . . . . . . . . :   (on)
+2019-01-25 08:34:49		  ssl. . . . . . . . . :   (off)
+2019-01-25 08:34:49		  ssl_cert . . . . . . :   ('')
+2019-01-25 08:34:49		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2019-01-25 08:34:49		  ssl_dhkey_size . . . :   (2048)
+2019-01-25 08:34:49		  ssl_fingerprint. . . :   ('')
+2019-01-25 08:34:49		  ssl_verify . . . . . :   (on)
+2019-01-25 08:34:49		  password . . . . . . :   (hidden)
+2019-01-25 08:34:49		  capabilities . . . . :   ('')
+2019-01-25 08:34:49		  sasl_mechanism . . . :   ('plain')
+2019-01-25 08:34:49		  sasl_username. . . . : 'gwosix'
+2019-01-25 08:34:49		  sasl_password. . . . : (hidden)
+2019-01-25 08:34:49		  sasl_key. .  . . . . :   ('')
+2019-01-25 08:34:49		  sasl_timeout . . . . :   (15 seconds)
+2019-01-25 08:34:49		  sasl_fail. . . . . . :   ('continue')
+2019-01-25 08:34:49		  autoconnect. . . . . : on
+2019-01-25 08:34:49		  autoreconnect. . . . :   (on)
+2019-01-25 08:34:49		  autoreconnect_delay. :   (10 seconds)
+2019-01-25 08:34:49		  nicks. . . . . . . . : 'gwosix, gwu'
+2019-01-25 08:34:49		  nicks_alternate. . . :   (on)
+2019-01-25 08:34:49		  username . . . . . . : 'gwosix'
+2019-01-25 08:34:49		  realname . . . . . . :   ('')
+2019-01-25 08:34:49		  local_hostname . . . :   ('')
+2019-01-25 08:34:49		  usermode . . . . . . :   ('')
+2019-01-25 08:34:49		  command. . . . . . . :   ('')
+2019-01-25 08:34:49		  command_delay. . . . :   (0 seconds)
+2019-01-25 08:34:49		  autojoin . . . . . . : '##programming,#haskell,##javascript'
+2019-01-25 08:34:49		  autorejoin . . . . . :   (off)
+2019-01-25 08:34:49		  autorejoin_delay . . :   (30 seconds)
+2019-01-25 08:34:49		  connection_timeout . :   (60 seconds)
+2019-01-25 08:34:49		  anti_flood_prio_high :   (2 seconds)
+2019-01-25 08:34:49		  anti_flood_prio_low. :   (2 seconds)
+2019-01-25 08:34:49		  away_check . . . . . :   (0 minutes)
+2019-01-25 08:34:49		  away_check_max_nicks :   (25)
+2019-01-25 08:34:49		  msg_kick . . . . . . :   ('')
+2019-01-25 08:34:49		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2019-01-25 08:34:49		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2019-01-25 08:34:49		  notify . . . . . . . :   ('')
+2019-01-25 08:34:49		  split_msg_max_length :   (512)
+2019-01-25 08:34:49		Server: mozilla [connected], nick: gwu
+2019-01-25 08:34:49		  addresses. . . . . . : 'irc.mozilla.org'
+2019-01-25 08:34:49		  proxy. . . . . . . . :   ('')
+2019-01-25 08:34:49		  ipv6 . . . . . . . . :   (on)
+2019-01-25 08:34:49		  ssl. . . . . . . . . :   (off)
+2019-01-25 08:34:49		  ssl_cert . . . . . . :   ('')
+2019-01-25 08:34:49		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2019-01-25 08:34:49		  ssl_dhkey_size . . . :   (2048)
+2019-01-25 08:34:49		  ssl_fingerprint. . . :   ('')
+2019-01-25 08:34:49		  ssl_verify . . . . . :   (on)
+2019-01-25 08:34:49		  password . . . . . . :   (hidden)
+2019-01-25 08:34:49		  capabilities . . . . :   ('')
+2019-01-25 08:34:49		  sasl_mechanism . . . :   ('plain')
+2019-01-25 08:34:49		  sasl_username. . . . :   ('')
+2019-01-25 08:34:49		  sasl_password. . . . :   (hidden)
+2019-01-25 08:34:49		  sasl_key. .  . . . . :   ('')
+2019-01-25 08:34:49		  sasl_timeout . . . . :   (15 seconds)
+2019-01-25 08:34:49		  sasl_fail. . . . . . :   ('continue')
+2019-01-25 08:34:49		  autoconnect. . . . . :   (off)
+2019-01-25 08:34:49		  autoreconnect. . . . :   (on)
+2019-01-25 08:34:49		  autoreconnect_delay. :   (10 seconds)
+2019-01-25 08:34:49		  nicks. . . . . . . . :   ('gwu, gwosix, gwimm, gwimminus')
+2019-01-25 08:34:49		  nicks_alternate. . . :   (on)
+2019-01-25 08:34:49		  username . . . . . . :   ('sai')
+2019-01-25 08:34:49		  realname . . . . . . :   ('')
+2019-01-25 08:34:49		  local_hostname . . . :   ('')
+2019-01-25 08:34:49		  usermode . . . . . . :   ('')
+2019-01-25 08:34:49		  command. . . . . . . :   ('')
+2019-01-25 08:34:49		  command_delay. . . . :   (0 seconds)
+2019-01-25 08:34:49		  autojoin . . . . . . :   ('')
+2019-01-25 08:34:49		  autorejoin . . . . . :   (off)
+2019-01-25 08:34:49		  autorejoin_delay . . :   (30 seconds)
+2019-01-25 08:34:49		  connection_timeout . :   (60 seconds)
+2019-01-25 08:34:49		  anti_flood_prio_high :   (2 seconds)
+2019-01-25 08:34:49		  anti_flood_prio_low. :   (2 seconds)
+2019-01-25 08:34:49		  away_check . . . . . :   (0 minutes)
+2019-01-25 08:34:49		  away_check_max_nicks :   (25)
+2019-01-25 08:34:49		  msg_kick . . . . . . :   ('')
+2019-01-25 08:34:49		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2019-01-25 08:34:49		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2019-01-25 08:34:49		  notify . . . . . . . :   ('')
+2019-01-25 08:34:49		  split_msg_max_length :   (512)
+2019-01-25 08:34:55		All servers:
+2019-01-25 08:34:55		 * freenode [connected], nick: gwosix, 3 channels, 0 pv
+2019-01-25 08:34:55		 * mozilla [connected], nick: gwu, 1 channel, 0 pv
+2019-01-25 08:35:05	=!=	Error: unknown command "/h" (type /help for help)
+2019-01-25 08:35:10		[irc]  /server  list|listfull [<name>]
+2019-01-25 08:35:10		                add <name> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2019-01-25 08:35:10		                copy|rename <name> <new_name>
+2019-01-25 08:35:10		                reorder <name> [<name>...]
+2019-01-25 08:35:10		                open <name>|-all [<name>...]
+2019-01-25 08:35:10		                del|keep <name>
+2019-01-25 08:35:10		                deloutq|jump|raw
+2019-01-25 08:35:10		list, add or remove IRC servers
+2019-01-25 08:35:10		    list: list servers (without argument, this list is displayed)
+2019-01-25 08:35:10		listfull: list servers with detailed info for each server
+2019-01-25 08:35:10		     add: add a new server
+2019-01-25 08:35:10		    name: server name, for internal and display use; this name is used to connect to the server (/connect name) and to set server options: irc.server.name.xxx
+2019-01-25 08:35:10		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2019-01-25 08:35:10		   -temp: add a temporary server (not saved)
+2019-01-25 08:35:10		  option: set option for server (for boolean option, value can be omitted)
+2019-01-25 08:35:10		nooption: set boolean option to 'off' (for example: -nossl)
+2019-01-25 08:35:10		    copy: duplicate a server
+2019-01-25 08:35:10		  rename: rename a server
+2019-01-25 08:35:10		 reorder: reorder list of servers
+2019-01-25 08:35:10		    open: open the server buffer without connecting
+2019-01-25 08:35:10		    keep: keep server in config file (for temporary servers only)
+2019-01-25 08:35:10		     del: delete a server
+2019-01-25 08:35:10		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2019-01-25 08:35:10		    jump: jump to server buffer
+2019-01-25 08:35:10		     raw: open buffer with raw IRC data
+2019-01-25 08:35:10		Examples:
+2019-01-25 08:35:10		  /server listfull
+2019-01-25 08:35:10		  /server add freenode chat.freenode.net
+2019-01-25 08:35:10		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2019-01-25 08:35:10		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2019-01-25 08:35:10		  /server copy freenode freenode-test
+2019-01-25 08:35:10		  /server rename freenode-test freenode2
+2019-01-25 08:35:10		  /server reorder freenode2 freenode
+2019-01-25 08:35:10		  /server del freenode
+2019-01-25 08:35:10		  /server deloutq
+2019-01-25 12:20:26		List of bars:
+2019-01-25 12:20:26		  input: window, bottom, height: 1
+2019-01-25 12:20:26		  title: window, top, height: 1
+2019-01-25 12:20:26		  status: window, bottom, height: 1
+2019-01-25 12:20:26		  nicklist: (hidden) window, right, width: auto
+2019-01-25 12:20:26		  fset: (hidden) window, top, height: 3
+2019-01-25 12:20:26		  buflist: root, left, width: auto
+2019-01-25 12:20:55	=!=	Error with command "/bar buflist top" (help on command: /help bar)
+2019-01-25 12:21:00		[core]  /bar  list|listfull|listitems
+2019-01-25 12:21:00		              add <name> <type>[,<conditions>] <position> <size> <separator> <item1>[,<item2>...]
+2019-01-25 12:21:00		              default [input|title|status|nicklist]
+2019-01-25 12:21:00		              del <name>|-all
+2019-01-25 12:21:00		              set <name> <option> <value>
+2019-01-25 12:21:00		              hide|show|toggle <name>
+2019-01-25 12:21:00		              scroll <name> <window> <scroll_value>
+2019-01-25 12:21:00		manage bars
+2019-01-25 12:21:00		         list: list all bars
+2019-01-25 12:21:00		     listfull: list all bars (verbose)
+2019-01-25 12:21:00		    listitems: list all bar items
+2019-01-25 12:21:00		          add: add a new bar
+2019-01-25 12:21:00		         name: name of bar (must be unique)
+2019-01-25 12:21:00		         type:   root: outside windows,
+2019-01-25 12:21:00		               window: inside windows, with optional conditions (see below)
+2019-01-25 12:21:00		   conditions: the conditions to display the bar:
+2019-01-25 12:21:00		                 active: on active window
+2019-01-25 12:21:00		               inactive: on inactive windows
+2019-01-25 12:21:00		               nicklist: on windows with nicklist
+2019-01-25 12:21:00		               other condition: see /help weechat.bar.xxx.conditions and /help eval
+2019-01-25 12:21:00		               without conditions, the bar is always displayed
+2019-01-25 12:21:00		     position: bottom, top, left or right
+2019-01-25 12:21:00		         size: size of bar (in chars)
+2019-01-25 12:21:00		    separator: 1 for using separator (line), 0 or nothing means no separator
+2019-01-25 12:21:00		    item1,...: items for this bar (items can be separated by comma (space between items) or "+" (glued items))
+2019-01-25 12:21:00		      default: create a default bar (all default bars if no bar name is given)
+2019-01-25 12:21:00		          del: delete a bar (or all bars with -all)
+2019-01-25 12:21:00		          set: set a value for a bar property
+2019-01-25 12:21:00		       option: option to change (for options list, look at /set weechat.bar.<barname>.*)
+2019-01-25 12:21:00		        value: new value for option
+2019-01-25 12:21:00		         hide: hide a bar
+2019-01-25 12:21:00		         show: show an hidden bar
+2019-01-25 12:21:00		       toggle: hide/show a bar
+2019-01-25 12:21:00		       scroll: scroll bar
+2019-01-25 12:21:00		       window: window number (use '*' for current window or for root bars)
+2019-01-25 12:21:00		 scroll_value: value for scroll: 'x' or 'y' (optional), followed by '+', '-', 'b' (beginning) or 'e' (end), value (for +/-), and optional % (to scroll by % of width/height, otherwise value is number of chars)
+2019-01-25 12:21:00		Examples:
+2019-01-25 12:21:00		  create a bar with time, buffer number + name, and completion:
+2019-01-25 12:21:00		    /bar add mybar root bottom 1 0 [time],buffer_number+:+buffer_name,completion
+2019-01-25 12:21:00		  hide a bar:
+2019-01-25 12:21:00		    /bar hide mybar
+2019-01-25 12:21:00		  scroll nicklist 10 lines down on current buffer:
+2019-01-25 12:21:00		    /bar scroll nicklist * y+10
+2019-01-25 12:21:00		  scroll to end of nicklist on current buffer:
+2019-01-25 12:21:00		    /bar scroll nicklist * ye
+2019-01-25 12:21:42	=!=	Too few arguments for command "/bar add" (help on command: /help bar)
+2019-01-25 12:21:50	=!=	Too few arguments for command "/bar add" (help on command: /help bar)
+2019-01-25 16:24:37	=!=	irc: already connected to server "freenode"!
+2019-01-26 01:53:55	=!=	Error: cannot create file "/sai/dot/weechat/plugins.conf.weechattmp"
+2019-01-26 01:53:55	=!=	Error writing configuration file "/sai/dot/weechat/plugins.conf"
+2019-01-26 01:53:55	=!=	Error: cannot create file "/sai/dot/weechat/xfer.conf.weechattmp"
+2019-01-26 01:53:55	=!=	Error writing configuration file "/sai/dot/weechat/xfer.conf"
+2019-01-26 01:53:55	=!=	Error: cannot create file "/sai/dot/weechat/relay.conf.weechattmp"
+2019-01-26 01:53:55	=!=	Error writing configuration file "/sai/dot/weechat/relay.conf"
+2019-01-26 01:53:55	=!=	Error: cannot create file "/sai/dot/weechat/alias.conf.weechattmp"
+2019-01-26 01:53:55	=!=	Error writing configuration file "/sai/dot/weechat/alias.conf"
+2019-01-26 01:53:55	=!=	Error: cannot create file "/sai/dot/weechat/logger.conf.weechattmp"
+2019-01-26 01:53:55	=!=	Error writing configuration file "/sai/dot/weechat/logger.conf"
+2019-01-26 21:51:49		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2019-01-28 19:00:49		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2019-01-30 09:55:42		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2019-01-30 17:05:45		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2019-01-30 17:35:19		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2019-01-30 18:22:59		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2019-01-30 20:35:47		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, xfer
+2019-01-30 20:36:01		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, xfer
+2019-01-30 20:36:24		lua: loading script "/sai/dot/bin/weechat/lua/matrix.lua"
+2019-01-30 20:36:24	=!=	lua: unable to execute file "/sai/dot/bin/weechat/lua/matrix.lua"
+2019-01-30 20:36:24	=!=	lua: error: /sai/dot/bin/weechat/lua/matrix.lua:48: module 'cjson' not found:
+2019-01-30 20:36:24		no field package.preload['cjson']
+2019-01-30 20:36:24		no file './cjson.lua'
+2019-01-30 20:36:24		no file '/usr/share/lua/5.1/cjson.lua'
+2019-01-30 20:36:24		no file '/usr/share/lua/5.1/cjson/init.lua'
+2019-01-30 20:36:24		no file '/usr/lib64/lua/5.1/cjson.lua'
+2019-01-30 20:36:24		no file '/usr/lib64/lua/5.1/cjson/init.lua'
+2019-01-30 20:36:24		no file '/usr/share/lua/5.1/cjson.lua'
+2019-01-30 20:36:24		no file '/usr/share/lua/5.1/cjson/init.lua'
+2019-01-30 20:36:24		no file './cjson.so'
+2019-01-30 20:36:24		no file '/usr/lib64/lua/5.1/cjson.so'
+2019-01-30 20:36:24		no file '/usr/lib64/lua/5.1/cjson.so'
+2019-01-30 20:36:24		no file '/usr/lib64/lua/5.1/loadall.so'
+2019-01-30 20:39:17		lua: loading script "/sai/dot/bin/weechat/lua/matrix.lua"
+2019-01-30 20:39:17		lua: registered script "matrix", version 3 (Matrix.org chat plugin)
+2019-01-30 20:39:17		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 20:39:17		Please set your username and password using the settings system and then type /matrix connect
+2019-01-30 20:42:37	=!=	Error with command "/bar buflist show" (help on command: /help bar)
+2019-01-30 20:43:10		Option changed: plugins.var.lua.matrix.user = "gwosix"
+2019-01-30 20:43:17		[crypt] (sec.conf)
+2019-01-30 20:43:17		  sec.crypt.cipher = aes256
+2019-01-30 20:43:17		  sec.crypt.hash_algo = sha256
+2019-01-30 20:43:17		  sec.crypt.passphrase_file = ""
+2019-01-30 20:43:17		  sec.crypt.salt = on
+2019-01-30 20:43:17		[startup] (weechat.conf)
+2019-01-30 20:43:17		  weechat.startup.command_after_plugins = ""
+2019-01-30 20:43:17		  weechat.startup.command_before_plugins = ""
+2019-01-30 20:43:17		  weechat.startup.display_logo = on
+2019-01-30 20:43:17		  weechat.startup.display_version = on
+2019-01-30 20:43:17		  weechat.startup.sys_rlimit = ""
+2019-01-30 20:43:17		[look] (weechat.conf)
+2019-01-30 20:43:17		  weechat.look.align_end_of_lines = message
+2019-01-30 20:43:17		  weechat.look.align_multiline_words = on
+2019-01-30 20:43:17		  weechat.look.bar_more_down = "++"
+2019-01-30 20:43:17		  weechat.look.bar_more_left = "<<"
+2019-01-30 20:43:17		  weechat.look.bar_more_right = ">>"
+2019-01-30 20:43:17		  weechat.look.bar_more_up = "--"
+2019-01-30 20:43:17		  weechat.look.bare_display_exit_on_input = on
+2019-01-30 20:43:17		  weechat.look.bare_display_time_format = "%H:%M"
+2019-01-30 20:43:17		  weechat.look.buffer_auto_renumber = on
+2019-01-30 20:43:17		  weechat.look.buffer_notify_default = all
+2019-01-30 20:43:17		  weechat.look.buffer_position = end
+2019-01-30 20:43:17		  weechat.look.buffer_search_case_sensitive = off
+2019-01-30 20:43:17		  weechat.look.buffer_search_force_default = off
+2019-01-30 20:43:17		  weechat.look.buffer_search_regex = off
+2019-01-30 20:43:17		  weechat.look.buffer_search_where = prefix_message
+2019-01-30 20:43:17		  weechat.look.buffer_time_format = "%H:%M:%S"
+2019-01-30 20:43:17		  weechat.look.color_basic_force_bold = off
+2019-01-30 20:43:17		  weechat.look.color_inactive_buffer = on
+2019-01-30 20:43:17		  weechat.look.color_inactive_message = on
+2019-01-30 20:43:17		  weechat.look.color_inactive_prefix = on
+2019-01-30 20:43:17		  weechat.look.color_inactive_prefix_buffer = on
+2019-01-30 20:43:17		  weechat.look.color_inactive_time = off
+2019-01-30 20:43:17		  weechat.look.color_inactive_window = on
+2019-01-30 20:43:17		  weechat.look.color_nick_offline = off
+2019-01-30 20:43:17		  weechat.look.color_pairs_auto_reset = 5
+2019-01-30 20:43:17		  weechat.look.color_real_white = off
+2019-01-30 20:43:17		  weechat.look.command_chars = ""
+2019-01-30 20:43:17		  weechat.look.command_incomplete = off
+2019-01-30 20:43:17		  weechat.look.confirm_quit = off
+2019-01-30 20:43:17		  weechat.look.confirm_upgrade = off
+2019-01-30 20:43:17		  weechat.look.day_change = on
+2019-01-30 20:43:17		  weechat.look.day_change_message_1date = "-- %a, %d %b %Y --"
+2019-01-30 20:43:17		  weechat.look.day_change_message_2dates = "-- %%a, %%d %%b %%Y (%a, %d %b %Y) --"
+2019-01-30 20:43:17		  weechat.look.eat_newline_glitch = off
+2019-01-30 20:43:17		  weechat.look.emphasized_attributes = ""
+2019-01-30 20:43:17		  weechat.look.highlight = ""
+2019-01-30 20:43:17		  weechat.look.highlight_regex = ""
+2019-01-30 20:43:17		  weechat.look.highlight_tags = ""
+2019-01-30 20:43:17		  weechat.look.hotlist_add_conditions = "${away} || ${buffer.num_displayed} == 0 || ${info:relay_client_count,weechat,connected} > 0"
+2019-01-30 20:43:17		  weechat.look.hotlist_buffer_separator = ", "
+2019-01-30 20:43:17		  weechat.look.hotlist_count_max = 2
+2019-01-30 20:43:17		  weechat.look.hotlist_count_min_msg = 2
+2019-01-30 20:43:17		  weechat.look.hotlist_names_count = 3
+2019-01-30 20:43:17		  weechat.look.hotlist_names_length = 0
+2019-01-30 20:43:17		  weechat.look.hotlist_names_level = 12
+2019-01-30 20:43:17		  weechat.look.hotlist_names_merged_buffers = off
+2019-01-30 20:43:17		  weechat.look.hotlist_prefix = "H: "
+2019-01-30 20:43:17		  weechat.look.hotlist_remove = merged
+2019-01-30 20:43:17		  weechat.look.hotlist_short_names = on
+2019-01-30 20:43:17		  weechat.look.hotlist_sort = group_time_asc
+2019-01-30 20:43:17		  weechat.look.hotlist_suffix = ""
+2019-01-30 20:43:17		  weechat.look.hotlist_unique_numbers = on
+2019-01-30 20:43:17		  weechat.look.input_cursor_scroll = 20
+2019-01-30 20:43:17		  weechat.look.input_share = none
+2019-01-30 20:43:17		  weechat.look.input_share_overwrite = off
+2019-01-30 20:43:17		  weechat.look.input_undo_max = 32
+2019-01-30 20:43:17		  weechat.look.item_away_message = on
+2019-01-30 20:43:17		  weechat.look.item_buffer_filter = "*"
+2019-01-30 20:43:17		  weechat.look.item_buffer_zoom = "!"
+2019-01-30 20:43:17		  weechat.look.item_mouse_status = "M"
+2019-01-30 20:43:17		  weechat.look.item_time_format = "%H:%M"
+2019-01-30 20:43:17		  weechat.look.jump_current_to_previous_buffer = on
+2019-01-30 20:43:17		  weechat.look.jump_previous_buffer_when_closing = on
+2019-01-30 20:43:17		  weechat.look.jump_smart_back_to_buffer = on
+2019-01-30 20:43:17		  weechat.look.key_bind_safe = on
+2019-01-30 20:43:17		  weechat.look.key_grab_delay = 800
+2019-01-30 20:43:17		  weechat.look.mouse = off
+2019-01-30 20:43:17		  weechat.look.mouse_timer_delay = 100
+2019-01-30 20:43:17		  weechat.look.nick_color_force = ""
+2019-01-30 20:43:17		  weechat.look.nick_color_hash = djb2
+2019-01-30 20:43:17		  weechat.look.nick_color_stop_chars = "_|["
+2019-01-30 20:43:17		  weechat.look.nick_prefix = "<"  (default: "")
+2019-01-30 20:43:17		  weechat.look.nick_suffix = ">"  (default: "")
+2019-01-30 20:43:17		  weechat.look.paste_auto_add_newline = on
+2019-01-30 20:43:17		  weechat.look.paste_bracketed = on
+2019-01-30 20:43:17		  weechat.look.paste_bracketed_timer_delay = 10
+2019-01-30 20:43:17		  weechat.look.paste_max_lines = 1
+2019-01-30 20:43:17		  weechat.look.prefix_action = " *"
+2019-01-30 20:43:17		  weechat.look.prefix_align = right
+2019-01-30 20:43:17		  weechat.look.prefix_align_max = 0
+2019-01-30 20:43:17		  weechat.look.prefix_align_min = 0
+2019-01-30 20:43:17		  weechat.look.prefix_align_more = "+"
+2019-01-30 20:43:17		  weechat.look.prefix_align_more_after = on
+2019-01-30 20:43:17		  weechat.look.prefix_buffer_align = right
+2019-01-30 20:43:17		  weechat.look.prefix_buffer_align_max = 0
+2019-01-30 20:43:17		  weechat.look.prefix_buffer_align_more = "+"
+2019-01-30 20:43:17		  weechat.look.prefix_buffer_align_more_after = on
+2019-01-30 20:43:17		  weechat.look.prefix_error = "=!="
+2019-01-30 20:43:17		  weechat.look.prefix_join = "-->"
+2019-01-30 20:43:17		  weechat.look.prefix_network = "--"
+2019-01-30 20:43:17		  weechat.look.prefix_quit = "<--"
+2019-01-30 20:43:17		  weechat.look.prefix_same_nick = ""
+2019-01-30 20:43:17		  weechat.look.prefix_suffix = "|"
+2019-01-30 20:43:17		  weechat.look.quote_nick_prefix = "<"
+2019-01-30 20:43:17		  weechat.look.quote_nick_suffix = ">"
+2019-01-30 20:43:17		  weechat.look.quote_time_format = "%H:%M:%S"
+2019-01-30 20:43:17		  weechat.look.read_marker = line
+2019-01-30 20:43:17		  weechat.look.read_marker_always_show = off
+2019-01-30 20:43:17		  weechat.look.read_marker_string = "- "
+2019-01-30 20:43:17		  weechat.look.save_config_on_exit = on
+2019-01-30 20:43:17		  weechat.look.save_config_with_fsync = off
+2019-01-30 20:43:17		  weechat.look.save_layout_on_exit = none
+2019-01-30 20:43:17		  weechat.look.scroll_amount = 3
+2019-01-30 20:43:17		  weechat.look.scroll_bottom_after_switch = off
+2019-01-30 20:43:17		  weechat.look.scroll_page_percent = 100
+2019-01-30 20:43:17		  weechat.look.search_text_not_found_alert = on
+2019-01-30 20:43:17		  weechat.look.separator_horizontal = "-"
+2019-01-30 20:43:17		  weechat.look.separator_vertical = ""
+2019-01-30 20:43:17		  weechat.look.tab_width = 1
+2019-01-30 20:43:17		  weechat.look.time_format = "%a, %d %b %Y %T"
+2019-01-30 20:43:17		  weechat.look.window_auto_zoom = off
+2019-01-30 20:43:17		  weechat.look.window_separator_horizontal = on
+2019-01-30 20:43:17		  weechat.look.window_separator_vertical = on
+2019-01-30 20:43:17		  weechat.look.window_title = ""
+2019-01-30 20:43:17		  weechat.look.word_chars_highlight = "!\u00A0,-,_,|,alnum"
+2019-01-30 20:43:17		  weechat.look.word_chars_input = "!\u00A0,-,_,|,alnum"
+2019-01-30 20:43:17		[color] (weechat.conf)
+2019-01-30 20:43:17		  weechat.color.bar_more = lightmagenta
+2019-01-30 20:43:17		  weechat.color.chat = default
+2019-01-30 20:43:17		  weechat.color.chat_bg = default
+2019-01-30 20:43:17		  weechat.color.chat_buffer = white
+2019-01-30 20:43:17		  weechat.color.chat_channel = white
+2019-01-30 20:43:17		  weechat.color.chat_day_change = cyan
+2019-01-30 20:43:17		  weechat.color.chat_delimiters = green
+2019-01-30 20:43:17		  weechat.color.chat_highlight = yellow
+2019-01-30 20:43:17		  weechat.color.chat_highlight_bg = magenta
+2019-01-30 20:43:17		  weechat.color.chat_host = cyan
+2019-01-30 20:43:17		  weechat.color.chat_inactive_buffer = default
+2019-01-30 20:43:17		  weechat.color.chat_inactive_window = default
+2019-01-30 20:43:17		  weechat.color.chat_nick = lightcyan
+2019-01-30 20:43:17		  weechat.color.chat_nick_colors = "cyan,magenta,green,brown,lightblue,default,lightcyan,lightmagenta,lightgreen,blue"
+2019-01-30 20:43:17		  weechat.color.chat_nick_offline = default
+2019-01-30 20:43:17		  weechat.color.chat_nick_offline_highlight = default
+2019-01-30 20:43:17		  weechat.color.chat_nick_offline_highlight_bg = blue
+2019-01-30 20:43:17		  weechat.color.chat_nick_other = cyan
+2019-01-30 20:43:17		  weechat.color.chat_nick_prefix = green
+2019-01-30 20:43:17		  weechat.color.chat_nick_self = white
+2019-01-30 20:43:17		  weechat.color.chat_nick_suffix = green
+2019-01-30 20:43:17		  weechat.color.chat_prefix_action = white
+2019-01-30 20:43:17		  weechat.color.chat_prefix_buffer = brown
+2019-01-30 20:43:17		  weechat.color.chat_prefix_buffer_inactive_buffer = default
+2019-01-30 20:43:17		  weechat.color.chat_prefix_error = yellow
+2019-01-30 20:43:17		  weechat.color.chat_prefix_join = lightgreen
+2019-01-30 20:43:17		  weechat.color.chat_prefix_more = lightmagenta
+2019-01-30 20:43:17		  weechat.color.chat_prefix_network = magenta
+2019-01-30 20:43:17		  weechat.color.chat_prefix_quit = lightred
+2019-01-30 20:43:17		  weechat.color.chat_prefix_suffix = green
+2019-01-30 20:43:17		  weechat.color.chat_read_marker = magenta
+2019-01-30 20:43:17		  weechat.color.chat_read_marker_bg = default
+2019-01-30 20:43:17		  weechat.color.chat_server = brown
+2019-01-30 20:43:17		  weechat.color.chat_tags = red
+2019-01-30 20:43:17		  weechat.color.chat_text_found = yellow
+2019-01-30 20:43:17		  weechat.color.chat_text_found_bg = lightmagenta
+2019-01-30 20:43:17		  weechat.color.chat_time = default
+2019-01-30 20:43:17		  weechat.color.chat_time_delimiters = brown
+2019-01-30 20:43:17		  weechat.color.chat_value = cyan
+2019-01-30 20:43:17		  weechat.color.chat_value_null = blue
+2019-01-30 20:43:17		  weechat.color.emphasized = yellow
+2019-01-30 20:43:17		  weechat.color.emphasized_bg = magenta
+2019-01-30 20:43:17		  weechat.color.input_actions = lightgreen
+2019-01-30 20:43:17		  weechat.color.input_text_not_found = red
+2019-01-30 20:43:17		  weechat.color.item_away = yellow
+2019-01-30 20:43:17		  weechat.color.nicklist_away = cyan
+2019-01-30 20:43:17		  weechat.color.nicklist_group = green
+2019-01-30 20:43:17		  weechat.color.separator = blue
+2019-01-30 20:43:17		  weechat.color.status_count_highlight = magenta
+2019-01-30 20:43:17		  weechat.color.status_count_msg = brown
+2019-01-30 20:43:17		  weechat.color.status_count_other = default
+2019-01-30 20:43:17		  weechat.color.status_count_private = green
+2019-01-30 20:43:17		  weechat.color.status_data_highlight = lightmagenta
+2019-01-30 20:43:17		  weechat.color.status_data_msg = yellow
+2019-01-30 20:43:17		  weechat.color.status_data_other = default
+2019-01-30 20:43:17		  weechat.color.status_data_private = lightgreen
+2019-01-30 20:43:17		  weechat.color.status_filter = green
+2019-01-30 20:43:17		  weechat.color.status_more = yellow
+2019-01-30 20:43:17		  weechat.color.status_mouse = green
+2019-01-30 20:43:17		  weechat.color.status_name = white
+2019-01-30 20:43:17		  weechat.color.status_name_ssl = lightgreen
+2019-01-30 20:43:17		  weechat.color.status_nicklist_count = default
+2019-01-30 20:43:17		  weechat.color.status_number = yellow
+2019-01-30 20:43:17		  weechat.color.status_time = default
+2019-01-30 20:43:17		[completion] (weechat.conf)
+2019-01-30 20:43:17		  weechat.completion.base_word_until_cursor = on
+2019-01-30 20:43:17		  weechat.completion.command_inline = on
+2019-01-30 20:43:17		  weechat.completion.default_template = "%(nicks)|%(irc_channels)"
+2019-01-30 20:43:17		  weechat.completion.nick_add_space = on
+2019-01-30 20:43:17		  weechat.completion.nick_case_sensitive = off
+2019-01-30 20:43:17		  weechat.completion.nick_completer = ":"
+2019-01-30 20:43:17		  weechat.completion.nick_first_only = off
+2019-01-30 20:43:17		  weechat.completion.nick_ignore_chars = "[]`_-^"
+2019-01-30 20:43:17		  weechat.completion.partial_completion_alert = on
+2019-01-30 20:43:17		  weechat.completion.partial_completion_command = off
+2019-01-30 20:43:17		  weechat.completion.partial_completion_command_arg = off
+2019-01-30 20:43:17		  weechat.completion.partial_completion_count = on
+2019-01-30 20:43:17		  weechat.completion.partial_completion_other = off
+2019-01-30 20:43:17		  weechat.completion.partial_completion_templates = "config_options"
+2019-01-30 20:43:17		[history] (weechat.conf)
+2019-01-30 20:43:17		  weechat.history.display_default = 5
+2019-01-30 20:43:17		  weechat.history.max_buffer_lines_minutes = 0
+2019-01-30 20:43:17		  weechat.history.max_buffer_lines_number = 4096
+2019-01-30 20:43:17		  weechat.history.max_commands = 100
+2019-01-30 20:43:17		  weechat.history.max_visited_buffers = 50
+2019-01-30 20:43:17		[network] (weechat.conf)
+2019-01-30 20:43:17		  weechat.network.connection_timeout = 60
+2019-01-30 20:43:17		  weechat.network.gnutls_ca_file = "/etc/ssl/certs/ca-certificates.crt"
+2019-01-30 20:43:17		  weechat.network.gnutls_handshake_timeout = 30
+2019-01-30 20:43:17		  weechat.network.proxy_curl = ""
+2019-01-30 20:43:17		[plugin] (weechat.conf)
+2019-01-30 20:43:17		  weechat.plugin.autoload = "*"
+2019-01-30 20:43:17		  weechat.plugin.debug = off
+2019-01-30 20:43:17		  weechat.plugin.extension = ".so,.dll"
+2019-01-30 20:43:17		  weechat.plugin.path = "%h/plugins"
+2019-01-30 20:43:17		  weechat.plugin.save_config_on_unload = on
+2019-01-30 20:43:17		[bar] (weechat.conf)
+2019-01-30 20:43:17		  weechat.bar.buflist.color_bg = default
+2019-01-30 20:43:17		  weechat.bar.buflist.color_delim = default
+2019-01-30 20:43:17		  weechat.bar.buflist.color_fg = default
+2019-01-30 20:43:17		  weechat.bar.buflist.conditions = ""
+2019-01-30 20:43:17		  weechat.bar.buflist.filling_left_right = vertical
+2019-01-30 20:43:17		  weechat.bar.buflist.filling_top_bottom = columns_vertical
+2019-01-30 20:43:17		  weechat.bar.buflist.hidden = off  (default: on)
+2019-01-30 20:43:17		  weechat.bar.buflist.items = "buflist"  (default: "")
+2019-01-30 20:43:17		  weechat.bar.buflist.position = left
+2019-01-30 20:43:17		  weechat.bar.buflist.priority = 0
+2019-01-30 20:43:17		  weechat.bar.buflist.separator = on
+2019-01-30 20:43:17		  weechat.bar.buflist.size = 0
+2019-01-30 20:43:17		  weechat.bar.buflist.size_max = 0
+2019-01-30 20:43:17		  weechat.bar.buflist.type = root
+2019-01-30 20:43:17		  weechat.bar.fset.color_bg = default
+2019-01-30 20:43:17		  weechat.bar.fset.color_delim = cyan
+2019-01-30 20:43:17		  weechat.bar.fset.color_fg = default
+2019-01-30 20:43:17		  weechat.bar.fset.conditions = "${buffer.full_name} == fset.fset"
+2019-01-30 20:43:17		  weechat.bar.fset.filling_left_right = vertical
+2019-01-30 20:43:17		  weechat.bar.fset.filling_top_bottom = horizontal
+2019-01-30 20:43:17		  weechat.bar.fset.hidden = on
+2019-01-30 20:43:17		  weechat.bar.fset.items = "fset"  (default: "")
+2019-01-30 20:43:17		  weechat.bar.fset.position = top
+2019-01-30 20:43:17		  weechat.bar.fset.priority = 0
+2019-01-30 20:43:17		  weechat.bar.fset.separator = on
+2019-01-30 20:43:17		  weechat.bar.fset.size = 3
+2019-01-30 20:43:17		  weechat.bar.fset.size_max = 3
+2019-01-30 20:43:17		  weechat.bar.fset.type = window
+2019-01-30 20:43:17		  weechat.bar.input.color_bg = default
+2019-01-30 20:43:17		  weechat.bar.input.color_delim = cyan
+2019-01-30 20:43:17		  weechat.bar.input.color_fg = default
+2019-01-30 20:43:17		  weechat.bar.input.conditions = ""
+2019-01-30 20:43:17		  weechat.bar.input.filling_left_right = vertical
+2019-01-30 20:43:17		  weechat.bar.input.filling_top_bottom = horizontal
+2019-01-30 20:43:17		  weechat.bar.input.hidden = off
+2019-01-30 20:43:17		  weechat.bar.input.items = "[input_prompt]+(away),[input_search],[input_paste],input_text"
+2019-01-30 20:43:17		  weechat.bar.input.position = bottom
+2019-01-30 20:43:17		  weechat.bar.input.priority = 1000
+2019-01-30 20:43:17		  weechat.bar.input.separator = off
+2019-01-30 20:43:17		  weechat.bar.input.size = 1
+2019-01-30 20:43:17		  weechat.bar.input.size_max = 0
+2019-01-30 20:43:17		  weechat.bar.input.type = window
+2019-01-30 20:43:17		  weechat.bar.nicklist.color_bg = default
+2019-01-30 20:43:17		  weechat.bar.nicklist.color_delim = cyan
+2019-01-30 20:43:17		  weechat.bar.nicklist.color_fg = default
+2019-01-30 20:43:17		  weechat.bar.nicklist.conditions = "${nicklist}"
+2019-01-30 20:43:17		  weechat.bar.nicklist.filling_left_right = vertical
+2019-01-30 20:43:17		  weechat.bar.nicklist.filling_top_bottom = columns_vertical
+2019-01-30 20:43:17		  weechat.bar.nicklist.hidden = on
+2019-01-30 20:43:17		  weechat.bar.nicklist.items = "buffer_nicklist"
+2019-01-30 20:43:17		  weechat.bar.nicklist.position = right
+2019-01-30 20:43:17		  weechat.bar.nicklist.priority = 200
+2019-01-30 20:43:17		  weechat.bar.nicklist.separator = on
+2019-01-30 20:43:17		  weechat.bar.nicklist.size = 0
+2019-01-30 20:43:17		  weechat.bar.nicklist.size_max = 0
+2019-01-30 20:43:17		  weechat.bar.nicklist.type = window
+2019-01-30 20:43:17		  weechat.bar.status.color_bg = blue
+2019-01-30 20:43:17		  weechat.bar.status.color_delim = cyan
+2019-01-30 20:43:17		  weechat.bar.status.color_fg = default
+2019-01-30 20:43:17		  weechat.bar.status.conditions = ""
+2019-01-30 20:43:17		  weechat.bar.status.filling_left_right = vertical
+2019-01-30 20:43:17		  weechat.bar.status.filling_top_bottom = horizontal
+2019-01-30 20:43:17		  weechat.bar.status.hidden = off
+2019-01-30 20:43:17		  weechat.bar.status.items = "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion"
+2019-01-30 20:43:17		  weechat.bar.status.position = bottom
+2019-01-30 20:43:17		  weechat.bar.status.priority = 500
+2019-01-30 20:43:17		  weechat.bar.status.separator = off
+2019-01-30 20:43:17		  weechat.bar.status.size = 1
+2019-01-30 20:43:17		  weechat.bar.status.size_max = 0
+2019-01-30 20:43:17		  weechat.bar.status.type = window
+2019-01-30 20:43:17		  weechat.bar.title.color_bg = blue
+2019-01-30 20:43:17		  weechat.bar.title.color_delim = cyan
+2019-01-30 20:43:17		  weechat.bar.title.color_fg = default
+2019-01-30 20:43:17		  weechat.bar.title.conditions = ""
+2019-01-30 20:43:17		  weechat.bar.title.filling_left_right = vertical
+2019-01-30 20:43:17		  weechat.bar.title.filling_top_bottom = horizontal
+2019-01-30 20:43:17		  weechat.bar.title.hidden = off
+2019-01-30 20:43:17		  weechat.bar.title.items = "buffer_title"
+2019-01-30 20:43:17		  weechat.bar.title.position = top
+2019-01-30 20:43:17		  weechat.bar.title.priority = 500
+2019-01-30 20:43:17		  weechat.bar.title.separator = off
+2019-01-30 20:43:17		  weechat.bar.title.size = 1
+2019-01-30 20:43:17		  weechat.bar.title.size_max = 0
+2019-01-30 20:43:17		  weechat.bar.title.type = window
+2019-01-30 20:43:17		[var] (plugins.conf)
+2019-01-30 20:43:17		  plugins.var.lua.matrix.autojoin_on_invite = "on"
+2019-01-30 20:43:17		  plugins.var.lua.matrix.backlog_lines = "120"
+2019-01-30 20:43:17		  plugins.var.lua.matrix.debug = "off"
+2019-01-30 20:43:17		  plugins.var.lua.matrix.encrypted_message_color = "lightgreen"
+2019-01-30 20:43:17		  plugins.var.lua.matrix.homeserver_url = "https://matrix.org/"
+2019-01-30 20:43:17		  plugins.var.lua.matrix.local_echo = "on"
+2019-01-30 20:43:17		  plugins.var.lua.matrix.nick_style = "nick"
+2019-01-30 20:43:17		  plugins.var.lua.matrix.password = ""
+2019-01-30 20:43:17		  plugins.var.lua.matrix.presence_filter = "off"
+2019-01-30 20:43:17		  plugins.var.lua.matrix.read_receipts = "on"
+2019-01-30 20:43:17		  plugins.var.lua.matrix.timeout = "5"
+2019-01-30 20:43:17		  plugins.var.lua.matrix.typing_notices = "on"
+2019-01-30 20:43:17		  plugins.var.lua.matrix.user = "gwosix"
+2019-01-30 20:43:17		[desc] (plugins.conf)
+2019-01-30 20:43:17		  plugins.desc.lua.matrix.autojoin_on_invite = "Automatically join rooms you are invited to (default: "on")"
+2019-01-30 20:43:17		  plugins.desc.lua.matrix.backlog_lines = "Number of lines to fetch from backlog upon connecting (default: "120")"
+2019-01-30 20:43:17		  plugins.desc.lua.matrix.debug = "Print a lot of extra information to help with finding bugs and other problems. (default: "off")"
+2019-01-30 20:43:17		  plugins.desc.lua.matrix.encrypted_message_color = "Print encrypted mesages with this color (default: "lightgreen")"
+2019-01-30 20:43:17		  plugins.desc.lua.matrix.homeserver_url = "Full URL including port to your homeserver (including trailing slash) or use default matrix.org (default: "https://matrix.org/")"
+2019-01-30 20:43:17		  plugins.desc.lua.matrix.local_echo = "Print lines locally instead of waiting for return from server (default: "on")"
+2019-01-30 20:43:17		  plugins.desc.lua.matrix.nick_style = "Show nicknames or user IDs in chat ('nick' or 'uid') (default: "nick")"
+2019-01-30 20:43:17		  plugins.desc.lua.matrix.password = "Your homeserver password (default: "")"
+2019-01-30 20:43:17		  plugins.desc.lua.matrix.presence_filter = "Filter presence messages and ephemeral events (for performance) (default: "off")"
+2019-01-30 20:43:17		  plugins.desc.lua.matrix.read_receipts = "Send read receipts. Note that not sending them will prevent a room to be marked as read in Riot clients. (default: "on")"
+2019-01-30 20:43:17		  plugins.desc.lua.matrix.timeout = "Time in seconds until a connection is assumed to be timed out (default: "5")"
+2019-01-30 20:43:17		  plugins.desc.lua.matrix.typing_notices = "Send typing notices when you type (default: "on")"
+2019-01-30 20:43:17		  plugins.desc.lua.matrix.user = "Your homeserver username (default: "")"
+2019-01-30 20:43:17		[default] (charset.conf)
+2019-01-30 20:43:17		  charset.default.decode = "iso-8859-1"
+2019-01-30 20:43:17		  charset.default.encode = ""
+2019-01-30 20:43:17		[look] (logger.conf)
+2019-01-30 20:43:17		  logger.look.backlog = 20
+2019-01-30 20:43:17		  logger.look.backlog_conditions = ""
+2019-01-30 20:43:17		[color] (logger.conf)
+2019-01-30 20:43:17		  logger.color.backlog_end = default
+2019-01-30 20:43:17		  logger.color.backlog_line = default
+2019-01-30 20:43:17		[file] (logger.conf)
+2019-01-30 20:43:17		  logger.file.auto_log = on
+2019-01-30 20:43:17		  logger.file.flush_delay = 120
+2019-01-30 20:43:17		  logger.file.fsync = off
+2019-01-30 20:43:17		  logger.file.info_lines = off
+2019-01-30 20:43:17		  logger.file.mask = "$plugin.$name.weechatlog"
+2019-01-30 20:43:17		  logger.file.name_lower_case = on
+2019-01-30 20:43:17		  logger.file.nick_prefix = ""
+2019-01-30 20:43:17		  logger.file.nick_suffix = ""
+2019-01-30 20:43:17		  logger.file.path = "%h/logs/"
+2019-01-30 20:43:17		  logger.file.replacement_char = "_"
+2019-01-30 20:43:17		  logger.file.time_format = "%Y-%m-%d %H:%M:%S"
+2019-01-30 20:43:17		[command] (exec.conf)
+2019-01-30 20:43:17		  exec.command.default_options = ""
+2019-01-30 20:43:17		  exec.command.purge_delay = 0
+2019-01-30 20:43:17		[color] (exec.conf)
+2019-01-30 20:43:17		  exec.color.flag_finished = lightred
+2019-01-30 20:43:17		  exec.color.flag_running = lightgreen
+2019-01-30 20:43:17		[look] (trigger.conf)
+2019-01-30 20:43:17		  trigger.look.enabled = on
+2019-01-30 20:43:17		  trigger.look.monitor_strip_colors = off
+2019-01-30 20:43:17		[color] (trigger.conf)
+2019-01-30 20:43:17		  trigger.color.flag_command = lightgreen
+2019-01-30 20:43:17		  trigger.color.flag_conditions = yellow
+2019-01-30 20:43:17		  trigger.color.flag_post_action = lightblue
+2019-01-30 20:43:17		  trigger.color.flag_regex = lightcyan
+2019-01-30 20:43:17		  trigger.color.flag_return_code = lightmagenta
+2019-01-30 20:43:17		  trigger.color.regex = white
+2019-01-30 20:43:17		  trigger.color.replace = cyan
+2019-01-30 20:43:17		  trigger.color.trigger = green
+2019-01-30 20:43:17		  trigger.color.trigger_disabled = red
+2019-01-30 20:43:17		[trigger] (trigger.conf)
+2019-01-30 20:43:17		  trigger.trigger.beep.arguments = ""
+2019-01-30 20:43:17		  trigger.trigger.beep.command = "/print -beep"
+2019-01-30 20:43:17		  trigger.trigger.beep.conditions = "${tg_displayed} && (${tg_highlight} || ${tg_msg_pv})"
+2019-01-30 20:43:17		  trigger.trigger.beep.enabled = on
+2019-01-30 20:43:17		  trigger.trigger.beep.hook = print
+2019-01-30 20:43:17		  trigger.trigger.beep.post_action = none
+2019-01-30 20:43:17		  trigger.trigger.beep.regex = ""
+2019-01-30 20:43:17		  trigger.trigger.beep.return_code = ok
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass.arguments = "5000|input_text_display;5000|history_add;5000|irc_command_auth"
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass.command = ""
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass.conditions = ""
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass.enabled = on
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass.hook = modifier
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass.post_action = none
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass.regex = "==^((/(msg|m|quote) +(-server +[^ ]+ +)?nickserv +(id|identify|set +password|ghost +[^ ]+|release +[^ ]+|regain +[^ ]+|recover +[^ ]+) +)|/oper +[^ ]+ +|/quote +pass +|/set +[^ ]*password[^ ]* +|/secure +(passphrase|decrypt|set +[^ ]+) +)(.*)==${re:1}${hide:*,${re:+}}"
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass.return_code = ok
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass_register.arguments = "5000|input_text_display;5000|history_add;5000|irc_command_auth"
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass_register.command = ""
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass_register.conditions = ""
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass_register.enabled = on
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass_register.hook = modifier
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass_register.post_action = none
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass_register.regex = "==^(/(msg|m|quote) +nickserv +register +)([^ ]+)(.*)==${re:1}${hide:*,${re:3}}${re:4}"
+2019-01-30 20:43:17		  trigger.trigger.cmd_pass_register.return_code = ok
+2019-01-30 20:43:17		  trigger.trigger.msg_auth.arguments = "5000|irc_message_auth"
+2019-01-30 20:43:17		  trigger.trigger.msg_auth.command = ""
+2019-01-30 20:43:17		  trigger.trigger.msg_auth.conditions = ""
+2019-01-30 20:43:17		  trigger.trigger.msg_auth.enabled = on
+2019-01-30 20:43:17		  trigger.trigger.msg_auth.hook = modifier
+2019-01-30 20:43:17		  trigger.trigger.msg_auth.post_action = none
+2019-01-30 20:43:17		  trigger.trigger.msg_auth.regex = "==^(.*(id|identify|set +password|register|ghost +[^ ]+|release +[^ ]+|regain +[^ ]+|recover +[^ ]+) +)(.*)==${re:1}${hide:*,${re:+}}"
+2019-01-30 20:43:17		  trigger.trigger.msg_auth.return_code = ok
+2019-01-30 20:43:17		  trigger.trigger.server_pass.arguments = "5000|input_text_display;5000|history_add"
+2019-01-30 20:43:17		  trigger.trigger.server_pass.command = ""
+2019-01-30 20:43:17		  trigger.trigger.server_pass.conditions = ""
+2019-01-30 20:43:17		  trigger.trigger.server_pass.enabled = on
+2019-01-30 20:43:17		  trigger.trigger.server_pass.hook = modifier
+2019-01-30 20:43:17		  trigger.trigger.server_pass.post_action = none
+2019-01-30 20:43:17		  trigger.trigger.server_pass.regex = "==^(/(server|connect) .*-(sasl_)?password=)([^ ]+)(.*)==${re:1}${hide:*,${re:4}}${re:5}"
+2019-01-30 20:43:17		  trigger.trigger.server_pass.return_code = ok
+2019-01-30 20:43:17		[color] (aspell.conf)
+2019-01-30 20:43:17		  aspell.color.misspelled = lightred
+2019-01-30 20:43:17		  aspell.color.suggestion = default
+2019-01-30 20:43:17		  aspell.color.suggestion_delimiter_dict = cyan
+2019-01-30 20:43:17		  aspell.color.suggestion_delimiter_word = cyan
+2019-01-30 20:43:17		[check] (aspell.conf)
+2019-01-30 20:43:17		  aspell.check.commands = "ame,amsg,away,command,cycle,kick,kickban,me,msg,notice,part,query,quit,topic"
+2019-01-30 20:43:17		  aspell.check.default_dict = ""
+2019-01-30 20:43:17		  aspell.check.during_search = off
+2019-01-30 20:43:17		  aspell.check.enabled = off
+2019-01-30 20:43:17		  aspell.check.real_time = off
+2019-01-30 20:43:17		  aspell.check.suggestions = -1
+2019-01-30 20:43:17		  aspell.check.word_min_length = 2
+2019-01-30 20:43:17		[look] (aspell.conf)
+2019-01-30 20:43:17		  aspell.look.suggestion_delimiter_dict = " / "
+2019-01-30 20:43:17		  aspell.look.suggestion_delimiter_word = ","
+2019-01-30 20:43:17		[cmd] (alias.conf)
+2019-01-30 20:43:17		  alias.cmd.AAWAY = "allserv /away"
+2019-01-30 20:43:17		  alias.cmd.AME = "allchan /me"
+2019-01-30 20:43:17		  alias.cmd.AMSG = "allchan /msg *"
+2019-01-30 20:43:17		  alias.cmd.ANICK = "allserv /nick"
+2019-01-30 20:43:17		  alias.cmd.BEEP = "print -beep"
+2019-01-30 20:43:17		  alias.cmd.BYE = "quit"
+2019-01-30 20:43:17		  alias.cmd.C = "buffer clear"
+2019-01-30 20:43:17		  alias.cmd.CHAT = "dcc chat"
+2019-01-30 20:43:17		  alias.cmd.CL = "buffer clear"
+2019-01-30 20:43:17		  alias.cmd.CLOSE = "buffer close"
+2019-01-30 20:43:17		  alias.cmd.EXIT = "quit"
+2019-01-30 20:43:17		  alias.cmd.IG = "ignore"
+2019-01-30 20:43:17		  alias.cmd.J = "join"
+2019-01-30 20:43:17		  alias.cmd.K = "kick"
+2019-01-30 20:43:17		  alias.cmd.KB = "kickban"
+2019-01-30 20:43:17		  alias.cmd.LEAVE = "part"
+2019-01-30 20:43:17		  alias.cmd.M = "msg"
+2019-01-30 20:43:17		  alias.cmd.MSGBUF = "command -buffer $1 * /input send $2-"
+2019-01-30 20:43:17		  alias.cmd.MUB = "unban *"
+2019-01-30 20:43:17		  alias.cmd.N = "names"
+2019-01-30 20:43:17		  alias.cmd.Q = "query"
+2019-01-30 20:43:17		  alias.cmd.REDRAW = "window refresh"
+2019-01-30 20:43:17		  alias.cmd.SAY = "msg *"
+2019-01-30 20:43:17		  alias.cmd.SIGNOFF = "quit"
+2019-01-30 20:43:17		  alias.cmd.T = "topic"
+2019-01-30 20:43:17		  alias.cmd.UB = "unban"
+2019-01-30 20:43:17		  alias.cmd.UMODE = "mode $nick"
+2019-01-30 20:43:17		  alias.cmd.V = "command core version"
+2019-01-30 20:43:17		  alias.cmd.W = "who"
+2019-01-30 20:43:17		  alias.cmd.WC = "window merge"
+2019-01-30 20:43:17		  alias.cmd.WI = "whois"
+2019-01-30 20:43:17		  alias.cmd.WII = "whois $1 $1"
+2019-01-30 20:43:17		  alias.cmd.WW = "whowas"
+2019-01-30 20:43:17		[completion] (alias.conf)
+2019-01-30 20:43:17		  alias.completion.MSGBUF = "%(buffers_plugins_names)"
+2019-01-30 20:43:17		[look] (buflist.conf)
+2019-01-30 20:43:17		  buflist.look.add_newline = on
+2019-01-30 20:43:17		  buflist.look.auto_scroll = 50
+2019-01-30 20:43:17		  buflist.look.display_conditions = "${buffer.hidden}==0"
+2019-01-30 20:43:17		  buflist.look.enabled = on
+2019-01-30 20:43:17		  buflist.look.mouse_jump_visited_buffer = off
+2019-01-30 20:43:17		  buflist.look.mouse_move_buffer = on
+2019-01-30 20:43:17		  buflist.look.mouse_wheel = on
+2019-01-30 20:43:17		  buflist.look.nick_prefix = off
+2019-01-30 20:43:17		  buflist.look.nick_prefix_empty = on
+2019-01-30 20:43:17		  buflist.look.signals_refresh = ""
+2019-01-30 20:43:17		  buflist.look.sort = "number,-active"
+2019-01-30 20:43:17		[format] (buflist.conf)
+2019-01-30 20:43:17		  buflist.format.buffer = "${format_number}${indent}${format_nick_prefix}${color_hotlist}${format_name}"
+2019-01-30 20:43:17		  buflist.format.buffer_current = "${color:,blue}${format_buffer}"
+2019-01-30 20:43:17		  buflist.format.hotlist = " ${color:green}(${hotlist}${color:green})"
+2019-01-30 20:43:17		  buflist.format.hotlist_highlight = "${color:magenta}"
+2019-01-30 20:43:17		  buflist.format.hotlist_low = "${color:white}"
+2019-01-30 20:43:17		  buflist.format.hotlist_message = "${color:brown}"
+2019-01-30 20:43:17		  buflist.format.hotlist_none = "${color:default}"
+2019-01-30 20:43:17		  buflist.format.hotlist_private = "${color:green}"
+2019-01-30 20:43:17		  buflist.format.hotlist_separator = "${color:default},"
+2019-01-30 20:43:17		  buflist.format.indent = "  "
+2019-01-30 20:43:17		  buflist.format.lag = " ${color:green}[${color:brown}${lag}${color:green}]"
+2019-01-30 20:43:17		  buflist.format.name = "${name}"
+2019-01-30 20:43:17		  buflist.format.nick_prefix = "${color_nick_prefix}${nick_prefix}"
+2019-01-30 20:43:17		  buflist.format.number = "${color:green}${number}${if:${number_displayed}?.: }"
+2019-01-30 20:43:17		[file] (fifo.conf)
+2019-01-30 20:43:17		  fifo.file.enabled = on
+2019-01-30 20:43:17		  fifo.file.path = "%h/weechat_fifo"
+2019-01-30 20:43:17		[look] (xfer.conf)
+2019-01-30 20:43:17		  xfer.look.auto_open_buffer = on
+2019-01-30 20:43:17		  xfer.look.progress_bar_size = 20
+2019-01-30 20:43:17		  xfer.look.pv_tags = "notify_private"
+2019-01-30 20:43:17		[color] (xfer.conf)
+2019-01-30 20:43:17		  xfer.color.status_aborted = lightred
+2019-01-30 20:43:17		  xfer.color.status_active = lightblue
+2019-01-30 20:43:17		  xfer.color.status_connecting = yellow
+2019-01-30 20:43:17		  xfer.color.status_done = lightgreen
+2019-01-30 20:43:17		  xfer.color.status_failed = lightred
+2019-01-30 20:43:17		  xfer.color.status_waiting = lightcyan
+2019-01-30 20:43:17		  xfer.color.text = default
+2019-01-30 20:43:17		  xfer.color.text_bg = default
+2019-01-30 20:43:17		  xfer.color.text_selected = white
+2019-01-30 20:43:17		[network] (xfer.conf)
+2019-01-30 20:43:17		  xfer.network.blocksize = 65536
+2019-01-30 20:43:17		  xfer.network.fast_send = on
+2019-01-30 20:43:17		  xfer.network.own_ip = ""
+2019-01-30 20:43:17		  xfer.network.port_range = ""
+2019-01-30 20:43:17		  xfer.network.send_ack = on
+2019-01-30 20:43:17		  xfer.network.speed_limit = 0
+2019-01-30 20:43:17		  xfer.network.timeout = 300
+2019-01-30 20:43:17		[file] (xfer.conf)
+2019-01-30 20:43:17		  xfer.file.auto_accept_chats = off
+2019-01-30 20:43:17		  xfer.file.auto_accept_files = off
+2019-01-30 20:43:17		  xfer.file.auto_accept_nicks = ""
+2019-01-30 20:43:17		  xfer.file.auto_check_crc32 = off
+2019-01-30 20:43:17		  xfer.file.auto_rename = on
+2019-01-30 20:43:17		  xfer.file.auto_resume = on
+2019-01-30 20:43:17		  xfer.file.convert_spaces = on
+2019-01-30 20:43:17		  xfer.file.download_path = "%h/xfer"
+2019-01-30 20:43:17		  xfer.file.upload_path = "~"
+2019-01-30 20:43:17		  xfer.file.use_nick_in_filename = on
+2019-01-30 20:43:17		[look] (irc.conf)
+2019-01-30 20:43:17		  irc.look.buffer_open_before_autojoin = on
+2019-01-30 20:43:17		  irc.look.buffer_open_before_join = off
+2019-01-30 20:43:17		  irc.look.buffer_switch_autojoin = on
+2019-01-30 20:43:17		  irc.look.buffer_switch_join = on
+2019-01-30 20:43:17		  irc.look.color_nicks_in_names = off
+2019-01-30 20:43:17		  irc.look.color_nicks_in_nicklist = off
+2019-01-30 20:43:17		  irc.look.color_nicks_in_server_messages = on
+2019-01-30 20:43:17		  irc.look.color_pv_nick_like_channel = on
+2019-01-30 20:43:17		  irc.look.ctcp_time_format = "%a, %d %b %Y %T %z"
+2019-01-30 20:43:17		  irc.look.display_away = local
+2019-01-30 20:43:17		  irc.look.display_ctcp_blocked = on
+2019-01-30 20:43:17		  irc.look.display_ctcp_reply = on
+2019-01-30 20:43:17		  irc.look.display_ctcp_unknown = on
+2019-01-30 20:43:17		  irc.look.display_host_join = on
+2019-01-30 20:43:17		  irc.look.display_host_join_local = on
+2019-01-30 20:43:17		  irc.look.display_host_quit = on
+2019-01-30 20:43:17		  irc.look.display_join_message = "329,332,333,366"
+2019-01-30 20:43:17		  irc.look.display_old_topic = on
+2019-01-30 20:43:17		  irc.look.display_pv_away_once = on
+2019-01-30 20:43:17		  irc.look.display_pv_back = on
+2019-01-30 20:43:17		  irc.look.highlight_channel = "$nick"
+2019-01-30 20:43:17		  irc.look.highlight_pv = "$nick"
+2019-01-30 20:43:17		  irc.look.highlight_server = "$nick"
+2019-01-30 20:43:17		  irc.look.highlight_tags_restrict = "irc_privmsg,irc_notice"
+2019-01-30 20:43:17		  irc.look.item_channel_modes_hide_args = "k"
+2019-01-30 20:43:17		  irc.look.item_display_server = buffer_plugin
+2019-01-30 20:43:17		  irc.look.item_nick_modes = on
+2019-01-30 20:43:17		  irc.look.item_nick_prefix = on
+2019-01-30 20:43:17		  irc.look.join_auto_add_chantype = off
+2019-01-30 20:43:17		  irc.look.msgbuffer_fallback = current
+2019-01-30 20:43:17		  irc.look.new_channel_position = none
+2019-01-30 20:43:17		  irc.look.new_pv_position = none
+2019-01-30 20:43:17		  irc.look.nick_completion_smart = speakers
+2019-01-30 20:43:17		  irc.look.nick_mode = prefix
+2019-01-30 20:43:17		  irc.look.nick_mode_empty = off
+2019-01-30 20:43:17		  irc.look.nicks_hide_password = "nickserv"
+2019-01-30 20:43:17		  irc.look.notice_as_pv = auto
+2019-01-30 20:43:17		  irc.look.notice_welcome_redirect = on
+2019-01-30 20:43:17		  irc.look.notice_welcome_tags = ""
+2019-01-30 20:43:17		  irc.look.notify_tags_ison = "notify_message"
+2019-01-30 20:43:17		  irc.look.notify_tags_whois = "notify_message"
+2019-01-30 20:43:17		  irc.look.part_closes_buffer = off
+2019-01-30 20:43:17		  irc.look.pv_buffer = independent
+2019-01-30 20:43:17		  irc.look.pv_tags = "notify_private"
+2019-01-30 20:43:17		  irc.look.raw_messages = 256
+2019-01-30 20:43:17		  irc.look.server_buffer = merge_with_core
+2019-01-30 20:43:17		  irc.look.smart_filter = on
+2019-01-30 20:43:17		  irc.look.smart_filter_chghost = on
+2019-01-30 20:43:17		  irc.look.smart_filter_delay = 4  (default: 5)
+2019-01-30 20:43:17		  irc.look.smart_filter_join = on
+2019-01-30 20:43:17		  irc.look.smart_filter_join_unmask = 30
+2019-01-30 20:43:17		  irc.look.smart_filter_mode = "+"
+2019-01-30 20:43:17		  irc.look.smart_filter_nick = on
+2019-01-30 20:43:17		  irc.look.smart_filter_quit = on
+2019-01-30 20:43:17		  irc.look.temporary_servers = off
+2019-01-30 20:43:17		  irc.look.topic_strip_colors = off
+2019-01-30 20:43:17		[color] (irc.conf)
+2019-01-30 20:43:17		  irc.color.input_nick = lightcyan
+2019-01-30 20:43:17		  irc.color.item_channel_modes = default
+2019-01-30 20:43:17		  irc.color.item_lag_counting = default
+2019-01-30 20:43:17		  irc.color.item_lag_finished = yellow
+2019-01-30 20:43:17		  irc.color.item_nick_modes = default
+2019-01-30 20:43:17		  irc.color.message_chghost = brown
+2019-01-30 20:43:17		  irc.color.message_join = green
+2019-01-30 20:43:17		  irc.color.message_quit = red
+2019-01-30 20:43:17		  irc.color.mirc_remap = "1,-1:darkgray"
+2019-01-30 20:43:17		  irc.color.nick_prefixes = "y:lightred;q:lightred;a:lightcyan;o:lightgreen;h:lightmagenta;v:yellow;*:lightblue"
+2019-01-30 20:43:17		  irc.color.notice = green
+2019-01-30 20:43:17		  irc.color.reason_quit = default
+2019-01-30 20:43:17		  irc.color.topic_current = default
+2019-01-30 20:43:17		  irc.color.topic_new = white
+2019-01-30 20:43:17		  irc.color.topic_old = default
+2019-01-30 20:43:17		[network] (irc.conf)
+2019-01-30 20:43:17		  irc.network.autoreconnect_delay_growing = 2
+2019-01-30 20:43:17		  irc.network.autoreconnect_delay_max = 600
+2019-01-30 20:43:17		  irc.network.ban_mask_default = "*!$ident@$host"
+2019-01-30 20:43:17		  irc.network.channel_encode = off
+2019-01-30 20:43:17		  irc.network.colors_receive = on
+2019-01-30 20:43:17		  irc.network.colors_send = on
+2019-01-30 20:43:17		  irc.network.lag_check = 60
+2019-01-30 20:43:17		  irc.network.lag_max = 1800
+2019-01-30 20:43:17		  irc.network.lag_min_show = 500
+2019-01-30 20:43:17		  irc.network.lag_reconnect = 300
+2019-01-30 20:43:17		  irc.network.lag_refresh_interval = 1
+2019-01-30 20:43:17		  irc.network.notify_check_ison = 1
+2019-01-30 20:43:17		  irc.network.notify_check_whois = 5
+2019-01-30 20:43:17		  irc.network.sasl_fail_unavailable = on
+2019-01-30 20:43:17		  irc.network.send_unknown_commands = off
+2019-01-30 20:43:17		  irc.network.whois_double_nick = off
+2019-01-30 20:43:17		[server_default] (irc.conf)
+2019-01-30 20:43:17		  irc.server_default.addresses = ""
+2019-01-30 20:43:17		  irc.server_default.anti_flood_prio_high = 2
+2019-01-30 20:43:17		  irc.server_default.anti_flood_prio_low = 2
+2019-01-30 20:43:17		  irc.server_default.autoconnect = off
+2019-01-30 20:43:17		  irc.server_default.autojoin = ""
+2019-01-30 20:43:17		  irc.server_default.autoreconnect = on
+2019-01-30 20:43:17		  irc.server_default.autoreconnect_delay = 10
+2019-01-30 20:43:17		  irc.server_default.autorejoin = off
+2019-01-30 20:43:17		  irc.server_default.autorejoin_delay = 30
+2019-01-30 20:43:17		  irc.server_default.away_check = 0
+2019-01-30 20:43:17		  irc.server_default.away_check_max_nicks = 25
+2019-01-30 20:43:17		  irc.server_default.capabilities = ""
+2019-01-30 20:43:17		  irc.server_default.command = ""
+2019-01-30 20:43:17		  irc.server_default.command_delay = 0
+2019-01-30 20:43:17		  irc.server_default.connection_timeout = 60
+2019-01-30 20:43:17		  irc.server_default.ipv6 = on
+2019-01-30 20:43:17		  irc.server_default.local_hostname = ""
+2019-01-30 20:43:17		  irc.server_default.msg_kick = ""
+2019-01-30 20:43:17		  irc.server_default.msg_part = "WeeChat ${info:version}"
+2019-01-30 20:43:17		  irc.server_default.msg_quit = "WeeChat ${info:version}"
+2019-01-30 20:43:17		  irc.server_default.nicks = "gwu, gwosix, gwimm, gwimminus"  (default: "")
+2019-01-30 20:43:17		  irc.server_default.nicks_alternate = on
+2019-01-30 20:43:17		  irc.server_default.notify = ""
+2019-01-30 20:43:17		  irc.server_default.password = ""
+2019-01-30 20:43:17		  irc.server_default.proxy = ""
+2019-01-30 20:43:17		  irc.server_default.realname = ""
+2019-01-30 20:43:17		  irc.server_default.sasl_fail = continue
+2019-01-30 20:43:17		  irc.server_default.sasl_key = ""
+2019-01-30 20:43:17		  irc.server_default.sasl_mechanism = plain
+2019-01-30 20:43:17		  irc.server_default.sasl_password = ""
+2019-01-30 20:43:17		  irc.server_default.sasl_timeout = 15
+2019-01-30 20:43:17		  irc.server_default.sasl_username = ""
+2019-01-30 20:43:17		  irc.server_default.split_msg_max_length = 512
+2019-01-30 20:43:17		  irc.server_default.ssl = off
+2019-01-30 20:43:17		  irc.server_default.ssl_cert = ""
+2019-01-30 20:43:17		  irc.server_default.ssl_dhkey_size = 2048
+2019-01-30 20:43:17		  irc.server_default.ssl_fingerprint = ""
+2019-01-30 20:43:17		  irc.server_default.ssl_priorities = "NORMAL:-VERS-SSL3.0"
+2019-01-30 20:43:17		  irc.server_default.ssl_verify = on
+2019-01-30 20:43:17		  irc.server_default.usermode = ""
+2019-01-30 20:43:17		  irc.server_default.username = "sai"  (default: "")
+2019-01-30 20:43:17		[server] (irc.conf)
+2019-01-30 20:43:17		  irc.server.freenode.addresses = "chat.freenode.net"  (default if null: "")
+2019-01-30 20:43:17		  irc.server.freenode.anti_flood_prio_high = null -> 2
+2019-01-30 20:43:17		  irc.server.freenode.anti_flood_prio_low = null -> 2
+2019-01-30 20:43:17		  irc.server.freenode.autoconnect = on  (default if null: off)
+2019-01-30 20:43:17		  irc.server.freenode.autojoin = null -> ""
+2019-01-30 20:43:17		  irc.server.freenode.autoreconnect = null -> on
+2019-01-30 20:43:17		  irc.server.freenode.autoreconnect_delay = null -> 10
+2019-01-30 20:43:17		  irc.server.freenode.autorejoin = null -> off
+2019-01-30 20:43:17		  irc.server.freenode.autorejoin_delay = null -> 30
+2019-01-30 20:43:17		  irc.server.freenode.away_check = null -> 0
+2019-01-30 20:43:17		  irc.server.freenode.away_check_max_nicks = null -> 25
+2019-01-30 20:43:17		  irc.server.freenode.capabilities = null -> ""
+2019-01-30 20:43:17		  irc.server.freenode.command = null -> ""
+2019-01-30 20:43:17		  irc.server.freenode.command_delay = null -> 0
+2019-01-30 20:43:17		  irc.server.freenode.connection_timeout = null -> 60
+2019-01-30 20:43:17		  irc.server.freenode.ipv6 = null -> on
+2019-01-30 20:43:17		  irc.server.freenode.local_hostname = null -> ""
+2019-01-30 20:43:17		  irc.server.freenode.msg_kick = null -> ""
+2019-01-30 20:43:17		  irc.server.freenode.msg_part = null -> "WeeChat ${info:version}"
+2019-01-30 20:43:17		  irc.server.freenode.msg_quit = null -> "WeeChat ${info:version}"
+2019-01-30 20:43:17		  irc.server.freenode.nicks = "gwosix, gwu"  (default if null: "gwu, gwosix, gwimm, gwimminus")
+2019-01-30 20:43:17		  irc.server.freenode.nicks_alternate = null -> on
+2019-01-30 20:43:17		  irc.server.freenode.notify = null -> ""
+2019-01-30 20:43:17		  irc.server.freenode.password = null -> ""
+2019-01-30 20:43:17		  irc.server.freenode.proxy = null -> ""
+2019-01-30 20:43:17		  irc.server.freenode.realname = null -> ""
+2019-01-30 20:43:17		  irc.server.freenode.sasl_fail = null -> continue
+2019-01-30 20:43:17		  irc.server.freenode.sasl_key = null -> ""
+2019-01-30 20:43:17		  irc.server.freenode.sasl_mechanism = null -> plain
+2019-01-30 20:43:17		  irc.server.freenode.sasl_password = "ETAisq2653589"  (default if null: "")
+2019-01-30 20:43:17		  irc.server.freenode.sasl_timeout = null -> 15
+2019-01-30 20:43:17		  irc.server.freenode.sasl_username = "gwosix"  (default if null: "")
+2019-01-30 20:43:17		  irc.server.freenode.split_msg_max_length = null -> 512
+2019-01-30 20:43:17		  irc.server.freenode.ssl = null -> off
+2019-01-30 20:43:17		  irc.server.freenode.ssl_cert = null -> ""
+2019-01-30 20:43:17		  irc.server.freenode.ssl_dhkey_size = null -> 2048
+2019-01-30 20:43:17		  irc.server.freenode.ssl_fingerprint = null -> ""
+2019-01-30 20:43:17		  irc.server.freenode.ssl_priorities = null -> "NORMAL:-VERS-SSL3.0"
+2019-01-30 20:43:17		  irc.server.freenode.ssl_verify = null -> on
+2019-01-30 20:43:17		  irc.server.freenode.usermode = null -> ""
+2019-01-30 20:43:17		  irc.server.freenode.username = "gwosix"  (default if null: "sai")
+2019-01-30 20:43:17		[look] (relay.conf)
+2019-01-30 20:43:17		  relay.look.auto_open_buffer = on
+2019-01-30 20:43:17		  relay.look.raw_messages = 256
+2019-01-30 20:43:17		[color] (relay.conf)
+2019-01-30 20:43:17		  relay.color.client = cyan
+2019-01-30 20:43:17		  relay.color.status_active = lightblue
+2019-01-30 20:43:17		  relay.color.status_auth_failed = lightred
+2019-01-30 20:43:17		  relay.color.status_connecting = yellow
+2019-01-30 20:43:17		  relay.color.status_disconnected = lightred
+2019-01-30 20:43:17		  relay.color.status_waiting_auth = brown
+2019-01-30 20:43:17		  relay.color.text = default
+2019-01-30 20:43:17		  relay.color.text_bg = default
+2019-01-30 20:43:17		  relay.color.text_selected = white
+2019-01-30 20:43:17		[network] (relay.conf)
+2019-01-30 20:43:17		  relay.network.allow_empty_password = off
+2019-01-30 20:43:17		  relay.network.allowed_ips = ""
+2019-01-30 20:43:17		  relay.network.bind_address = ""
+2019-01-30 20:43:17		  relay.network.clients_purge_delay = 0
+2019-01-30 20:43:17		  relay.network.compression_level = 6
+2019-01-30 20:43:17		  relay.network.ipv6 = on
+2019-01-30 20:43:17		  relay.network.max_clients = 5
+2019-01-30 20:43:17		  relay.network.password = ""
+2019-01-30 20:43:17		  relay.network.ssl_cert_key = "%h/ssl/relay.pem"
+2019-01-30 20:43:17		  relay.network.ssl_priorities = "NORMAL:-VERS-SSL3.0"
+2019-01-30 20:43:17		  relay.network.websocket_allowed_origins = ""
+2019-01-30 20:43:17		[irc] (relay.conf)
+2019-01-30 20:43:17		  relay.irc.backlog_max_minutes = 1440
+2019-01-30 20:43:17		  relay.irc.backlog_max_number = 256
+2019-01-30 20:43:17		  relay.irc.backlog_since_last_disconnect = on
+2019-01-30 20:43:17		  relay.irc.backlog_since_last_message = off
+2019-01-30 20:43:17		  relay.irc.backlog_tags = "irc_privmsg"
+2019-01-30 20:43:17		  relay.irc.backlog_time_format = "[%H:%M] "
+2019-01-30 20:43:17		[look] (lua.conf)
+2019-01-30 20:43:17		  lua.look.check_license = off
+2019-01-30 20:43:17		  lua.look.eval_keep_context = on
+2019-01-30 20:43:17		[look] (perl.conf)
+2019-01-30 20:43:17		  perl.look.check_license = off
+2019-01-30 20:43:17		  perl.look.eval_keep_context = on
+2019-01-30 20:43:17		[look] (script.conf)
+2019-01-30 20:43:17		  script.look.columns = "%s %n %V %v %u | %d | %t"
+2019-01-30 20:43:17		  script.look.diff_color = on
+2019-01-30 20:43:17		  script.look.diff_command = "auto"
+2019-01-30 20:43:17		  script.look.display_source = on
+2019-01-30 20:43:17		  script.look.quiet_actions = on
+2019-01-30 20:43:17		  script.look.sort = "i,p,n"
+2019-01-30 20:43:17		  script.look.translate_description = on
+2019-01-30 20:43:17		  script.look.use_keys = on
+2019-01-30 20:43:17		[color] (script.conf)
+2019-01-30 20:43:17		  script.color.status_autoloaded = cyan
+2019-01-30 20:43:17		  script.color.status_held = white
+2019-01-30 20:43:17		  script.color.status_installed = lightcyan
+2019-01-30 20:43:17		  script.color.status_obsolete = lightmagenta
+2019-01-30 20:43:17		  script.color.status_popular = yellow
+2019-01-30 20:43:17		  script.color.status_running = lightgreen
+2019-01-30 20:43:17		  script.color.status_unknown = lightred
+2019-01-30 20:43:17		  script.color.text = default
+2019-01-30 20:43:17		  script.color.text_bg = default
+2019-01-30 20:43:17		  script.color.text_bg_selected = red
+2019-01-30 20:43:17		  script.color.text_date = default
+2019-01-30 20:43:17		  script.color.text_date_selected = white
+2019-01-30 20:43:17		  script.color.text_delimiters = default
+2019-01-30 20:43:17		  script.color.text_description = default
+2019-01-30 20:43:17		  script.color.text_description_selected = white
+2019-01-30 20:43:17		  script.color.text_extension = default
+2019-01-30 20:43:17		  script.color.text_extension_selected = white
+2019-01-30 20:43:17		  script.color.text_name = cyan
+2019-01-30 20:43:17		  script.color.text_name_selected = lightcyan
+2019-01-30 20:43:17		  script.color.text_selected = white
+2019-01-30 20:43:17		  script.color.text_tags = brown
+2019-01-30 20:43:17		  script.color.text_tags_selected = yellow
+2019-01-30 20:43:17		  script.color.text_version = magenta
+2019-01-30 20:43:17		  script.color.text_version_loaded = default
+2019-01-30 20:43:17		  script.color.text_version_loaded_selected = white
+2019-01-30 20:43:17		  script.color.text_version_selected = lightmagenta
+2019-01-30 20:43:17		[scripts] (script.conf)
+2019-01-30 20:43:17		  script.scripts.autoload = on
+2019-01-30 20:43:17		  script.scripts.cache_expire = 1440
+2019-01-30 20:43:17		  script.scripts.download_timeout = 30
+2019-01-30 20:43:17		  script.scripts.hold = ""
+2019-01-30 20:43:17		  script.scripts.path = "%h/script"
+2019-01-30 20:43:17		  script.scripts.url = "https://weechat.org/files/plugins.xml.gz"
+2019-01-30 20:43:17		[look] (fset.conf)
+2019-01-30 20:43:17		  fset.look.auto_unmark = off
+2019-01-30 20:43:17		  fset.look.condition_catch_set = "${count} >= 1"
+2019-01-30 20:43:17		  fset.look.export_help_default = on
+2019-01-30 20:43:17		  fset.look.format_number = 1
+2019-01-30 20:43:17		  fset.look.marked_string = "*"
+2019-01-30 20:43:17		  fset.look.scroll_horizontal = 10
+2019-01-30 20:43:17		  fset.look.show_plugins_desc = off
+2019-01-30 20:43:17		  fset.look.sort = "~name"
+2019-01-30 20:43:17		  fset.look.unmarked_string = " "
+2019-01-30 20:43:17		  fset.look.use_color_value = off
+2019-01-30 20:43:17		  fset.look.use_keys = on
+2019-01-30 20:43:17		  fset.look.use_mute = off
+2019-01-30 20:43:17		[format] (fset.conf)
+2019-01-30 20:43:17		  fset.format.export_help = "# ${description2}"
+2019-01-30 20:43:17		  fset.format.export_option = "/set ${name} ${quoted_value}"
+2019-01-30 20:43:17		  fset.format.export_option_null = "/unset ${name}"
+2019-01-30 20:43:17		  fset.format.option1 = ""
+2019-01-30 20:43:17		  fset.format.option2 = "${marked} ${name}  ${type}  ${value2}${newline}  ${empty_name}  ${_default_value}${color:darkgray} -- ${min}..${max}${newline}  ${empty_name}  ${description}"
+2019-01-30 20:43:17		[color] (fset.conf)
+2019-01-30 20:43:17		  fset.color.default_value = default
+2019-01-30 20:43:17		  fset.color.default_value_selected = white
+2019-01-30 20:43:17		  fset.color.description = default
+2019-01-30 20:43:17		  fset.color.description_selected = white
+2019-01-30 20:43:17		  fset.color.file = default
+2019-01-30 20:43:17		  fset.color.file_changed = brown
+2019-01-30 20:43:17		  fset.color.file_changed_selected = yellow
+2019-01-30 20:43:17		  fset.color.file_selected = white
+2019-01-30 20:43:17		  fset.color.help_default_value = white
+2019-01-30 20:43:17		  fset.color.help_description = default
+2019-01-30 20:43:17		  fset.color.help_name = white
+2019-01-30 20:43:17		  fset.color.help_quotes = darkgray
+2019-01-30 20:43:17		  fset.color.help_values = default
+2019-01-30 20:43:17		  fset.color.index = cyan
+2019-01-30 20:43:17		  fset.color.index_selected = lightcyan
+2019-01-30 20:43:17		  fset.color.line_marked_bg1 = default
+2019-01-30 20:43:17		  fset.color.line_marked_bg2 = default
+2019-01-30 20:43:17		  fset.color.line_selected_bg1 = blue
+2019-01-30 20:43:17		  fset.color.line_selected_bg2 = red
+2019-01-30 20:43:17		  fset.color.marked = brown
+2019-01-30 20:43:17		  fset.color.marked_selected = yellow
+2019-01-30 20:43:17		  fset.color.max = default
+2019-01-30 20:43:17		  fset.color.max_selected = white
+2019-01-30 20:43:17		  fset.color.min = default
+2019-01-30 20:43:17		  fset.color.min_selected = white
+2019-01-30 20:43:17		  fset.color.name = default
+2019-01-30 20:43:17		  fset.color.name_changed = brown
+2019-01-30 20:43:17		  fset.color.name_changed_selected = yellow
+2019-01-30 20:43:17		  fset.color.name_selected = white
+2019-01-30 20:43:17		  fset.color.option = default
+2019-01-30 20:43:17		  fset.color.option_changed = brown
+2019-01-30 20:43:17		  fset.color.option_changed_selected = yellow
+2019-01-30 20:43:17		  fset.color.option_selected = white
+2019-01-30 20:43:17		  fset.color.parent_name = default
+2019-01-30 20:43:17		  fset.color.parent_name_selected = white
+2019-01-30 20:43:17		  fset.color.parent_value = cyan
+2019-01-30 20:43:17		  fset.color.parent_value_selected = lightcyan
+2019-01-30 20:43:17		  fset.color.quotes = darkgray
+2019-01-30 20:43:17		  fset.color.quotes_changed = default
+2019-01-30 20:43:17		  fset.color.quotes_changed_selected = white
+2019-01-30 20:43:17		  fset.color.quotes_selected = default
+2019-01-30 20:43:17		  fset.color.section = default
+2019-01-30 20:43:17		  fset.color.section_changed = brown
+2019-01-30 20:43:17		  fset.color.section_changed_selected = yellow
+2019-01-30 20:43:17		  fset.color.section_selected = white
+2019-01-30 20:43:17		  fset.color.string_values = default
+2019-01-30 20:43:17		  fset.color.string_values_selected = white
+2019-01-30 20:43:17		  fset.color.title_count_options = cyan
+2019-01-30 20:43:17		  fset.color.title_current_option = lightcyan
+2019-01-30 20:43:17		  fset.color.title_filter = yellow
+2019-01-30 20:43:17		  fset.color.title_marked_options = lightgreen
+2019-01-30 20:43:17		  fset.color.title_sort = white
+2019-01-30 20:43:17		  fset.color.type = green
+2019-01-30 20:43:17		  fset.color.type_selected = lightgreen
+2019-01-30 20:43:17		  fset.color.unmarked = default
+2019-01-30 20:43:17		  fset.color.unmarked_selected = white
+2019-01-30 20:43:17		  fset.color.value = cyan
+2019-01-30 20:43:17		  fset.color.value_changed = brown
+2019-01-30 20:43:17		  fset.color.value_changed_selected = yellow
+2019-01-30 20:43:17		  fset.color.value_selected = lightcyan
+2019-01-30 20:43:17		  fset.color.value_undef = magenta
+2019-01-30 20:43:17		  fset.color.value_undef_selected = lightmagenta
+2019-01-30 20:43:17		822 options
+2019-01-30 20:43:30		Option changed: plugins.var.lua.matrix.password = "ETAisq2653589"
+2019-01-30 20:43:39	=!=	irc: unable to add temporary server "matrix" because the addition of temporary servers with command /connect is currently disabled
+2019-01-30 20:43:39	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2019-01-30 20:43:54		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 20:43:54		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-30 20:43:54		lua scripts loaded: matrix
+2019-01-30 20:43:54		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, xfer
+2019-01-30 20:45:11		Option "plugins.var.lua.matrix.local_echo":
+2019-01-30 20:45:11		  description: Print lines locally instead of waiting for return from server (default: "on")
+2019-01-30 20:45:11		  type: string
+2019-01-30 20:45:11		  values: any string
+2019-01-30 20:45:11		  default value: ""
+2019-01-30 20:45:11		  current value: "on"
+2019-01-30 20:48:18	=!=	lua: unable to run function "join_command_cb"
+2019-01-30 20:48:18	=!=	lua: error: /sai/dot/bin/weechat/lua/autoload/matrix.lua:2937: attempt to index local 'room' (a nil value)
+2019-01-30 20:48:18	=!=	lua: error in function "join_command_cb"
+2019-01-30 20:48:18	=!=	irc: command "join" must be executed on irc buffer (server or channel)
+2019-01-30 20:54:18		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 20:54:18		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-30 20:54:18		lua scripts loaded: matrix
+2019-01-30 20:54:18		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, xfer
+2019-01-30 21:07:42		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 21:07:42		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-30 21:07:42		lua scripts loaded: matrix
+2019-01-30 21:07:42		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, xfer
+2019-01-30 21:26:32	=!=	irc: command "part" must be executed on irc buffer (server or channel)
+2019-01-30 21:35:24		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 21:35:24		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-30 21:35:24		lua scripts loaded: matrix
+2019-01-30 21:35:24		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, weecord, xfer
+2019-01-30 21:35:44		weecord: see /help discord for more information
+2019-01-30 21:35:52		weecord: option token successfully set to MjE2Mzk3MjMyNTEyMDQwOTYx.DwNlgQ.fJ67K--_8mBKQ6KgelrDBwoo8Mc
+2019-01-30 21:35:52		weecord: Set Discord token
+2019-01-30 21:36:00		Connecting to Discord...
+2019-01-30 21:36:02		Connected to Discord!
+2019-01-30 21:36:40		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 21:36:40		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-30 21:36:40		lua scripts loaded: matrix
+2019-01-30 21:36:40		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, weecord, xfer
+2019-01-30 21:36:47	=!=	Error: unknown command "/setf" (type /help for help)
+2019-01-30 21:37:17		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 21:37:17		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-30 21:37:17		lua scripts loaded: matrix
+2019-01-30 21:37:17		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, weecord, xfer
+2019-01-30 21:37:29		Connecting to Discord...
+2019-01-30 21:37:32		Connected to Discord!
+2019-01-30 21:44:26		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 21:44:26		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-30 21:44:26		lua scripts loaded: matrix
+2019-01-30 21:44:26		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, weecord, xfer
+2019-01-30 21:44:37		weecord: Unknown command
+2019-01-30 21:44:43		weecord: Unknown command
+2019-01-30 21:45:03		weecord: Discord will now load on startup
+2019-01-30 21:45:08		Connecting to Discord...
+2019-01-30 21:45:10		Connected to Discord!
+2019-01-30 21:53:29		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 21:53:29		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-30 21:53:29		lua scripts loaded: matrix
+2019-01-30 21:53:29		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, weecord, xfer
+2019-01-30 21:55:42		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 21:55:42		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-30 21:55:42		lua scripts loaded: matrix
+2019-01-30 21:55:42		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, weecord, xfer
+2019-01-30 21:55:55		weecord: see /help discord for more information
+2019-01-30 21:56:01		weecord: see /help discord for more information
+2019-01-30 21:56:10		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 21:56:10		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-30 21:56:10		lua scripts loaded: matrix
+2019-01-30 21:56:10		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, weecord, xfer
+2019-01-30 21:56:16	=!=	Error: unknown command "/weecord" (type /help for help)
+2019-01-30 21:58:06		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 21:58:06		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-30 21:58:06		lua scripts loaded: matrix
+2019-01-30 21:58:06		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, relay, script, trigger, weecord, xfer
+2019-01-30 21:58:11	=!=	Error: unknown command "/go" (type /help for help)
+2019-01-30 21:58:18	=!=	Error: unknown command "/go" (type /help for help)
+2019-01-30 21:58:20		[core]
+2019-01-30 21:58:20		  away     eval     mouse    repeat   version
+2019-01-30 21:58:20		  bar      filter   mute     save     wait   
+2019-01-30 21:58:20		  buffer   help     plugin   secure   window 
+2019-01-30 21:58:20		  color    history  print    set    
+2019-01-30 21:58:20		  command  input    proxy    unset  
+2019-01-30 21:58:20		  cursor   key      quit     upgrade
+2019-01-30 21:58:20		  debug    layout   reload   uptime 
+2019-01-30 21:58:20		[weecord]
+2019-01-30 21:58:20		  discord
+2019-01-30 21:58:20		[charset]
+2019-01-30 21:58:20		  charset
+2019-01-30 21:58:20		[exec]
+2019-01-30 21:58:20		  exec
+2019-01-30 21:58:20		[buflist]
+2019-01-30 21:58:20		  buflist
+2019-01-30 21:58:20		[lua]
+2019-01-30 21:58:20		  lua  matrix
+2019-01-30 21:58:20		[aspell]
+2019-01-30 21:58:20		  aspell
+2019-01-30 21:58:20		[irc]
+2019-01-30 21:58:20		  admin       ison        part        squit     
+2019-01-30 21:58:20		  allchan     join        ping        stats     
+2019-01-30 21:58:20		  allpv       kick        pong        summon    
+2019-01-30 21:58:20		  allserv     kickban     query       time      
+2019-01-30 21:58:20		  ban         kill        quiet       topic     
+2019-01-30 21:58:20		  cap         links       quote       trace     
+2019-01-30 21:58:20		  connect     list        reconnect   unban     
+2019-01-30 21:58:20		  ctcp        lusers      rehash      unquiet   
+2019-01-30 21:58:20		  cycle       map         remove      userhost  
+2019-01-30 21:58:20		  dcc         me          restart     users     
+2019-01-30 21:58:20		  dehalfop    mode        sajoin      version   
+2019-01-30 21:58:20		  deop        motd        samode      voice     
+2019-01-30 21:58:20		  devoice     msg         sanick      wallchops 
+2019-01-30 21:58:20		  die         names       sapart      wallops   
+2019-01-30 21:58:20		  disconnect  nick        saquit      who       
+2019-01-30 21:58:20		  halfop      notice      server      whois     
+2019-01-30 21:58:20		  ignore      notify      service     whowas    
+2019-01-30 21:58:20		  info        op          servlist  
+2019-01-30 21:58:20		  invite      oper        squery    
+2019-01-30 21:58:20		[fset]
+2019-01-30 21:58:20		  fset
+2019-01-30 21:58:20		[trigger]
+2019-01-30 21:58:20		  trigger
+2019-01-30 21:58:20		[script]
+2019-01-30 21:58:20		  script
+2019-01-30 21:58:20		[fifo]
+2019-01-30 21:58:20		  fifo
+2019-01-30 21:58:20		[perl]
+2019-01-30 21:58:20		  perl
+2019-01-30 21:58:20		[logger]
+2019-01-30 21:58:20		  logger
+2019-01-30 21:58:20		[alias]
+2019-01-30 21:58:20		  AAWAY    C        K        Q        V      
+2019-01-30 21:58:20		  alias    CHAT     KB       REDRAW   W      
+2019-01-30 21:58:20		  AME      CL       LEAVE    SAY      WC     
+2019-01-30 21:58:20		  AMSG     CLOSE    M        SIGNOFF  WI     
+2019-01-30 21:58:20		  ANICK    EXIT     MSGBUF   T        WII    
+2019-01-30 21:58:20		  BEEP     IG       MUB      UB       WW     
+2019-01-30 21:58:20		  BYE      J        N        UMODE  
+2019-01-30 21:58:20		[relay]
+2019-01-30 21:58:20		  relay
+2019-01-30 21:58:20		[xfer]
+2019-01-30 21:58:20		  me  xfer
+2019-01-30 21:59:50		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 21:59:50		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-30 21:59:50		lua scripts loaded: matrix
+2019-01-30 21:59:50		python scripts loaded: go
+2019-01-30 21:59:50		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, weecord, xfer
+2019-01-30 22:00:11		Connecting to Discord...
+2019-01-30 22:00:12		Connected to Discord!
+2019-01-30 22:00:31	=!=	Error with command "/bar buflist hide" (help on command: /help bar)
+2019-01-30 22:00:51		[python/go]  /go  [name]
+2019-01-30 22:00:51		Quick jump to buffers
+2019-01-30 22:00:51		name: directly jump to buffer by name (without argument, list is displayed)
+2019-01-30 22:00:51		You can bind command to a key, for example:
+2019-01-30 22:00:51		  /key bind meta-g /go
+2019-01-30 22:00:51		You can use completion key (commonly Tab and shift-Tab) to select next/previous buffer in list.
+2019-01-30 22:02:14		Option changed: plugins.var.python.go.short_name = "on"
+2019-01-30 22:07:04		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-30 22:07:04		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-30 22:07:04		lua scripts loaded: matrix
+2019-01-30 22:07:04		python scripts loaded: go
+2019-01-30 22:07:04		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, weecord, xfer
+2019-01-30 22:07:16		Connecting to Discord...
+2019-01-30 22:07:18		Connected to Discord!
+2019-01-31 08:06:23		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 08:06:23		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 08:06:23		lua scripts loaded: matrix
+2019-01-31 08:06:23		python scripts loaded: go
+2019-01-31 08:06:23		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, weecord, xfer
+2019-01-31 08:06:44		Connecting to Discord...
+2019-01-31 08:06:46		Connected to Discord!
+2019-01-31 01:40:20		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 01:40:20		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 01:40:20		lua scripts loaded: matrix
+2019-01-31 01:40:20		python scripts loaded: go
+2019-01-31 01:40:20		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, weecord, xfer
+2019-01-31 01:40:38	=!=	irc: unable to add temporary server "localhost" because the addition of temporary servers with command /connect is currently disabled
+2019-01-31 01:40:38	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2019-01-31 01:42:43		irc: server local added
+2019-01-31 01:43:22		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 01:43:22		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 01:43:22		lua scripts loaded: matrix
+2019-01-31 01:43:22		python scripts loaded: go
+2019-01-31 01:43:22		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, weecord, xfer
+2019-01-31 01:51:23		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 01:51:23		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 01:51:23		lua scripts loaded: matrix
+2019-01-31 01:51:23		python scripts loaded: go
+2019-01-31 01:51:23		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, weecord, xfer
+2019-01-31 01:51:23		error: curl error 6 (Couldn't resolve host 'matrix.org') (URL: "https://matrix.org/_matrix/client/r0/login")
+2019-01-31 01:52:11	=!=	Command not found: 
+2019-01-31 01:53:07		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 01:53:07		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 01:53:07		lua scripts loaded: matrix
+2019-01-31 01:53:07		python scripts loaded: go
+2019-01-31 01:53:07		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, weecord, xfer
+2019-01-31 01:53:24		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 01:53:24		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 01:53:24		lua scripts loaded: matrix
+2019-01-31 01:53:24		python scripts loaded: go
+2019-01-31 01:53:24		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, weecord, xfer
+2019-01-31 01:58:48		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 01:58:48		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 01:58:48		lua scripts loaded: matrix
+2019-01-31 01:58:48		python scripts loaded: go
+2019-01-31 01:58:48		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, weecord, xfer
+2019-01-31 01:59:48		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 01:59:48		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 01:59:48		lua scripts loaded: matrix
+2019-01-31 01:59:48		python scripts loaded: go
+2019-01-31 01:59:48		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, weecord, xfer
+2019-01-31 02:00:15		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 02:00:15		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 02:00:15		lua scripts loaded: matrix
+2019-01-31 02:00:15		python scripts loaded: go
+2019-01-31 02:00:15		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, weecord, xfer
+2019-01-31 02:08:00		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 02:08:00		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 02:08:00		lua scripts loaded: matrix
+2019-01-31 02:08:00		python scripts loaded: go
+2019-01-31 02:08:00		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, weecord, xfer
+2019-01-31 02:11:59		Option changed: irc.server.local.command = "/msg &bitlbee identify ETAisq"  (default if null: "")
+2019-01-31 02:19:52		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 02:19:52		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 02:19:52		lua scripts loaded: matrix
+2019-01-31 02:19:52		python scripts loaded: go
+2019-01-31 02:19:52		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, weecord, xfer
+2019-01-31 02:27:41		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 02:27:41		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 02:27:41		lua scripts loaded: matrix
+2019-01-31 02:27:41		python scripts loaded: go
+2019-01-31 02:27:41		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-01-31 02:30:33		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 02:30:33		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 02:30:33		lua scripts loaded: matrix
+2019-01-31 02:30:33		python scripts loaded: go
+2019-01-31 02:30:33		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-01-31 02:31:30		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 02:31:30		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 02:31:30		lua scripts loaded: matrix
+2019-01-31 02:31:30		python scripts loaded: go
+2019-01-31 02:31:30		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-01-31 02:44:22		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 02:44:22		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 02:44:22		lua scripts loaded: matrix
+2019-01-31 02:44:22		python scripts loaded: go
+2019-01-31 02:44:22		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-01-31 02:52:48		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 02:52:48		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 02:52:48		lua scripts loaded: matrix
+2019-01-31 02:52:48		python scripts loaded: go
+2019-01-31 02:52:48		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-01-31 02:55:25		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 02:55:25		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 02:55:25		lua scripts loaded: matrix
+2019-01-31 02:55:26		python scripts loaded: go
+2019-01-31 02:55:26		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-01-31 03:23:07		[core]
+2019-01-31 03:23:07		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2019-01-31 03:23:07		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2019-01-31 03:23:07		[charset]
+2019-01-31 03:23:07		  charset
+2019-01-31 03:23:07		[exec]
+2019-01-31 03:23:07		  exec
+2019-01-31 03:23:07		[buflist]
+2019-01-31 03:23:07		  buflist
+2019-01-31 03:23:07		[lua]
+2019-01-31 03:23:07		  lua  matrix
+2019-01-31 03:23:07		[aspell]
+2019-01-31 03:23:07		  aspell
+2019-01-31 03:23:07		[irc]
+2019-01-31 03:23:07		  admin       ctcp        disconnect  kick        me          notify      quiet       samode      squery      unban       wallops   
+2019-01-31 03:23:07		  allchan     cycle       halfop      kickban     mode        op          quote       sanick      squit       unquiet     who       
+2019-01-31 03:23:07		  allpv       dcc         ignore      kill        motd        oper        reconnect   sapart      stats       userhost    whois     
+2019-01-31 03:23:07		  allserv     dehalfop    info        links       msg         part        rehash      saquit      summon      users       whowas    
+2019-01-31 03:23:07		  ban         deop        invite      list        names       ping        remove      server      time        version   
+2019-01-31 03:23:07		  cap         devoice     ison        lusers      nick        pong        restart     service     topic       voice     
+2019-01-31 03:23:07		  connect     die         join        map         notice      query       sajoin      servlist    trace       wallchops 
+2019-01-31 03:23:07		[fset]
+2019-01-31 03:23:07		  fset
+2019-01-31 03:23:07		[trigger]
+2019-01-31 03:23:07		  trigger
+2019-01-31 03:23:07		[script]
+2019-01-31 03:23:07		  script
+2019-01-31 03:23:07		[fifo]
+2019-01-31 03:23:07		  fifo
+2019-01-31 03:23:07		[python]
+2019-01-31 03:23:07		  go  python
+2019-01-31 03:23:07		[perl]
+2019-01-31 03:23:07		  perl
+2019-01-31 03:23:07		[logger]
+2019-01-31 03:23:07		  logger
+2019-01-31 03:23:07		[alias]
+2019-01-31 03:23:07		  AAWAY    AMSG     BYE      CL       IG       KB       MSGBUF   Q        SIGNOFF  UMODE    WC       WW     
+2019-01-31 03:23:07		  alias    ANICK    C        CLOSE    J        LEAVE    MUB      REDRAW   T        V        WI     
+2019-01-31 03:23:07		  AME      BEEP     CHAT     EXIT     K        M        N        SAY      UB       W        WII    
+2019-01-31 03:23:07		[relay]
+2019-01-31 03:23:07		  relay
+2019-01-31 03:23:07		[xfer]
+2019-01-31 03:23:07		  me  xfer
+2019-01-31 04:12:59	=!=	Error: unknown command "/discord" (type /help for help)
+2019-01-31 04:36:19		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 04:36:19		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 04:36:19		lua scripts loaded: matrix
+2019-01-31 04:36:19		python scripts loaded: go
+2019-01-31 04:36:19		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-01-31 06:50:10		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 06:50:10		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 06:50:10		lua scripts loaded: matrix
+2019-01-31 06:50:10		python scripts loaded: go
+2019-01-31 06:50:10		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-01-31 07:11:50		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 07:11:50		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 07:11:50		lua scripts loaded: matrix
+2019-01-31 07:11:50		python scripts loaded: go
+2019-01-31 07:11:50		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-01-31 08:21:06		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 08:21:06		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 08:21:06		lua scripts loaded: matrix
+2019-01-31 08:21:06		python scripts loaded: go
+2019-01-31 08:21:06		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-01-31 08:50:28	=!=	Error: unknown command "/buf" (type /help for help)
+2019-01-31 08:50:31	=!=	No help available, "buf" is not a command or an option
+2019-01-31 10:31:57	=!=	You can not write text in this buffer
+2019-01-31 10:32:00	=!=	Error: unknown command "/clear" (type /help for help)
+2019-01-31 14:55:51		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-01-31 14:55:51		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-01-31 14:55:51		lua scripts loaded: matrix
+2019-01-31 14:55:51		python scripts loaded: go
+2019-01-31 14:55:51		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-01 01:54:59		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-01 01:54:59		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-01 01:54:59		lua scripts loaded: matrix
+2019-02-01 01:54:59		python scripts loaded: go
+2019-02-01 01:54:59		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-01 01:57:42		Option changed: irc.server.local.sasl_username = "gwu"  (default if null: "")
+2019-02-01 01:58:39		Option changed: irc.server.local.sasl_password = "ETAisq"  (default if null: "")
+2019-02-01 01:59:13		Option changed: irc.server.local.command = null -> ""
+2019-02-01 01:59:37		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-01 01:59:37		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-01 01:59:37		lua scripts loaded: matrix
+2019-02-01 01:59:37		python scripts loaded: go
+2019-02-01 01:59:37		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-01 03:04:34		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-01 03:04:34		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-01 03:04:34		lua scripts loaded: matrix
+2019-02-01 03:04:34		python scripts loaded: go
+2019-02-01 03:04:34		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-01 03:05:55		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-01 03:05:55		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-01 03:05:55		lua scripts loaded: matrix
+2019-02-01 03:05:55		python scripts loaded: go
+2019-02-01 03:05:55		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-01 04:09:52		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-01 04:09:52		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-01 04:09:52		lua scripts loaded: matrix
+2019-02-01 04:09:52		python scripts loaded: go
+2019-02-01 04:09:52		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-01 04:12:42		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-01 04:12:42		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-01 04:12:42		lua scripts loaded: matrix
+2019-02-01 04:12:42		python scripts loaded: go
+2019-02-01 04:12:42		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-01 06:30:25	=!=	Too few arguments for command "/query" (help on command: /help query)
+2019-02-01 21:18:58		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-01 21:18:58		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-01 21:18:58		lua scripts loaded: matrix
+2019-02-01 21:18:58		python scripts loaded: go
+2019-02-01 21:18:58		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-02 14:09:54		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-02 14:09:54		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-02 14:09:54		lua scripts loaded: matrix
+2019-02-02 14:09:54		python scripts loaded: go
+2019-02-02 14:09:54		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-02 15:55:01	=!=	Error: unknown command "/buf" (type /help for help)
+2019-02-02 15:55:05	=!=	No help available, "buf" is not a command or an option
+2019-02-02 15:55:11		[core]  /buffer  list
+2019-02-02 15:55:11		                 add [-free] [-switch] <name>
+2019-02-02 15:55:11		                 clear [<number>|<name>|-merged|-all [<number>|<name>...]]
+2019-02-02 15:55:11		                 move <number>|-|+
+2019-02-02 15:55:11		                 swap <number1>|<name1> [<number2>|<name2>]
+2019-02-02 15:55:11		                 cycle <number>|<name> [<number>|<name>...]
+2019-02-02 15:55:11		                 merge <number>|<name>
+2019-02-02 15:55:11		                 unmerge [<number>|-all]
+2019-02-02 15:55:11		                 hide [<number>|<name>|-all [<number>|<name>...]]
+2019-02-02 15:55:11		                 unhide [<number>|<name>|-all [<number>|<name>...]]
+2019-02-02 15:55:11		                 renumber [<number1> [<number2> [<start>]]]
+2019-02-02 15:55:11		                 close [<n1>[-<n2>]|<name>...]
+2019-02-02 15:55:11		                 notify <level>
+2019-02-02 15:55:11		                 localvar [<number>|<name>]
+2019-02-02 15:55:11		                 set <property> [<value>]
+2019-02-02 15:55:11		                 get <property>
+2019-02-02 15:55:11		                 <number>|-|+|<name>
+2019-02-02 15:55:11		manage buffers
+2019-02-02 15:55:11		    list: list buffers (without argument, this list is displayed)
+2019-02-02 15:55:11		     add: add a new buffer (it can be closed with "/buffer close" or input "q")
+2019-02-02 15:55:11		   clear: clear buffer content (number for a buffer, -merged for merged buffers, -all for all buffers, or nothing for current buffer)
+2019-02-02 15:55:11		    move: move buffer in the list (may be relative, for example -1); "-" = move to first buffer number, "+" = move to last buffer number + 1
+2019-02-02 15:55:11		    swap: swap two buffers (swap with current buffer if only one number/name given)
+2019-02-02 15:55:11		   cycle: jump loop between a list of buffers
+2019-02-02 15:55:11		   merge: merge current buffer to another buffer (chat area will be mix of both buffers)
+2019-02-02 15:55:11		          (by default ctrl-x switches between merged buffers)
+2019-02-02 15:55:11		 unmerge: unmerge buffer from other buffers which have same number
+2019-02-02 15:55:11		    hide: hide the buffer
+2019-02-02 15:55:11		  unhide: unhide the buffer
+2019-02-02 15:55:11		renumber: renumber buffers (works only if option weechat.look.buffer_auto_renumber is off)
+2019-02-02 15:55:11		   close: close buffer (number/range or name is optional)
+2019-02-02 15:55:11		  notify: set notify level for current buffer: this level determines whether buffer will be added to hotlist or not:
+2019-02-02 15:55:11		               none: never
+2019-02-02 15:55:11		          highlight: for highlights only
+2019-02-02 15:55:11		            message: for messages from users + highlights
+2019-02-02 15:55:11		                all: all messages
+2019-02-02 15:55:11		              reset: reset to default value (all)
+2019-02-02 15:55:11		localvar: display local variables for the buffer
+2019-02-02 15:55:11		     set: set a property for current buffer
+2019-02-02 15:55:11		     get: display a property of current buffer
+2019-02-02 15:55:11		  number: jump to buffer by number, possible prefix:
+2019-02-02 15:55:11		          '+': relative jump, add number to current
+2019-02-02 15:55:11		          '-': relative jump, sub number to current
+2019-02-02 15:55:11		          '*': jump to number, using option "weechat.look.jump_current_to_previous_buffer"
+2019-02-02 15:55:11		       -: jump to first buffer number
+2019-02-02 15:55:11		       +: jump to last buffer number
+2019-02-02 15:55:11		    name: jump to buffer by (partial) name
+2019-02-02 15:55:11		Examples:
+2019-02-02 15:55:11		  clear current buffer:
+2019-02-02 15:55:11		    /buffer clear
+2019-02-02 15:55:11		  move buffer to number 5:
+2019-02-02 15:55:11		    /buffer move 5
+2019-02-02 15:55:11		  swap buffer 1 with 3:
+2019-02-02 15:55:11		    /buffer swap 1 3
+2019-02-02 15:55:11		  swap buffer #weechat with current buffer:
+2019-02-02 15:55:11		    /buffer swap #weechat
+2019-02-02 15:55:11		  jump on #chan1, #chan2, #chan3 and loop:
+2019-02-02 15:55:11		    /buffer cycle #chan1 #chan2 #chan3
+2019-02-02 15:55:11		  merge with core buffer:
+2019-02-02 15:55:11		    /buffer merge 1
+2019-02-02 15:55:11		  merge with #weechat buffer:
+2019-02-02 15:55:11		    /buffer merge #weechat
+2019-02-02 15:55:11		  unmerge buffer:
+2019-02-02 15:55:11		    /buffer unmerge
+2019-02-02 15:55:11		  close current buffer:
+2019-02-02 15:55:11		    /buffer close
+2019-02-02 15:55:11		  close buffers 5 to 7:
+2019-02-02 15:55:11		    /buffer close 5-7
+2019-02-02 15:55:11		  jump to #weechat:
+2019-02-02 15:55:11		    /buffer #weechat
+2019-02-02 15:55:11		  jump to next buffer:
+2019-02-02 15:55:11		    /buffer +1
+2019-02-02 15:55:11		  jump to last buffer number:
+2019-02-02 15:55:11		    /buffer +
+2019-02-02 15:55:35		[core]  /bar  list|listfull|listitems
+2019-02-02 15:55:35		              add <name> <type>[,<conditions>] <position> <size> <separator> <item1>[,<item2>...]
+2019-02-02 15:55:35		              default [input|title|status|nicklist]
+2019-02-02 15:55:35		              del <name>|-all
+2019-02-02 15:55:35		              set <name> <option> <value>
+2019-02-02 15:55:35		              hide|show|toggle <name>
+2019-02-02 15:55:35		              scroll <name> <window> <scroll_value>
+2019-02-02 15:55:35		manage bars
+2019-02-02 15:55:35		         list: list all bars
+2019-02-02 15:55:35		     listfull: list all bars (verbose)
+2019-02-02 15:55:35		    listitems: list all bar items
+2019-02-02 15:55:35		          add: add a new bar
+2019-02-02 15:55:35		         name: name of bar (must be unique)
+2019-02-02 15:55:35		         type:   root: outside windows,
+2019-02-02 15:55:35		               window: inside windows, with optional conditions (see below)
+2019-02-02 15:55:35		   conditions: the conditions to display the bar:
+2019-02-02 15:55:35		                 active: on active window
+2019-02-02 15:55:35		               inactive: on inactive windows
+2019-02-02 15:55:35		               nicklist: on windows with nicklist
+2019-02-02 15:55:35		               other condition: see /help weechat.bar.xxx.conditions and /help eval
+2019-02-02 15:55:35		               without conditions, the bar is always displayed
+2019-02-02 15:55:35		     position: bottom, top, left or right
+2019-02-02 15:55:35		         size: size of bar (in chars)
+2019-02-02 15:55:35		    separator: 1 for using separator (line), 0 or nothing means no separator
+2019-02-02 15:55:35		    item1,...: items for this bar (items can be separated by comma (space between items) or "+" (glued items))
+2019-02-02 15:55:35		      default: create a default bar (all default bars if no bar name is given)
+2019-02-02 15:55:35		          del: delete a bar (or all bars with -all)
+2019-02-02 15:55:35		          set: set a value for a bar property
+2019-02-02 15:55:35		       option: option to change (for options list, look at /set weechat.bar.<barname>.*)
+2019-02-02 15:55:35		        value: new value for option
+2019-02-02 15:55:35		         hide: hide a bar
+2019-02-02 15:55:35		         show: show an hidden bar
+2019-02-02 15:55:35		       toggle: hide/show a bar
+2019-02-02 15:55:35		       scroll: scroll bar
+2019-02-02 15:55:35		       window: window number (use '*' for current window or for root bars)
+2019-02-02 15:55:35		 scroll_value: value for scroll: 'x' or 'y' (optional), followed by '+', '-', 'b' (beginning) or 'e' (end), value (for +/-), and optional % (to scroll by % of width/height, otherwise value is number of chars)
+2019-02-02 15:55:35		Examples:
+2019-02-02 15:55:35		  create a bar with time, buffer number + name, and completion:
+2019-02-02 15:55:35		    /bar add mybar root bottom 1 0 [time],buffer_number+:+buffer_name,completion
+2019-02-02 15:55:35		  hide a bar:
+2019-02-02 15:55:35		    /bar hide mybar
+2019-02-02 15:55:35		  scroll nicklist 10 lines down on current buffer:
+2019-02-02 15:55:35		    /bar scroll nicklist * y+10
+2019-02-02 15:55:35		  scroll to end of nicklist on current buffer:
+2019-02-02 15:55:35		    /bar scroll nicklist * ye
+2019-02-02 15:56:02		List of bars:
+2019-02-02 15:56:02		  input: window, bottom, height: 1
+2019-02-02 15:56:02		  title: window, top, height: 1
+2019-02-02 15:56:02		  status: window, bottom, height: 1
+2019-02-02 15:56:02		  nicklist: (hidden) window, right, width: auto
+2019-02-02 15:56:02		  fset: (hidden) window, top, height: 3
+2019-02-02 15:56:02		  buflist: (hidden) root, left, width: auto
+2019-02-02 17:24:57		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-02 17:24:57		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-02 17:24:57		lua scripts loaded: matrix
+2019-02-02 17:24:57		python scripts loaded: go
+2019-02-02 17:24:57		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-02 22:29:51		xfer: sending chat request to discord (irc.local)
+2019-02-02 22:34:51	=!=	xfer: timeout for "xfer chat" with discord
+2019-02-03 12:34:38	=!=	Error: unknown command "/tam" (type /help for help)
+2019-02-03 12:34:56	=!=	Error: unknown command "/g" (type /help for help)
+2019-02-03 15:10:21		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-03 15:10:21		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-03 15:10:21		lua scripts loaded: matrix
+2019-02-03 15:10:21		python scripts loaded: go
+2019-02-03 15:10:21		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-03 15:20:22		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-03 15:20:22		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-03 15:20:22		lua scripts loaded: matrix
+2019-02-03 15:20:22		python scripts loaded: go
+2019-02-03 15:20:22		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-03 19:39:41	=!=	Error: unknown command "/tam" (type /help for help)
+2019-02-03 20:28:49		script: downloading list of scripts...
+2019-02-03 20:28:51		script: 359 scripts for WeeChat 2.3
+2019-02-03 20:28:52		python: loading script "/sai/dot/bin/weechat/python/urlgrab.py"
+2019-02-03 20:28:52		python: registered script "urlgrab", version 3.0 (Url functionality Loggin, opening of browser, selectable links)
+2019-02-03 20:29:39		python: stdout/stderr (urlgrab): failed to log url check that ~/.weechat/urls.log is valid path
+2019-02-03 20:30:56		python: stdout/stderr (urlgrab): failed to log url check that ~/.weechat/urls.log is valid path
+2019-02-03 20:31:01	=!=	Error: unknown command "/install" (type /help for help)
+2019-02-03 20:31:07		python: stdout/stderr (urlgrab): failed to log url check that ~/.weechat/urls.log is valid path
+2019-02-03 20:31:37		python: stdout/stderr (urlgrab): failed to log url check that ~/.weechat/urls.log is valid path
+2019-02-03 20:33:57		Option changed: urlgrab.default.url_log = "~/.cache/weechat/urls.log"  (default: "~/.weechat/urls.log")
+2019-02-03 20:34:17	=!=	Error: unknown command "/urls" (type /help for help)
+2019-02-03 20:34:44		[python/urlgrab]  /url  [open <url> | <url> | show | copy [n] | [n] | list]
+2019-02-03 20:34:44		Url Grabber
+2019-02-03 20:34:44		open or <url>: opens the url
+2019-02-03 20:34:44		show: Opens the select buffer to allow for url selection
+2019-02-03 20:34:44		copy: Copies the nth url to the system clipboard
+2019-02-03 20:34:44		list: Lists the urls in the current buffer
+2019-02-03 20:35:49		[urlgrab] urlgrab: no entries
+2019-02-03 20:36:45		python: loading script "/sai/dot/bin/weechat/python/aformat.py"
+2019-02-03 20:36:45		python: registered script "aformat", version 0.2 (Alternate way of text formatting, see /help for instructions)
+2019-02-03 20:36:59		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-03 20:36:59		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-03 20:36:59		lua scripts loaded: matrix
+2019-02-03 20:36:59		python scripts loaded: aformat, go, urlgrab
+2019-02-03 20:36:59		script: 359 scripts for WeeChat 2.3
+2019-02-03 20:36:59		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-03 21:12:33		Option changed: weechat.bar.status.items = "time,[buffer_last_number],buffer_number+:+buffer_short_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion"  (default: "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion")
+2019-02-03 21:15:00		Option changed: aspell.check.default_dict = "en,de"  (default: "")
+2019-02-03 21:15:48		Option changed: aspell.check.enabled = on  (default: off)
+2019-02-03 21:15:48	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-03 21:16:10	=!=	Error with command "/fset -add" (help on command: /help fset)
+2019-02-03 21:16:21		Option changed: aspell.check.real_time = on  (default: off)
+2019-02-03 21:17:49		Option changed: weechat.bar.buflist.position = right  (default: left)
+2019-02-03 21:22:15		Option changed: weechat.look.mouse = on  (default: off)
+2019-02-03 21:23:03		List of bars:
+2019-02-03 21:23:03		  input: window, bottom, height: 1
+2019-02-03 21:23:03		  title: (hidden) window, top, height: 1
+2019-02-03 21:23:03		  status: window, bottom, height: 1
+2019-02-03 21:23:03		  nicklist: (hidden) window, right, width: auto
+2019-02-03 21:23:03		  fset: (hidden) window, top, height: 3
+2019-02-03 21:23:03		  buflist: (hidden) root, right, width: auto
+2019-02-03 21:23:05	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-03 21:23:15		List of bars:
+2019-02-03 21:23:15		  input: window (conditions: -), bottom, filling: horizontal(top/bottom)/vertical(left/right), height: 1
+2019-02-03 21:23:15		    priority: 1000, fg: default, bg: default, items: [input_prompt]+(away),[input_search],[input_paste],input_text
+2019-02-03 21:23:15		  title: (hidden) window (conditions: -), top, filling: horizontal(top/bottom)/vertical(left/right), height: 1
+2019-02-03 21:23:15		    priority: 500, fg: default, bg: blue, items: buffer_title
+2019-02-03 21:23:15		  status: window (conditions: -), bottom, filling: horizontal(top/bottom)/vertical(left/right), height: 1
+2019-02-03 21:23:15		    priority: 500, fg: default, bg: blue, items: time,[buffer_last_number],buffer_number+:+buffer_short_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion
+2019-02-03 21:23:15		  nicklist: (hidden) window (conditions: ${nicklist}), right, filling: columns_vertical(top/bottom)/vertical(left/right), width: auto
+2019-02-03 21:23:15		    priority: 200, fg: default, bg: default, items: buffer_nicklist, with separator
+2019-02-03 21:23:15		  fset: (hidden) window (conditions: ${buffer.full_name} == fset.fset), top, filling: horizontal(top/bottom)/vertical(left/right), height: 3
+2019-02-03 21:23:15		    priority: 0, fg: default, bg: default, items: fset, with separator
+2019-02-03 21:23:15		  buflist: (hidden) root (conditions: -), right, filling: columns_vertical(top/bottom)/vertical(left/right), width: auto
+2019-02-03 21:23:15		    priority: 0, fg: default, bg: default, items: buflist, with separator
+2019-02-03 21:24:34	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-03 22:13:07	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-03 22:13:35	=!=	Error: unknown command "/clear" (type /help for help)
+2019-02-03 23:43:02		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-03 23:43:02		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-03 23:43:02		lua scripts loaded: matrix
+2019-02-03 23:43:02		python scripts loaded: aformat, go, urlgrab
+2019-02-03 23:43:02		script: 359 scripts for WeeChat 2.3
+2019-02-03 23:43:02		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-04 00:02:47	=!=	Error: unknown command "/setf" (type /help for help)
+2019-02-04 00:03:19		Option changed: aspell.check.default_dict = "en,de"  (default: "")
+2019-02-04 00:03:37	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 00:04:03	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 00:04:10	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 00:12:01	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 08:23:57	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 08:29:45		[urlgrab] Unknown command 'open'.  Try '/help url' for usage
+2019-02-04 08:29:52	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 08:30:13		[python/urlgrab]  /url  [open <url> | <url> | show | copy [n] | [n] | list]
+2019-02-04 08:30:13		Url Grabber
+2019-02-04 08:30:13		open or <url>: opens the url
+2019-02-04 08:30:13		show: Opens the select buffer to allow for url selection
+2019-02-04 08:30:13		copy: Copies the nth url to the system clipboard
+2019-02-04 08:30:13		list: Lists the urls in the current buffer
+2019-02-04 08:30:45		[urlgrab] No URL found - Invalid channel
+2019-02-04 08:30:45		python: stdout/stderr (urlgrab): Traceback (most recent call last):
+2019-02-04 08:30:45		python: stdout/stderr (urlgrab):   File "/sai/dot/bin/weechat/python/autoload/urlgrab.py", line 530, in urlGrabMain
+2019-02-04 08:30:45		python: stdout/stderr (urlgrab):     urlGrabCopy(bufferd,1)
+2019-02-04 08:30:45		python: stdout/stderr (urlgrab):   File "/sai/dot/bin/weechat/python/autoload/urlgrab.py", line 454, in urlGrabCopy
+2019-02-04 08:30:45		python: stdout/stderr (urlgrab):     if url == "":
+2019-02-04 08:30:45		python: stdout/stderr (urlgrab): UnboundLocalError: local variable 'url' referenced before assignment
+2019-02-04 08:30:45	=!=	python: error in function "urlGrabMain"
+2019-02-04 08:36:21	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 12:34:33	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 16:55:06	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 18:53:01	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 18:53:01	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 18:53:04	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 19:48:21	=!=	Error: unknown command "/dab" (type /help for help)
+2019-02-04 21:11:10		xfer: sending chat request to list (irc.local)
+2019-02-04 21:11:15		xfer: sending chat request to list (irc.local)
+2019-02-04 21:13:05	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 21:14:05	=!=	aspell: error: No word lists can be found for the language "de".
+2019-02-04 21:16:10	=!=	xfer: timeout for "xfer chat" with list
+2019-02-04 21:16:15	=!=	xfer: timeout for "xfer chat" with list
+2019-02-05 19:42:42		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-05 19:42:42		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-05 19:42:42		lua scripts loaded: matrix
+2019-02-05 19:42:42		python scripts loaded: aformat, go, urlgrab
+2019-02-05 19:42:42		script: downloading list of scripts...
+2019-02-05 19:42:42		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-05 19:42:45		script: 359 scripts for WeeChat 2.3
+2019-02-06 07:44:46		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-06 07:44:46		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-06 07:44:46		lua scripts loaded: matrix
+2019-02-06 07:44:46		python scripts loaded: aformat, go, urlgrab
+2019-02-06 07:44:46		script: 359 scripts for WeeChat 2.3
+2019-02-06 07:44:46		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-06 13:31:05		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-06 13:31:05		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-06 13:31:05		lua scripts loaded: matrix
+2019-02-06 13:31:05		python scripts loaded: aformat, go, urlgrab
+2019-02-06 13:31:05		script: 359 scripts for WeeChat 2.3
+2019-02-06 13:31:05		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer
+2019-02-06 16:48:05		matrix: Unable to load olm encryption library. Not enabling encryption. Please see documentation (README.md) for information on how to enable.
+2019-02-06 16:48:05		matrix: Connecting to homeserver URL: https://matrix.org/
+2019-02-06 16:48:05		lua scripts loaded: matrix
+2019-02-06 16:48:05		python scripts loaded: aformat, go, urlgrab
+2019-02-06 16:48:05		script: 359 scripts for WeeChat 2.3
+2019-02-06 16:48:05		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, script, trigger, xfer

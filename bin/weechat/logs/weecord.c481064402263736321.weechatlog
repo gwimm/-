@@ -1,0 +1,74 @@
+2018-10-10 16:49:00	fogg	Emoji purge is done. You guys have terrible taste in emoji. (full results here: https://git.io/fxWTG)
+2018-10-11 23:36:08	[kiwmi] pornguy	> ask in a channel people cant write in
+2018-10-11 23:36:08		kingks pretty stupid amirite @Plasma#1271 ?
+2018-10-11 23:36:24	[kiwmi] pornguy	true
+2018-10-11 23:36:36	[kiwmi] pornguy	template a thumbsup/down though <:ree:454820323640999956>
+2018-10-18 05:22:32	clay	If you havent seen this in other servers, Discord recently updated their TOS to include a clause that doesn't allow you to participate in a class action lawsuit unless you opt out.
+2018-10-18 05:22:32		https://old.reddit.com/r/discordapp/comments/9p5uyp/latesttosupdaterevokesyourrightto_sue/
+2018-10-18 05:22:32		Latest ToS update revokes your right to sue Discord. • r/discordapp
+2018-10-18 05:22:32		From the Discord API server: > Discord has changed their Terms of Service! > > Unfortunately, this change comes with a revocation of your legal...
+2018-10-18 05:22:37	clay	Check it out
+2018-10-18 05:23:07	clay	And Opt-Out if youre in the US. This apparently isnt enforceable in the EU
+2018-10-18 05:23:48	Kingk22	Luckily, there is an opt-out for the clause, in which you must email the following template to arbitration-opt-out@discord.com with the subject Arbitration opt out, but you must do it within 30 days or you can no longer opt-out.
+2018-10-18 05:23:48		
+2018-10-18 05:23:48		Dear Discord,
+2018-10-18 05:23:48		By this email, I am opting out of the agreement to arbitrate as authorized by the new changes to the Discord Terms of Service Agreement.
+2018-10-18 05:23:48		I DO NOT AGREE TO THE AGREEMENT TO ARBITRATE FOR THE ACCOUNT(S) LISTED/DESCRIBED BELOW:
+2018-10-18 05:23:48		XXXXX#XXXX (Your discord name and #number)
+2018-10-18 05:23:48		XXXXX (Your e-mail)
+2018-10-18 05:23:48		+X XXX-XXX-XXXX (Your SMS/Phone)
+2018-10-18 05:23:48		Please let me know immediately if there is additional information needed to implement my opt-out request. Finally, I would like to ask for a written confirmation that you have received and processed this notice.
+2018-10-18 05:23:48		Sincerely,
+2018-10-18 05:23:48		XXXXX XXXXX
+2018-10-18 05:23:48		
+2018-10-19 15:25:55	⚉	If you've been pinged, don't panic.
+2018-10-19 15:25:55		We've been getting a few spambot accounts, and we're trying to deal with them as fast as we can. We're pretty certain we know where they're coming from, and we'll try our best to minimise the effect any potential future idiots cause. The whole purpose of these bots is to cause chaos, so let's be better than them and not let that happen. Thank you for your patience.
+2018-10-25 16:08:35	fogg	Hey folks, one of us @Plasma#1271 has been working on a Discord which is a cross collaboration between r/unixporn, r/androidthemes, and r/rainmeter. Rather than focusing on tools for a specific system it's  more about creativity and the process of coming up with new setup ideas. If you like this kinda of thing and want more of it then it might be worth a look :)
+2018-10-25 16:08:35		https://discord.gg/bFYeqhH
+2018-12-01 12:03:53	⚉	So the like 2.4 people that went "Ooohh do a D-lang December", this is your lucky ~~day~~month.
+2018-12-01 12:03:53		D-lang December
+2018-12-01 12:03:53		Very simple principle. This month you will be given a theme, and with that theme you must do the following:
+2018-12-01 12:03:53		
+2018-12-01 12:03:53		- write a small program or tool
+2018-12-01 12:03:53		- use no more than 2000 lines of code across all files
+2018-12-01 12:03:53		- follow the theme throughout
+2018-12-01 12:03:53		
+2018-12-01 12:03:53		This month's theme is "keeping". As long as you can clearly describe the link between your submission and the theme, you're following it. The theme is up for interpretation. The idea is that we get variety.
+2018-12-01 12:03:53		By the 1st January, submissions should be provided as a link to github/gitlab/etc with simple instructions for running the program, and maybe a readme to explain what it does and how to use it.
+2018-12-01 12:03:53		I'll collect in the submissions, try them all out, and return with results.
+2018-12-01 12:03:53		The winner gets to choose the theme for next year (provided it is appropriate).
+2018-12-01 12:03:53		The top 3 get a "DDecWinner" role until the next year. (this is dependent on there boing more than 3 contestants so I won't bother if there are 3 or fewer)
+2018-12-01 12:03:53		Good Luck! Have Fun!
+2018-12-31 18:21:36	fogg	Just a quick one to say I've decided to step down as mod on Reddit & Discord. I enjoy doing it but I've realised that I can't do a good job while also prioritising my  masters and the future beyond that. I wish a best of luck to the mod team and  look forward to seeing y'all around as an ordinary member 😃
+2019-01-02 12:03:07	⚉	D-lang December
+2019-01-02 12:03:07		Seeing as it isn't December any more, it's time to collect in projects. PM me the following to complete your entry:
+2019-01-02 12:03:07		
+2019-01-02 12:03:07		- Link to your code
+2019-01-02 12:03:07		- Any specific build instructions (if it isn't something obvious like dub build or rdmd nameofproject.d)
+2019-01-02 12:03:07		- Quick description of what you've made and how to use it
+2019-01-02 12:03:07		
+2019-01-02 12:03:07		The last 2 can be in the readme in your repo you link.
+2019-01-02 12:03:07		Loose deadline, but be quick. I'll announce the winner in the coming days!
+2019-01-03 21:43:37	clay	Flairs are back on the sub
+2019-01-07 23:50:13	clay	Here's my plan for roles on the server
+2019-01-07 23:50:13		There's a google form at the bottom so we can get a proper response back
+2019-01-07 23:50:13		 I want to replace the current bot with another bot, there are features lacking from this one, and it seems some of the other mods don't either, if anyone has any suggestions, we're more than open to it.
+2019-01-07 23:50:13		 Colored roles as is are gone, replaced with roles similar to sub flairs (for distros, software, etc. all can be chosen by you). These roles will be able to be added and removed by users whenever and will have their own (relevant) colors.
+2019-01-07 23:50:13		* I want to implement a system I really like on another server I'm on, where the top 5 most active users get their own role, I think it's cool and rewards some our regulars. These 5 members rotate on a (probably) monthly basis
+2019-01-07 23:50:34	clay	https://bit.ly/2FdfFsQ
+2019-01-07 23:50:34		Google Forms - create and analyze surveys, for free.
+2019-01-07 23:50:34		Create a new survey on your own or with others at the same time. Choose from a variety of survey types and analyze results in Google Forms. Free from Google.
+2019-01-07 23:51:12	clay	Any feedback you have about any of these can be left in <#361911025555079189>
+2019-01-08 22:56:41	clay	Aright we got a pretty good amount of responses
+2019-01-08 22:56:56	clay	All 3 of those were liked by a large margin
+2019-01-08 22:57:16	clay	I'll work on most of them tonight 👍
+2019-01-08 22:59:51	clay	So over the next day or two:
+2019-01-08 22:59:51		 Color roles will be removed (except for 16 "default" colors)
+2019-01-08 22:59:51		 Distro, OS, and Software Roles will be added, if you have any that you personally would want please ping me in <#361911025555079189> 
+2019-01-08 22:59:51		 A new bot will be found and users will be able to set their own roles
+2019-01-08 22:59:51		 Every month 5 members will be chosen based on activeness and will be given their own custom role
+2019-01-08 23:02:43	clay	Edit: Don't ping me with popular distros, they will be added
+2019-01-09 00:41:12	clay	Our first 5 members for this month  are @yemou#0649 @diamondburned#4507  @natemonster321#7520 @Turquoise#0416 and @ym555#1339
+2019-01-09 00:41:26	clay	Please PM me what color and what you want your role to be
+2019-01-09 01:47:55	Kingk22	PSA:. If you have a windows 10 computer and have ever connected to a public hotspot then get the latest Windows security update ASAP. A vulnerability with remote code execution in the DHCP client has emerged.
+2019-01-09 01:47:55		https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0547

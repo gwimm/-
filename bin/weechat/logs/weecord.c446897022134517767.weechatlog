@@ -1,0 +1,46 @@
+2019-01-30 00:39:07	Astrak	I haven't seen any differences between web vs desktop
+2019-01-30 00:39:33	Astrak	If I get them to delete my data, does that include my entire account?
+2019-01-30 00:39:38	Astrak	That'd be shitty but would make sense
+2019-01-30 00:40:09	Butterscotch	Reminds me of all the reddit scripts that rewrite old comments.
+2019-01-30 00:40:09		infuriates me since usually I need help and now the help is overwritten.
+2019-01-30 00:40:41	Astrak	I did that once. Not sure why though
+2019-01-30 00:40:52	Astrak	Big regret tho
+2019-01-30 00:40:58	Butterscotch	"privacy" apparently is why people do it.
+2019-01-30 01:17:27	Butterscotch	What's with this bye bye thing I keep seeing in my log?
+2019-01-30 01:17:27		
+2019-01-30 01:17:27		2019-01-30T01:06:13.72038 auth.info: Jan 29 17:06:13 sshd[2937]: Received disconnect from 58.210.180.188 port 42716:11: Bye Bye [preauth]
+2019-01-30 01:17:27		2019-01-30T00:59:05.52548 auth.info: Jan 29 16:59:05 sshd[28147]: Received disconnect from 219.135.194.73 port 51181:11: Bye Bye [preauth]
+2019-01-30 01:17:27		
+2019-01-30 01:29:52	Arch	Probably logouts
+2019-01-30 01:29:58	Arch	Those are disconnects so
+2019-01-30 01:44:06	Butterscotch	No logins tho
+2019-01-30 01:44:12	Butterscotch	Probably some weird way to scan
+2019-01-30 07:33:40	AstrakDotCo IRC Bridge	Astrak has quit ("From the dumpy potato to the succulent french fry, nothing satisfies hunger quite like food" -Ken M.)
+2019-01-30 08:11:37	Butterscotch	grep is really cool
+2019-01-30 08:11:49	Butterscotch	Just kinda discovered it
+2019-01-30 08:12:00	Butterscotch	Now I can actually search my logs
+2019-01-30 08:12:30	Astrak	oh hell yeah dude
+2019-01-30 08:12:46	Astrak	do you know about sed?
+2019-01-30 08:13:14	Butterscotch	What does that do?
+2019-01-30 08:13:41	Astrak	all sorts of stuff. i use it to replace text in a file
+2019-01-30 08:14:14	Butterscotch	I'll look it up some time.
+2019-01-30 08:14:24	Butterscotch	I'm just super happy I can focus on stuff and filter text now
+2019-01-30 08:14:50	Butterscotch	
+2019-01-30 08:14:50		2019-01-30T01:36:22.25907 auth.notice: Jan 29 17:36:22 sshguard[906]: Attack from "58.210.156.142" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T01:42:11.55512 auth.notice: Jan 29 17:42:11 sshguard[906]: Attack from "36.156.24.99" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T01:44:55.30420 auth.notice: Jan 29 17:44:55 sshguard[906]: Attack from "36.156.24.98" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T01:46:13.50766 auth.notice: Jan 29 17:46:13 sshguard[906]: Attack from "61.184.247.8" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T01:47:35.52489 auth.notice: Jan 29 17:47:35 sshguard[906]: Attack from "61.184.247.3" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T01:55:37.62848 auth.notice: Jan 29 17:55:37 sshguard[906]: Attack from "58.210.156.141" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T01:56:48.63620 auth.notice: Jan 29 17:56:48 sshguard[906]: Attack from "36.156.24.96" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T02:57:30.28247 auth.notice: Jan 29 18:57:30 sshguard[891]: Attack from "221.204.177.165" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T03:30:38.78498 auth.notice: Jan 29 19:30:38 sshguard[891]: Attack from "118.123.15.142" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T03:45:38.33249 auth.notice: Jan 29 19:45:38 sshguard[891]: Attack from "36.156.24.94" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T03:52:28.94358 auth.notice: Jan 29 19:52:28 sshguard[891]: Attack from "36.156.24.97" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T04:01:22.59387 auth.notice: Jan 29 20:01:22 sshguard[891]: Attack from "223.111.139.210" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T04:24:58.51797 auth.notice: Jan 29 20:24:58 sshguard[891]: Attack from "101.231.74.212" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T04:29:07.93179 auth.notice: Jan 29 20:29:07 sshguard[891]: Attack from "125.65.42.192" on service 100 with danger 10.
+2019-01-30 08:14:50		2019-01-30T04:40:37.89751 auth.notice: Jan 29 20:40:37 sshguard[891]: Attack from "36.156.24.94" on service 100 with danger 10.
+2019-01-30 08:14:50		
+2019-01-30 08:14:57	Butterscotch	Looks a lot more threatening when all together
+2019-01-30 08:14:58	Butterscotch	😂

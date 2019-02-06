@@ -1,0 +1,68 @@
+# make sxhkd reload its configuration files:
+super + Escape
+    pkill -USR1 -x sxhkd
+
+# spawn/kill programs
+super + {Return, d, b, s, c}
+    {leaf, surf https://discordapp.com/activity, firefox, steam}
+super + c
+	bspc node -c
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
+
+alt {h,j,k,l}
+	bspc node -z {right -20 0,bottom 0 20,bottom 0 -20,right 20 0}
+
+# send the newest marked node to the newest preselected node
+super + y
+	bspc node newest.marked.local -n newest.!automatic.local
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# cancel the preselection for the focused node
+super + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+# mark
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+# focus or send to the given desktop
+super + {_, shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# set the window state
+super + {t,shift + t,f}
+	bspc node -t {tiled,floating,fullscreen}
+
+# mediakeys
+{XF86AudioPlay,XF86AudioNext,XF86AudioPrev}
+    mpc {toggle,next,prev}
+
+{XF86AudioRaiseVolume,XF86AudioLowerVolume}
+	pulsemixer --change-volume {+,-}5
+    # amixer set Master 1dB{+,-}
+
+{XF86MonBrightnessUp,XF86MonBrightnessDown}
+	xbacklight {-inc,-dec} 10
+
+XF86AudioMute
+    togglemute
+
+{shift +,_} Print
+	maim {-s,_} | pb --notify --extension png
+
+ctrl + alt + c
+	xcolor | xclip -selection clipboard

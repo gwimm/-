@@ -1,0 +1,18 @@
+ncmpcpp_directory = "~/.local/share/ncmpcpp/cache"
+lyrics_directory = "~/.local/share/ncmpcpp/lyrics"
+
+message_delay_time = 1
+
+titles_visibility = "yes"
+statusbar_visibility = "no"
+header_visibility = "no"
+browser_display_mode = "columns"
+song_list_format = "$8%a - %t$R%l$9"
+song_columns_list_format = "(15)[red]{ar} (20)[yellow]{t}"
+progressbar_look = "── "
+
+jump_to_now_playing_song_at_start = "yes"
+
+execute_on_song_change = "/bin/sh -c ${DOT}/bin/ncmpcpp/art.sh"
+
+# vim:ft=toml

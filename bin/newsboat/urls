@@ -1,0 +1,27 @@
+https://xkcd.com/atom.xml dev "~xkcd"
+
+https://horriblesubs.info/rss.php?res=1080 torrent anime "~torrent hrsubs 1080p"
+https://nyaa.si/?page=rss&q=1080+dual&c=1_2&f=0 torrent anime "~torrent nyaa 1080p dual"
+
+https://www.reddit.com/.rss?feed=bfeb9fad23e0e108984c86e190330d49b4e87da1&user=gwimminus reddit "~reddit front"
+https://www.reddit.com/message/inbox/.rss?feed=bfeb9fad23e0e108984c86e190330d49b4e87da1&user=gwimminus reddit "~inbox reddit"
+
+http://news.mit.edu/rss/feed news edu "~news mit"
+http://news.mit.edu/rss/topic/mathematics news edu "~news mit math"
+
+http://feeds.feedburner.com/planet-openbsd news dev bsd "~planet-openbsd"
+http://rss.slashdot.org/slashdot/slashdotMain news linux "~news slashdot"
+https://www.cyberciti.biz/atom/atom.xml linux "~nixcraft"
+https://www.archlinux.org/feeds/news/ news linux "~news archlinux"
+https://voidlinux.org/atom.xml news linux "~news voidlinux"
+https://alpinelinux.org/atom.xml "~news alpinelinux"
+
+https://aur.archlinux.org/rss/ linux "~pack aur"
+https://github.com/void-linux/void-packages/commits/master.atom linux "~pack voidlinux"
+
+http://ck-hack.blogspot.com/feeds/posts/default dev blog linux "~blog kon colivas"
+
+http://www.tagesschau.de/xml/atom/ news "~tagesschau"
+
+# https://www.youtube.com/user/PewDiePie "~youtube"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC-lHJZR3Gqxm24_Vd_AJ5Yw "~pwediepie"

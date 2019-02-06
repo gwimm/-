@@ -1,0 +1,55 @@
+2019-01-29 23:48:02	thatc0der	when I do the find.
+2019-01-29 23:58:34	thatc0der	so where would the .theme file be?
+2019-01-30 02:21:46	Lordofalltech	Mpc ,ncmpcpp and polybar are not synced up to the same song and two songs at once.
+2019-01-30 03:45:55	Superuser	i know mpd is cool and all but its possible to get mpris 2 on polybar and use a player like cmus
+2019-01-30 03:45:58	Superuser	@Lordofalltech#5523
+2019-01-30 04:51:52	Momiro	so, my mother is trying to print a legal document, i helped her install the fonts from her windows partition, but when printed, it has some weird effects
+2019-01-30 04:52:01	Momiro	https://media.discordapp.net/attachments/403741067335434240/540031408601825297/signal-2019-01-29-205825-1.jpg
+2019-01-30 04:52:01		https://media.discordapp.net/attachments/403741067335434240/540031409079844864/signal-2019-01-29-210917.jpg
+2019-01-30 04:52:38	Momiro	for the second one prints tons of these pages with this gibberish
+2019-01-30 05:03:07	Superuser	either doc is corrupt
+2019-01-30 05:03:16	Superuser	or it doesnt like the windows fonts
+2019-01-30 05:10:36	Momiro	hmmm
+2019-01-30 06:30:15	matryoshka	>windows partition
+2019-01-30 06:30:29	matryoshka	if it's a dualbooted system just use windows
+2019-01-30 06:46:00	IndigoLaser	@diamondburned#4507 Lol I just downloaded another torrent and it didn't need any installing/configuring and run completely fine with wine.
+2019-01-30 06:46:10	diamondburned	kek
+2019-01-30 06:46:11	diamondburned	sure
+2019-01-30 07:34:19	IndigoLaser	But honestly I'll never learn it the right way...
+2019-01-30 09:07:28	[kiwmi] pornguy	somebody fix my wifi <:GWmythicalGhostHug:367722252567052298>
+2019-01-30 09:50:36	IndigoLaser	Why is it that if I run wine PvZ.exe in the folder PvZ.exe is in, it works, but if I do wine ~/Downloads/PvZ/PvZ.exe it doesn't work?
+2019-01-30 09:51:17	IndigoLaser	Do I have to specify some arguments to wine to make it work?
+2019-01-30 10:32:37	Dafman	I've tried out Latte Dock on KDE but decided I didn't like it. Now I can't seem to get rid of it whatsoever. I tried uninstalling through terminal and through octopi but the dock just stays there andit just removes the settings when I uninstall. Is there any way to remove it permanently?
+2019-01-30 10:33:13	Dafman	https://media.discordapp.net/attachments/403741067335434240/540117275492089856/dock.png
+2019-01-30 10:33:35	Dafman	Currently its overlaying the taskbar 🤔
+2019-01-30 13:24:12	Superuser	kill it then remove it
+2019-01-30 13:24:17	Superuser	@Dafman#1234
+2019-01-29 23:48:02	thatc0der	when I do the find.
+2019-01-29 23:58:34	thatc0der	so where would the .theme file be?
+2019-01-30 02:21:46	Lordofalltech	Mpc ,ncmpcpp and polybar are not synced up to the same song and two songs at once.
+2019-01-30 03:45:55	Superuser	i know mpd is cool and all but its possible to get mpris 2 on polybar and use a player like cmus
+2019-01-30 03:45:58	Superuser	@Lordofalltech#5523
+2019-01-30 04:51:52	Momiro	so, my mother is trying to print a legal document, i helped her install the fonts from her windows partition, but when printed, it has some weird effects
+2019-01-30 04:52:01	Momiro	https://media.discordapp.net/attachments/403741067335434240/540031408601825297/signal-2019-01-29-205825-1.jpg
+2019-01-30 04:52:01		https://media.discordapp.net/attachments/403741067335434240/540031409079844864/signal-2019-01-29-210917.jpg
+2019-01-30 04:52:38	Momiro	for the second one prints tons of these pages with this gibberish
+2019-01-30 05:03:07	Superuser	either doc is corrupt
+2019-01-30 05:03:16	Superuser	or it doesnt like the windows fonts
+2019-01-30 05:10:36	Momiro	hmmm
+2019-01-30 06:30:15	matryoshka	>windows partition
+2019-01-30 06:30:29	matryoshka	if it's a dualbooted system just use windows
+2019-01-30 06:46:00	IndigoLaser	@diamondburned#4507 Lol I just downloaded another torrent and it didn't need any installing/configuring and run completely fine with wine.
+2019-01-30 06:46:10	diamondburned	kek
+2019-01-30 06:46:11	diamondburned	sure
+2019-01-30 07:34:19	IndigoLaser	But honestly I'll never learn it the right way...
+2019-01-30 09:07:28	[kiwmi] pornguy	somebody fix my wifi <:GWmythicalGhostHug:367722252567052298>
+2019-01-30 09:50:36	IndigoLaser	Why is it that if I run wine PvZ.exe in the folder PvZ.exe is in, it works, but if I do wine ~/Downloads/PvZ/PvZ.exe it doesn't work?
+2019-01-30 09:51:17	IndigoLaser	Do I have to specify some arguments to wine to make it work?
+2019-01-30 10:32:37	Dafman	I've tried out Latte Dock on KDE but decided I didn't like it. Now I can't seem to get rid of it whatsoever. I tried uninstalling through terminal and through octopi but the dock just stays there andit just removes the settings when I uninstall. Is there any way to remove it permanently?
+2019-01-30 10:33:13	Dafman	https://media.discordapp.net/attachments/403741067335434240/540117275492089856/dock.png
+2019-01-30 10:33:35	Dafman	Currently its overlaying the taskbar 🤔
+2019-01-30 13:24:12	Superuser	kill it then remove it
+2019-01-30 13:24:17	Superuser	@Dafman#1234
+2019-01-31 01:27:18	natemonster321	@IndigoLaser#1436 i think the issue is that some windows binaries just expect to be run from the directory they're in, and when they aren't (which is kind of hard to do in windows since in file explorer you have to navigate to the file anyway, and it by default is set to start in its own directory), they just break
+2019-01-31 01:27:37	[gotag shill] oxy	wow nate's first coherent sentence
+2019-01-31 01:36:21	Renzix	Wow
