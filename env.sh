@@ -1,0 +1,67 @@
+# environment
+
+CFG="${HOME}/dot/cfg"
+
+INPUTRC="${CFG}/sh/inputrc"
+HISTFILE="${HOME}/.local/share/sh/history"
+HISTSIZE=10000
+
+XDG_DATA_HOME="${HOME}/.local/share"
+XDG_CACHE_HOME="${HOME}/.cache"
+XDG_CONFIG_HOME="${HOME}/.config"
+XDG_DESKTOP_DIR="/dev/null"
+
+PULSE_COOKIE="${XDG_DATA_HOME}/pulse/cookie"
+
+GOPATH="${XDG_DATA_HOME}/go"
+
+CARGO_HOME="${XDG_DATA_HOME}/cargo"
+RUSTUP_HOME="${XDG_DATA_HOME}/rustup"
+RUST_SRC_PATH="${RUSTUP_HOME}/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
+
+ROSWELL_HOME="${XDG_DATA_HOME}/lisp/roswell"
+
+STACK_HOME="${XDG_DATA_HOME}/lisp/roswell"
+
+PYENV_ROOT="${XDG_DATA_HOME}/pyenv"
+PIPSI_HOME="${XDG_DATA_HOME}/pipsi/venvs"
+PIPSI_BIN_DIR="${XDG_DATA_HOME}/pipsi/bin"
+PYTHONUSERBASE="${XDG_DATA_HOME}/pip"
+PYTHONPATH="${PYTHONUSERBASE}/lib64/python3.6/site-packages:${PYTHONPATH}"
+
+NODE_HOME="${XDG_DATA_HOME}/node"
+NODENV_ROOT="${XDG_DATA_HOME}/nodenv"
+N_PREFIX="${XDG_DATA_HOME}/n"
+
+NPM_CONFIG_USERCONFIG="${CFG}/npm/npmrc"
+NPM_CONFIG_GLOBALCONFIG="${CFG}/npm/npmrc"
+
+PAGER="cat"
+MANPAGER="less"
+editor_config="${CFG}/neovim/config.vim"
+EDITOR="nvim -u ${editor_config}"
+VISUAL="${EDITOR}"
+
+LESSHISTFILE="/dev/null"
+
+PATH="\
+${HOME}/bin:\
+${PYENV_ROOT}/bin:\
+${PIPSI_BIN_DIR}:\
+${NODENV_ROOT}/bin:\
+${XDG_DATA_HOME}/npm/bin:\
+${PYTHONUSERBASE}/bin:\
+${CARGO_HOME}/bin:\
+${GOPATH}/bin:\
+${NODE_HOME}/bin:\
+${PATH}"
+
+export DOT
+export HISTFILE HISTSIZE
+export VISUAL EDITOR
+export PAGER MANPAGER LESSHISTFILE
+export XDG_CONFIG_HOME XDG_DESKTOP_DIR XDG_DATA_HOME PULSE_COOKIE
+export GOPATH CARGO_HOME RUSTUP_HOME RUST_SRC_PATH ROSWELL_HOME
+export NODE_HOME NODENV_ROOT NPM_CONFIG_USERCONFIG NPM_CONFIG_GLOBALCONFIG
+export PYENV_ROOT PYTHONUSERBASE PYTHONPATH PIPSI_HOME PIPSI_BIN_DIR
+export PATH
