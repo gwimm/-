@@ -1,51 +1,53 @@
 # bash
 
-for util in "cp" "ln" "rm" "mv" "rename" "mkdir" "chmod" "chown"; do
+for util in "cp" "ln" "rm" "mv" "rename" "mkdir" "chmod" "chown"; {
 	alias "${util}"="${util} -v"
-done; unset util
+}; unset util
 
 alias :q="exit"
 alias ptpb="curl -F c=@- https://ptpb.pw/"
 
 alias l="exa"
 alias la="exa --all"
-alias ls="l \
-	--long --bytes --git --extended --group"
+alias ls="l --long --bytes --git --extended --group"
 alias lsa="ls --all"
 
 alias sc="sc-im"
-alias wget="wget --hsts-file=${XDG_DATA_HOME}/wget/hist"
-alias irc="weechat --dir ${CFG}/weechat"
+alias wget="wget \
+    --hsts-file     ${XDG_DATA_HOME}/wget/hist"
+
+alias irc="weechat \
+    --dir           ${CFG}/weechat"
+
 alias rss="newsboat \
-	--config-file=${CFG}/newsboat/conf \
-	--url-file=${CFG}/newsboat/urls"
-alias tr="tremc --config=${CFG}/tremc/tremc.conf"
+	--config-file   ${CFG}/newsboat/conf \
+	--url-file      ${CFG}/newsboat/urls"
+
 alias tmux="tmux -f ${CFG}/tmux/tmux.conf"
 
+alias cabal="cabal \
+    --config-file   ${CABAL_HOME}/config"
+
+alias luarocks="luarocks \
+    --local --tree=${LUAROCKS_HOME}"
+
 alias appear="sudo emerge"
-alias unlimbo="sudo emerge -uNd @world"
+alias unlimbo="appear -uNd @world"
+
+get_rc() {
+	case "$0" in
+		*bash) echo "~/.bashrc";;
+		*zsh) echo "~/.zshrc";;
+		*sh|*dash) echo "~/.shellrc";;
+	esac
+}
+
+alias sauce=". $(get_rc)"
 
 alias e="${EDITOR}"
-alias eerc="${EDITOR} ${editor_config}"
-alias eterm="${EDITOR} ~/.config/alacritty/alacritty.yml"
-
-alias man="extra::silent man"
-
-eshrc() {
-	case "$0" in
-		*bash) ${EDITOR} ~/.bashrc;;
-		*zsh) ${EDITOR} ~/.zshrc;;
-		*sh|*dash) ${EDITOR} ~/.shellrc;;
-	esac
-}
-
-sauce() {
-	case "$0" in
-		*bash) source ~/.bashrc;;
-		*zsh) source ~/.zshrc;;
-		*sh|*dash) source ~/.shellrc;;
-	esac
-}
+alias esh="e $(get_rc)"
+alias eerc="e ${editor_config}"
+alias eterm="e ~/.config/alacritty/alacritty.yml"
 
 lf() {
 	case "$1" in
@@ -59,7 +61,7 @@ lf() {
 			;;
 	esac
 
-	${HOME}/bin/src/ranger/ranger.py \
+	${HOME}/src/ranger%ranger/ranger.py \
 		--cachedir=${XDG_CACHE_HOME}/ranger \
 		--datadir=${XDG_DATA_HOME}/ranger \
 		--confdir="${CFG}/ranger" \

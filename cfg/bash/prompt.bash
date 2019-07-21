@@ -1,6 +1,6 @@
 # bash
 
-prompt::color::fg() {
+ps_color::fg() {
 	local esc_open="\[" esc_close="\]" col=$1
 	case "$col" in
 		black|none|NONE) col=0 ;;
@@ -15,35 +15,32 @@ prompt::color::fg() {
 	printf "${esc_open}\\e[3${col}m${esc_close}"
 }
 
-
-
-prompt::pwd::dev() {
+ps_pwd_dev() {
 	while read -r; do
 		set -- $REPLY
 		local d="$1" mp="$2" l c ind
 		[[ $PWD == $mp* ]] || continue
 
-		c="$(prompt::color::fg yellow)"
+		c="$(ps_color::fg yellow)"
 		l="$(blkid -o value -s LABEL $d)"
 		ind="${1/\/dev\//}"
 
 		[[ $l ]] && {
 			ind+="[$l]"
 		} || {
-			ind+="[$(prompt::cwd::col "${mp}" $c)]"
+			ind+="[$(ps_cwd::col "${mp}" $c)]"
 		}
 
 		[[ $PWD == $mp ]] && {
 			printf "${c}${ind} "
 			return
 		}
-		printf "${c}${ind} $(prompt::cwd "${PWD/${mp}\//}" $c) "
+		printf "${c}${ind} $(ps_cwd "${PWD/${mp}\//}" $c) "
 		return
-	done <<< "$(<'/proc/mounts' grep -Ee'^/dev/sd.*')"
+	done <<< "$(<'/proc/mounts' grep -E '^/dev/sd.*')"
 }
 
-## slash(p) -> p
-prompt::cwd::slash() {
+ps_cwd::slash() {
 	local d p="$1"
 	for d in ./*; do
 		[[ -d $d ]] || continue
@@ -53,20 +50,19 @@ prompt::cwd::slash() {
 	printf "$p"
 }
 
-## col(p, c) -> c
-prompt::cwd::col() {
+ps_cwd::col() {
 	local p="$1" c="$2"
-	printf "${c}${p//\//$(prompt::color::fg reset)\/${c}}"
+	printf "${c}${p//\//$(ps_color::fg reset)\/${c}}"
 }
 
-prompt::cwd() {
+ps_cwd() {
 	local p="$1" c="$2"
-	p="$(prompt::cwd::slash "$p")"
-	prompt::cwd::col "$p" "$c"
+	p="$(ps_cwd::slash "$p")"
+	ps_cwd::col "$p" "$c"
 }
 
-prompt::pwd() {
-	in_dev=$(prompt::pwd::dev)
+ps_pwd() {
+	in_dev=$(ps_pwd_dev)
 	[[ $in_dev ]] && {
 		printf "$in_dev"
 		return
@@ -76,7 +72,7 @@ prompt::pwd() {
 
 	while read -r; do
 		set -- $REPLY
-		local CWD d="$1" col="$(prompt::color::fg $2)" rs="$3"
+		local CWD d="$1" col="$(ps_color::fg $2)" rs="$3"
 		case "$PWD" in
 			$d)
 				printf "${col}${rs} "
@@ -84,24 +80,24 @@ prompt::pwd() {
 				;;
 			$d*)
 				CWD+="${PWD/$d/$rs}"
-				printf "$(prompt::cwd "$CWD" $col) "
+				printf "$(ps_cwd "$CWD" $col) "
 				return
 				;;
 		esac
 	done <<< "$DIRS"
 }
 
-prompt::vcs::git() {
+ps_vcs() {
 	if git diff --shortstat HEAD &>/dev/null; then
 		[[ $(git diff --shortstat HEAD 2>/dev/null) ]] && {
-			printf "$(prompt::color::fg red)± "
+			printf "$(ps_color::fg red)± "
 			return
 		}
 		printf "± "
 	fi
 }
 
-prompt::battery() {
+ps_battery() {
 	local col cap bat stat
 	bat="/sys/class/power_supply/BAT1"
 	cap="$(< ${bat}/capacity)"
@@ -109,37 +105,32 @@ prompt::battery() {
 
 	case "$stat" in
 		Full|Unknown) return ;;
-		Discharging) col=$(prompt::color::fg red) ;;
-		Charging) col=$(prompt::color::fg green) ;;
+		Discharging) col=$(ps_color::fg red) ;;
+		Charging) col=$(ps_color::fg green) ;;
 	esac
 	printf "${col}${cap} "
 }
 
-prompt::exitstat() {
+ps_exit() {
 	local ind="!"
 	case "$EXIT_CODE" in
 		0) return ;;
 		1) ;;
 		*) ind="$EXIT_CODE${ind}"
 	esac
-	printf "$(prompt::color::fg red)${ind} "
+	printf "$(ps_color::fg red)${ind} "
 }
 
-prompt::rprompt() {
-	printf "%*s" $COLUMNS "right prompt"
-}
-
-prompt::constructor() { 
-	EXIT_CODE="$?" # i really don't want to do this first though q-q
-	unset PS1
-	for ps in "$(prompt::battery)" "$(prompt::exitstat)" "$(prompt::pwd)" \
-			  "$(prompt::vcs::git)" "> "; do
-		PS1+="${ps}$(prompt::color::fg reset)"
-	done
+ps_init() {
+	EXIT_CODE="$?"
+	unset PS1; for component in "battery" "exit" "pwd" "vcs"; {
+        PS1+="$(ps_$component)$(ps_color::fg reset)"
+    }
+    PS1+="> "
 }
 
 DIRS+="$HOME/ green ~/"$'\n'
 DIRS+="$HOME green ~"$'\n'
 DIRS+="/ red /"$'\n'
 
-PROMPT_COMMAND=prompt::constructor
+PROMPT_COMMAND=ps_init

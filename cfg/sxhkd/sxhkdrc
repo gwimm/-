@@ -51,18 +51,18 @@ super + {t,shift + t,f}
 {XF86AudioPlay,XF86AudioNext,XF86AudioPrev}
     mpc {toggle,next,prev}
 
-{XF86AudioRaiseVolume,XF86AudioLowerVolume}
-	pulsemixer --change-volume {+,-}5
+{XF86AudioLowerVolume,XF86AudioRaiseVolume}
+	pactl set-sink-volume alsa_output.usb-Corsair_Corsair_VOID_PRO_Wireless_Gaming_Headset-00.iec958-stereo {-,+}3%
     # amixer set Master 1dB{+,-}
 
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
 	xbacklight {-inc,-dec} 10
 
 XF86AudioMute
-    togglemute
+	pactl set-sink-mute 5 toggle
 
 {shift +,_} Print
-	maim {-s,_} | pb --notify --extension png
+	maim {-s,_} | xclip -selection clipboard -t image/png
 
 ctrl + alt + c
 	xcolor | xclip -selection clipboard

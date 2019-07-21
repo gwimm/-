@@ -9,10 +9,10 @@ header_visibility = "no"
 browser_display_mode = "columns"
 song_list_format = "$8%a - %t$R%l$9"
 song_columns_list_format = "(15)[red]{ar} (20)[yellow]{t}"
-progressbar_look = "── "
+progressbar_look = "─|─"
 
 jump_to_now_playing_song_at_start = "yes"
 
-execute_on_song_change = "/bin/sh -c ${DOT}/bin/ncmpcpp/art.sh"
+execute_on_song_change = "${CFG}/ncmpcpp/art"
 
 # vim:ft=toml

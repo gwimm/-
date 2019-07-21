@@ -1,10 +1,10 @@
 #!/bin/bash
 
-${DOT}/bin/ncmpcpp/art.sh "start" &
+${CFG}/ncmpcpp/art "start" &
 pid=$!
 trap "pkill -P $pid" EXIT
 
 ncmpcpp \
-	--config=${DOT}/bin/ncmpcpp/conf \
-	--bindings=${DOT}/bin/ncmpcpp/bindings \
+	--config=${CFG}/ncmpcpp/conf \
+	--bindings=${CFG}/ncmpcpp/bindings \
 	--quiet
